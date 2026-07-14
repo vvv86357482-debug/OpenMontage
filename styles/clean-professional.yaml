@@ -1,3 +1,6 @@
+metadata:
+  render_runtime: ffmpeg
+
 identity:
   name: "Clean Professional"
   category: motion-graphics

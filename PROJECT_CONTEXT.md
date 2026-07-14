@@ -40,6 +40,16 @@ Layer 3: .agents/skills/            → "How the technology works" (generic API 
 
 Each tool's `agent_skills[]` field bridges Layer 1 → Layer 3. See `skills/INDEX.md` for the full mapping.
 
+## Kaggle GPU Asset Generation
+
+- **Kernel metadata:** `tools/kaggle/kernel-metadata.json` — `machine_shape` controls accelerator assignment. Use `"NvidiaTeslaT4"` explicitly; `gpu_type` is vestigial and ignored by Kaggle.
+- **SANA-Sprint on T4:**
+  - `num_inference_steps=2` (required by current diffusers; steps=4 hard-fails with SCM error)
+  - Pipeline dtype: `bfloat16` for transformer, `float32` for VAE (`pipe.vae.to(torch.float32)`)
+  - Float16 VAE causes zero-latent black-image output — do not use float16 for the VAE
+  - Expected VRAM: ~13 GB peak on T4 for 1024×576 generation
+- **P100 fallback:** If `cc == 6`, sets `GPU_BRANCH = 'p100'` and uses FLUX.1 Schnell instead.
+
 ## Key Patterns
 
 - **Pipeline state machine:** `idea -> script -> scene_plan -> assets -> edit -> compose -> publish`

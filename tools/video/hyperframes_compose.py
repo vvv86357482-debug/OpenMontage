@@ -1122,37 +1122,17 @@ class HyperFramesCompose(BaseTool):
         timeout: int,
         check: bool,
     ) -> subprocess.CompletedProcess:
-        """Invoke `npx hyperframes <args>` with the right Windows quirks.
+        """Invoke `npx hyperframes <args>`. BANNED in this environment.
 
-        We intentionally bypass `self.run_command` here because we do NOT
-        want to raise CalledProcessError on non-zero exits — the caller
-        parses lint/validate/render exit codes itself.
+        HyperFrames is not a supported render runtime in this Codespace.
+        This method always returns a failed CompletedProcess.
         """
-        cmd = ["npx", "--yes", "hyperframes", *args]
-        # On Windows, resolve the .cmd wrapper so subprocess can find it
-        # without shell=True.
-        if os.name == "nt":
-            resolved = shutil.which(cmd[0])
-            if resolved:
-                cmd[0] = resolved
-        try:
-            return subprocess.run(
-                cmd,
-                capture_output=True,
-                text=True,
-                timeout=timeout,
-                cwd=str(cwd) if cwd else None,
-                check=False,
-            )
-        except subprocess.TimeoutExpired as e:
-            # Surface timeouts as a failed CompletedProcess so callers get a
-            # uniform shape. The stderr tail will say timeout.
-            return subprocess.CompletedProcess(
-                args=cmd,
-                returncode=124,
-                stdout=e.stdout or "",
-                stderr=(e.stderr or "") + f"\n[timeout after {timeout}s]",
-            )
+        return subprocess.CompletedProcess(
+            args=["hyperframes", *args],
+            returncode=1,
+            stdout="",
+            stderr="HyperFrames is banned in this environment. Use FFmpeg render runtime only.",
+        )
 
     @staticmethod
     def _parse_json_output(stdout: str) -> Optional[Any]:

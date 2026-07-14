@@ -1,0 +1,1658 @@
+{
+  "project_id": "tts-measure-chatterbox-270",
+  "gpu_name": "Tesla T4",
+  "gpu_branch": "t4_or_better",
+  "voice": "default",
+  "model_load_s": 55.58,
+  "vram_peak_bytes": 3460917760,
+  "generated_at": "2026-07-11T11:04:15",
+  "errors": [],
+  "channel_stats": {
+    "crime-ledger": {
+      "scenes": 90,
+      "total_gen_s": 491.52,
+      "total_audio_s": 530.4,
+      "rtf": 1.079
+    },
+    "mythology-slavic": {
+      "scenes": 90,
+      "total_gen_s": 433.67,
+      "total_audio_s": 472.04,
+      "rtf": 1.088
+    },
+    "speculative-biology": {
+      "scenes": 90,
+      "total_gen_s": 416.93,
+      "total_audio_s": 453.92,
+      "rtf": 1.089
+    }
+  },
+  "channels": {
+    "crime-ledger": [
+      {
+        "id": "scene_01",
+        "dur_s": 5.68,
+        "gen_s": 14.886,
+        "bytes": 272718
+      },
+      {
+        "id": "scene_02",
+        "dur_s": 4.44,
+        "gen_s": 4.123,
+        "bytes": 213198
+      },
+      {
+        "id": "scene_03",
+        "dur_s": 4.36,
+        "gen_s": 3.998,
+        "bytes": 209358
+      },
+      {
+        "id": "scene_04",
+        "dur_s": 4.2,
+        "gen_s": 3.913,
+        "bytes": 201678
+      },
+      {
+        "id": "scene_05",
+        "dur_s": 5.0,
+        "gen_s": 4.539,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_06",
+        "dur_s": 5.56,
+        "gen_s": 4.962,
+        "bytes": 266958
+      },
+      {
+        "id": "scene_07",
+        "dur_s": 5.0,
+        "gen_s": 4.515,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_08",
+        "dur_s": 5.88,
+        "gen_s": 5.222,
+        "bytes": 282318
+      },
+      {
+        "id": "scene_09",
+        "dur_s": 5.28,
+        "gen_s": 4.67,
+        "bytes": 253518
+      },
+      {
+        "id": "scene_10",
+        "dur_s": 5.92,
+        "gen_s": 5.186,
+        "bytes": 284238
+      },
+      {
+        "id": "scene_11",
+        "dur_s": 4.96,
+        "gen_s": 4.423,
+        "bytes": 238158
+      },
+      {
+        "id": "scene_12",
+        "dur_s": 4.64,
+        "gen_s": 4.196,
+        "bytes": 222798
+      },
+      {
+        "id": "scene_13",
+        "dur_s": 4.88,
+        "gen_s": 4.355,
+        "bytes": 234318
+      },
+      {
+        "id": "scene_14",
+        "dur_s": 6.44,
+        "gen_s": 5.679,
+        "bytes": 309198
+      },
+      {
+        "id": "scene_15",
+        "dur_s": 6.12,
+        "gen_s": 5.414,
+        "bytes": 293838
+      },
+      {
+        "id": "scene_16",
+        "dur_s": 6.76,
+        "gen_s": 6.135,
+        "bytes": 324558
+      },
+      {
+        "id": "scene_17",
+        "dur_s": 4.8,
+        "gen_s": 4.516,
+        "bytes": 230478
+      },
+      {
+        "id": "scene_18",
+        "dur_s": 4.96,
+        "gen_s": 4.584,
+        "bytes": 238158
+      },
+      {
+        "id": "scene_19",
+        "dur_s": 5.76,
+        "gen_s": 5.208,
+        "bytes": 276558
+      },
+      {
+        "id": "scene_20",
+        "dur_s": 4.36,
+        "gen_s": 4.242,
+        "bytes": 209358
+      },
+      {
+        "id": "scene_21",
+        "dur_s": 6.88,
+        "gen_s": 6.279,
+        "bytes": 330318
+      },
+      {
+        "id": "scene_22",
+        "dur_s": 5.16,
+        "gen_s": 4.717,
+        "bytes": 247758
+      },
+      {
+        "id": "scene_23",
+        "dur_s": 8.52,
+        "gen_s": 7.613,
+        "bytes": 409038
+      },
+      {
+        "id": "scene_24",
+        "dur_s": 8.72,
+        "gen_s": 7.75,
+        "bytes": 418638
+      },
+      {
+        "id": "scene_25",
+        "dur_s": 4.96,
+        "gen_s": 4.667,
+        "bytes": 238158
+      },
+      {
+        "id": "scene_26",
+        "dur_s": 5.24,
+        "gen_s": 4.771,
+        "bytes": 251598
+      },
+      {
+        "id": "scene_27",
+        "dur_s": 6.12,
+        "gen_s": 5.521,
+        "bytes": 293838
+      },
+      {
+        "id": "scene_28",
+        "dur_s": 6.08,
+        "gen_s": 5.46,
+        "bytes": 291918
+      },
+      {
+        "id": "scene_29",
+        "dur_s": 5.84,
+        "gen_s": 5.254,
+        "bytes": 280398
+      },
+      {
+        "id": "scene_30",
+        "dur_s": 5.44,
+        "gen_s": 4.978,
+        "bytes": 261198
+      },
+      {
+        "id": "scene_31",
+        "dur_s": 5.96,
+        "gen_s": 5.376,
+        "bytes": 286158
+      },
+      {
+        "id": "scene_32",
+        "dur_s": 5.44,
+        "gen_s": 5.03,
+        "bytes": 261198
+      },
+      {
+        "id": "scene_33",
+        "dur_s": 6.84,
+        "gen_s": 6.404,
+        "bytes": 328398
+      },
+      {
+        "id": "scene_34",
+        "dur_s": 6.0,
+        "gen_s": 5.383,
+        "bytes": 288078
+      },
+      {
+        "id": "scene_35",
+        "dur_s": 6.68,
+        "gen_s": 6.223,
+        "bytes": 320718
+      },
+      {
+        "id": "scene_36",
+        "dur_s": 5.8,
+        "gen_s": 5.223,
+        "bytes": 278478
+      },
+      {
+        "id": "scene_37",
+        "dur_s": 5.88,
+        "gen_s": 5.271,
+        "bytes": 282318
+      },
+      {
+        "id": "scene_38",
+        "dur_s": 5.96,
+        "gen_s": 5.373,
+        "bytes": 286158
+      },
+      {
+        "id": "scene_39",
+        "dur_s": 6.8,
+        "gen_s": 6.185,
+        "bytes": 326478
+      },
+      {
+        "id": "scene_40",
+        "dur_s": 6.68,
+        "gen_s": 6.255,
+        "bytes": 320718
+      },
+      {
+        "id": "scene_41",
+        "dur_s": 7.08,
+        "gen_s": 6.372,
+        "bytes": 339918
+      },
+      {
+        "id": "scene_42",
+        "dur_s": 5.28,
+        "gen_s": 4.805,
+        "bytes": 253518
+      },
+      {
+        "id": "scene_43",
+        "dur_s": 5.24,
+        "gen_s": 4.917,
+        "bytes": 251598
+      },
+      {
+        "id": "scene_44",
+        "dur_s": 4.76,
+        "gen_s": 4.34,
+        "bytes": 228558
+      },
+      {
+        "id": "scene_45",
+        "dur_s": 5.76,
+        "gen_s": 5.132,
+        "bytes": 276558
+      },
+      {
+        "id": "scene_46",
+        "dur_s": 4.88,
+        "gen_s": 4.431,
+        "bytes": 234318
+      },
+      {
+        "id": "scene_47",
+        "dur_s": 5.68,
+        "gen_s": 5.312,
+        "bytes": 272718
+      },
+      {
+        "id": "scene_48",
+        "dur_s": 6.32,
+        "gen_s": 5.622,
+        "bytes": 303438
+      },
+      {
+        "id": "scene_49",
+        "dur_s": 5.52,
+        "gen_s": 5.054,
+        "bytes": 265038
+      },
+      {
+        "id": "scene_50",
+        "dur_s": 6.56,
+        "gen_s": 6.032,
+        "bytes": 314958
+      },
+      {
+        "id": "scene_51",
+        "dur_s": 5.88,
+        "gen_s": 5.306,
+        "bytes": 282318
+      },
+      {
+        "id": "scene_52",
+        "dur_s": 6.88,
+        "gen_s": 6.247,
+        "bytes": 330318
+      },
+      {
+        "id": "scene_53",
+        "dur_s": 5.12,
+        "gen_s": 4.67,
+        "bytes": 245838
+      },
+      {
+        "id": "scene_54",
+        "dur_s": 5.0,
+        "gen_s": 4.562,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_55",
+        "dur_s": 6.76,
+        "gen_s": 6.233,
+        "bytes": 324558
+      },
+      {
+        "id": "scene_56",
+        "dur_s": 5.12,
+        "gen_s": 4.701,
+        "bytes": 245838
+      },
+      {
+        "id": "scene_57",
+        "dur_s": 5.44,
+        "gen_s": 5.141,
+        "bytes": 261198
+      },
+      {
+        "id": "scene_58",
+        "dur_s": 4.8,
+        "gen_s": 4.456,
+        "bytes": 230478
+      },
+      {
+        "id": "scene_59",
+        "dur_s": 5.12,
+        "gen_s": 4.723,
+        "bytes": 245838
+      },
+      {
+        "id": "scene_60",
+        "dur_s": 6.6,
+        "gen_s": 6.009,
+        "bytes": 316878
+      },
+      {
+        "id": "scene_61",
+        "dur_s": 6.4,
+        "gen_s": 5.772,
+        "bytes": 307278
+      },
+      {
+        "id": "scene_62",
+        "dur_s": 5.48,
+        "gen_s": 4.975,
+        "bytes": 263118
+      },
+      {
+        "id": "scene_63",
+        "dur_s": 5.96,
+        "gen_s": 5.357,
+        "bytes": 286158
+      },
+      {
+        "id": "scene_64",
+        "dur_s": 5.92,
+        "gen_s": 5.266,
+        "bytes": 284238
+      },
+      {
+        "id": "scene_65",
+        "dur_s": 5.68,
+        "gen_s": 5.16,
+        "bytes": 272718
+      },
+      {
+        "id": "scene_66",
+        "dur_s": 4.88,
+        "gen_s": 4.697,
+        "bytes": 234318
+      },
+      {
+        "id": "scene_67",
+        "dur_s": 8.2,
+        "gen_s": 7.295,
+        "bytes": 393678
+      },
+      {
+        "id": "scene_68",
+        "dur_s": 5.56,
+        "gen_s": 5.154,
+        "bytes": 266958
+      },
+      {
+        "id": "scene_69",
+        "dur_s": 5.0,
+        "gen_s": 4.543,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_70",
+        "dur_s": 4.96,
+        "gen_s": 4.539,
+        "bytes": 238158
+      },
+      {
+        "id": "scene_71",
+        "dur_s": 5.52,
+        "gen_s": 5.014,
+        "bytes": 265038
+      },
+      {
+        "id": "scene_72",
+        "dur_s": 6.88,
+        "gen_s": 6.285,
+        "bytes": 330318
+      },
+      {
+        "id": "scene_73",
+        "dur_s": 6.12,
+        "gen_s": 5.531,
+        "bytes": 293838
+      },
+      {
+        "id": "scene_74",
+        "dur_s": 6.04,
+        "gen_s": 5.493,
+        "bytes": 289998
+      },
+      {
+        "id": "scene_75",
+        "dur_s": 6.12,
+        "gen_s": 5.607,
+        "bytes": 293838
+      },
+      {
+        "id": "scene_76",
+        "dur_s": 5.96,
+        "gen_s": 5.459,
+        "bytes": 286158
+      },
+      {
+        "id": "scene_77",
+        "dur_s": 5.84,
+        "gen_s": 5.299,
+        "bytes": 280398
+      },
+      {
+        "id": "scene_78",
+        "dur_s": 5.04,
+        "gen_s": 4.638,
+        "bytes": 241998
+      },
+      {
+        "id": "scene_79",
+        "dur_s": 6.24,
+        "gen_s": 5.529,
+        "bytes": 299598
+      },
+      {
+        "id": "scene_80",
+        "dur_s": 5.72,
+        "gen_s": 5.143,
+        "bytes": 274638
+      },
+      {
+        "id": "scene_81",
+        "dur_s": 6.72,
+        "gen_s": 6.332,
+        "bytes": 322638
+      },
+      {
+        "id": "scene_82",
+        "dur_s": 8.8,
+        "gen_s": 7.755,
+        "bytes": 422478
+      },
+      {
+        "id": "scene_83",
+        "dur_s": 6.52,
+        "gen_s": 5.853,
+        "bytes": 313038
+      },
+      {
+        "id": "scene_84",
+        "dur_s": 5.52,
+        "gen_s": 5.047,
+        "bytes": 265038
+      },
+      {
+        "id": "scene_85",
+        "dur_s": 5.88,
+        "gen_s": 5.293,
+        "bytes": 282318
+      },
+      {
+        "id": "scene_86",
+        "dur_s": 6.92,
+        "gen_s": 6.427,
+        "bytes": 332238
+      },
+      {
+        "id": "scene_87",
+        "dur_s": 6.2,
+        "gen_s": 5.495,
+        "bytes": 297678
+      },
+      {
+        "id": "scene_88",
+        "dur_s": 6.32,
+        "gen_s": 5.676,
+        "bytes": 303438
+      },
+      {
+        "id": "scene_89",
+        "dur_s": 6.44,
+        "gen_s": 5.718,
+        "bytes": 309198
+      },
+      {
+        "id": "scene_90",
+        "dur_s": 9.76,
+        "gen_s": 8.604,
+        "bytes": 468558
+      }
+    ],
+    "mythology-slavic": [
+      {
+        "id": "scene_01",
+        "dur_s": 4.4,
+        "gen_s": 4.167,
+        "bytes": 211278
+      },
+      {
+        "id": "scene_02",
+        "dur_s": 4.36,
+        "gen_s": 4.018,
+        "bytes": 209358
+      },
+      {
+        "id": "scene_03",
+        "dur_s": 4.56,
+        "gen_s": 4.215,
+        "bytes": 218958
+      },
+      {
+        "id": "scene_04",
+        "dur_s": 5.0,
+        "gen_s": 4.715,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_05",
+        "dur_s": 5.44,
+        "gen_s": 4.919,
+        "bytes": 261198
+      },
+      {
+        "id": "scene_06",
+        "dur_s": 6.28,
+        "gen_s": 5.622,
+        "bytes": 301518
+      },
+      {
+        "id": "scene_07",
+        "dur_s": 5.84,
+        "gen_s": 5.189,
+        "bytes": 280398
+      },
+      {
+        "id": "scene_08",
+        "dur_s": 3.68,
+        "gen_s": 3.638,
+        "bytes": 176718
+      },
+      {
+        "id": "scene_09",
+        "dur_s": 4.16,
+        "gen_s": 3.97,
+        "bytes": 199758
+      },
+      {
+        "id": "scene_10",
+        "dur_s": 5.44,
+        "gen_s": 5.091,
+        "bytes": 261198
+      },
+      {
+        "id": "scene_11",
+        "dur_s": 5.44,
+        "gen_s": 4.959,
+        "bytes": 261198
+      },
+      {
+        "id": "scene_12",
+        "dur_s": 4.52,
+        "gen_s": 4.257,
+        "bytes": 217038
+      },
+      {
+        "id": "scene_13",
+        "dur_s": 5.0,
+        "gen_s": 4.555,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_14",
+        "dur_s": 4.88,
+        "gen_s": 4.462,
+        "bytes": 234318
+      },
+      {
+        "id": "scene_15",
+        "dur_s": 5.32,
+        "gen_s": 4.894,
+        "bytes": 255438
+      },
+      {
+        "id": "scene_16",
+        "dur_s": 4.96,
+        "gen_s": 4.641,
+        "bytes": 238158
+      },
+      {
+        "id": "scene_17",
+        "dur_s": 5.0,
+        "gen_s": 4.553,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_18",
+        "dur_s": 5.84,
+        "gen_s": 5.293,
+        "bytes": 280398
+      },
+      {
+        "id": "scene_19",
+        "dur_s": 4.8,
+        "gen_s": 4.442,
+        "bytes": 230478
+      },
+      {
+        "id": "scene_20",
+        "dur_s": 4.64,
+        "gen_s": 4.276,
+        "bytes": 222798
+      },
+      {
+        "id": "scene_21",
+        "dur_s": 5.04,
+        "gen_s": 4.64,
+        "bytes": 241998
+      },
+      {
+        "id": "scene_22",
+        "dur_s": 4.16,
+        "gen_s": 3.899,
+        "bytes": 199758
+      },
+      {
+        "id": "scene_23",
+        "dur_s": 5.08,
+        "gen_s": 4.634,
+        "bytes": 243918
+      },
+      {
+        "id": "scene_24",
+        "dur_s": 4.76,
+        "gen_s": 4.397,
+        "bytes": 228558
+      },
+      {
+        "id": "scene_25",
+        "dur_s": 6.56,
+        "gen_s": 6.225,
+        "bytes": 314958
+      },
+      {
+        "id": "scene_26",
+        "dur_s": 5.6,
+        "gen_s": 5.136,
+        "bytes": 268878
+      },
+      {
+        "id": "scene_27",
+        "dur_s": 5.72,
+        "gen_s": 5.318,
+        "bytes": 274638
+      },
+      {
+        "id": "scene_28",
+        "dur_s": 4.96,
+        "gen_s": 4.61,
+        "bytes": 238158
+      },
+      {
+        "id": "scene_29",
+        "dur_s": 5.0,
+        "gen_s": 4.695,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_30",
+        "dur_s": 5.64,
+        "gen_s": 5.191,
+        "bytes": 270798
+      },
+      {
+        "id": "scene_31",
+        "dur_s": 6.28,
+        "gen_s": 5.7,
+        "bytes": 301518
+      },
+      {
+        "id": "scene_32",
+        "dur_s": 4.76,
+        "gen_s": 4.513,
+        "bytes": 228558
+      },
+      {
+        "id": "scene_33",
+        "dur_s": 6.56,
+        "gen_s": 6.04,
+        "bytes": 314958
+      },
+      {
+        "id": "scene_34",
+        "dur_s": 4.2,
+        "gen_s": 4.039,
+        "bytes": 201678
+      },
+      {
+        "id": "scene_35",
+        "dur_s": 4.24,
+        "gen_s": 4.122,
+        "bytes": 203598
+      },
+      {
+        "id": "scene_36",
+        "dur_s": 4.88,
+        "gen_s": 4.496,
+        "bytes": 234318
+      },
+      {
+        "id": "scene_37",
+        "dur_s": 6.12,
+        "gen_s": 5.462,
+        "bytes": 293838
+      },
+      {
+        "id": "scene_38",
+        "dur_s": 4.88,
+        "gen_s": 4.45,
+        "bytes": 234318
+      },
+      {
+        "id": "scene_39",
+        "dur_s": 4.72,
+        "gen_s": 4.393,
+        "bytes": 226638
+      },
+      {
+        "id": "scene_40",
+        "dur_s": 5.56,
+        "gen_s": 5.085,
+        "bytes": 266958
+      },
+      {
+        "id": "scene_41",
+        "dur_s": 5.76,
+        "gen_s": 5.486,
+        "bytes": 276558
+      },
+      {
+        "id": "scene_42",
+        "dur_s": 5.24,
+        "gen_s": 4.782,
+        "bytes": 251598
+      },
+      {
+        "id": "scene_43",
+        "dur_s": 4.8,
+        "gen_s": 4.556,
+        "bytes": 230478
+      },
+      {
+        "id": "scene_44",
+        "dur_s": 4.12,
+        "gen_s": 3.992,
+        "bytes": 197838
+      },
+      {
+        "id": "scene_45",
+        "dur_s": 4.88,
+        "gen_s": 4.582,
+        "bytes": 234318
+      },
+      {
+        "id": "scene_46",
+        "dur_s": 6.2,
+        "gen_s": 5.9,
+        "bytes": 297678
+      },
+      {
+        "id": "scene_47",
+        "dur_s": 6.4,
+        "gen_s": 5.802,
+        "bytes": 307278
+      },
+      {
+        "id": "scene_48",
+        "dur_s": 6.72,
+        "gen_s": 6.222,
+        "bytes": 322638
+      },
+      {
+        "id": "scene_49",
+        "dur_s": 4.96,
+        "gen_s": 4.662,
+        "bytes": 238158
+      },
+      {
+        "id": "scene_50",
+        "dur_s": 4.8,
+        "gen_s": 4.471,
+        "bytes": 230478
+      },
+      {
+        "id": "scene_51",
+        "dur_s": 6.0,
+        "gen_s": 5.375,
+        "bytes": 288078
+      },
+      {
+        "id": "scene_52",
+        "dur_s": 5.08,
+        "gen_s": 4.586,
+        "bytes": 243918
+      },
+      {
+        "id": "scene_53",
+        "dur_s": 5.68,
+        "gen_s": 5.136,
+        "bytes": 272718
+      },
+      {
+        "id": "scene_54",
+        "dur_s": 5.92,
+        "gen_s": 5.282,
+        "bytes": 284238
+      },
+      {
+        "id": "scene_55",
+        "dur_s": 6.44,
+        "gen_s": 5.77,
+        "bytes": 309198
+      },
+      {
+        "id": "scene_56",
+        "dur_s": 5.76,
+        "gen_s": 5.158,
+        "bytes": 276558
+      },
+      {
+        "id": "scene_57",
+        "dur_s": 4.24,
+        "gen_s": 4.014,
+        "bytes": 203598
+      },
+      {
+        "id": "scene_58",
+        "dur_s": 5.08,
+        "gen_s": 4.601,
+        "bytes": 243918
+      },
+      {
+        "id": "scene_59",
+        "dur_s": 5.12,
+        "gen_s": 4.664,
+        "bytes": 245838
+      },
+      {
+        "id": "scene_60",
+        "dur_s": 6.36,
+        "gen_s": 5.611,
+        "bytes": 305358
+      },
+      {
+        "id": "scene_61",
+        "dur_s": 6.88,
+        "gen_s": 6.262,
+        "bytes": 330318
+      },
+      {
+        "id": "scene_62",
+        "dur_s": 4.76,
+        "gen_s": 4.331,
+        "bytes": 228558
+      },
+      {
+        "id": "scene_63",
+        "dur_s": 4.48,
+        "gen_s": 4.178,
+        "bytes": 215118
+      },
+      {
+        "id": "scene_64",
+        "dur_s": 6.4,
+        "gen_s": 5.622,
+        "bytes": 307278
+      },
+      {
+        "id": "scene_65",
+        "dur_s": 5.88,
+        "gen_s": 5.288,
+        "bytes": 282318
+      },
+      {
+        "id": "scene_66",
+        "dur_s": 5.76,
+        "gen_s": 5.15,
+        "bytes": 276558
+      },
+      {
+        "id": "scene_67",
+        "dur_s": 4.72,
+        "gen_s": 4.356,
+        "bytes": 226638
+      },
+      {
+        "id": "scene_68",
+        "dur_s": 5.8,
+        "gen_s": 5.217,
+        "bytes": 278478
+      },
+      {
+        "id": "scene_69",
+        "dur_s": 5.56,
+        "gen_s": 5.242,
+        "bytes": 266958
+      },
+      {
+        "id": "scene_70",
+        "dur_s": 5.0,
+        "gen_s": 4.502,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_71",
+        "dur_s": 6.08,
+        "gen_s": 5.461,
+        "bytes": 291918
+      },
+      {
+        "id": "scene_72",
+        "dur_s": 4.04,
+        "gen_s": 3.825,
+        "bytes": 193998
+      },
+      {
+        "id": "scene_73",
+        "dur_s": 5.48,
+        "gen_s": 5.025,
+        "bytes": 263118
+      },
+      {
+        "id": "scene_74",
+        "dur_s": 5.0,
+        "gen_s": 4.49,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_75",
+        "dur_s": 4.6,
+        "gen_s": 4.286,
+        "bytes": 220878
+      },
+      {
+        "id": "scene_76",
+        "dur_s": 5.6,
+        "gen_s": 5.05,
+        "bytes": 268878
+      },
+      {
+        "id": "scene_77",
+        "dur_s": 6.04,
+        "gen_s": 5.392,
+        "bytes": 289998
+      },
+      {
+        "id": "scene_78",
+        "dur_s": 5.2,
+        "gen_s": 4.694,
+        "bytes": 249678
+      },
+      {
+        "id": "scene_79",
+        "dur_s": 5.84,
+        "gen_s": 5.215,
+        "bytes": 280398
+      },
+      {
+        "id": "scene_80",
+        "dur_s": 6.28,
+        "gen_s": 5.591,
+        "bytes": 301518
+      },
+      {
+        "id": "scene_81",
+        "dur_s": 4.28,
+        "gen_s": 4.0,
+        "bytes": 205518
+      },
+      {
+        "id": "scene_82",
+        "dur_s": 6.0,
+        "gen_s": 5.306,
+        "bytes": 288078
+      },
+      {
+        "id": "scene_83",
+        "dur_s": 5.76,
+        "gen_s": 5.169,
+        "bytes": 276558
+      },
+      {
+        "id": "scene_84",
+        "dur_s": 4.88,
+        "gen_s": 4.45,
+        "bytes": 234318
+      },
+      {
+        "id": "scene_85",
+        "dur_s": 4.32,
+        "gen_s": 4.057,
+        "bytes": 207438
+      },
+      {
+        "id": "scene_86",
+        "dur_s": 4.88,
+        "gen_s": 4.486,
+        "bytes": 234318
+      },
+      {
+        "id": "scene_87",
+        "dur_s": 5.24,
+        "gen_s": 4.752,
+        "bytes": 251598
+      },
+      {
+        "id": "scene_88",
+        "dur_s": 5.52,
+        "gen_s": 5.032,
+        "bytes": 265038
+      },
+      {
+        "id": "scene_89",
+        "dur_s": 3.96,
+        "gen_s": 3.837,
+        "bytes": 190158
+      },
+      {
+        "id": "scene_90",
+        "dur_s": 3.96,
+        "gen_s": 3.824,
+        "bytes": 190158
+      }
+    ],
+    "speculative-biology": [
+      {
+        "id": "scene_01",
+        "dur_s": 5.32,
+        "gen_s": 4.839,
+        "bytes": 255438
+      },
+      {
+        "id": "scene_02",
+        "dur_s": 5.16,
+        "gen_s": 4.716,
+        "bytes": 247758
+      },
+      {
+        "id": "scene_03",
+        "dur_s": 7.16,
+        "gen_s": 6.4,
+        "bytes": 343758
+      },
+      {
+        "id": "scene_04",
+        "dur_s": 6.12,
+        "gen_s": 5.481,
+        "bytes": 293838
+      },
+      {
+        "id": "scene_05",
+        "dur_s": 5.84,
+        "gen_s": 5.245,
+        "bytes": 280398
+      },
+      {
+        "id": "scene_06",
+        "dur_s": 3.76,
+        "gen_s": 3.689,
+        "bytes": 180558
+      },
+      {
+        "id": "scene_07",
+        "dur_s": 5.56,
+        "gen_s": 4.974,
+        "bytes": 266958
+      },
+      {
+        "id": "scene_08",
+        "dur_s": 5.76,
+        "gen_s": 5.196,
+        "bytes": 276558
+      },
+      {
+        "id": "scene_09",
+        "dur_s": 5.12,
+        "gen_s": 4.623,
+        "bytes": 245838
+      },
+      {
+        "id": "scene_10",
+        "dur_s": 5.52,
+        "gen_s": 5.022,
+        "bytes": 265038
+      },
+      {
+        "id": "scene_11",
+        "dur_s": 5.68,
+        "gen_s": 5.113,
+        "bytes": 272718
+      },
+      {
+        "id": "scene_12",
+        "dur_s": 5.56,
+        "gen_s": 5.045,
+        "bytes": 266958
+      },
+      {
+        "id": "scene_13",
+        "dur_s": 7.2,
+        "gen_s": 6.478,
+        "bytes": 345678
+      },
+      {
+        "id": "scene_14",
+        "dur_s": 5.0,
+        "gen_s": 4.594,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_15",
+        "dur_s": 4.84,
+        "gen_s": 4.475,
+        "bytes": 232398
+      },
+      {
+        "id": "scene_16",
+        "dur_s": 6.04,
+        "gen_s": 5.486,
+        "bytes": 289998
+      },
+      {
+        "id": "scene_17",
+        "dur_s": 5.32,
+        "gen_s": 4.837,
+        "bytes": 255438
+      },
+      {
+        "id": "scene_18",
+        "dur_s": 4.6,
+        "gen_s": 4.28,
+        "bytes": 220878
+      },
+      {
+        "id": "scene_19",
+        "dur_s": 4.68,
+        "gen_s": 4.328,
+        "bytes": 224718
+      },
+      {
+        "id": "scene_20",
+        "dur_s": 5.08,
+        "gen_s": 4.658,
+        "bytes": 243918
+      },
+      {
+        "id": "scene_21",
+        "dur_s": 6.24,
+        "gen_s": 5.531,
+        "bytes": 299598
+      },
+      {
+        "id": "scene_22",
+        "dur_s": 4.2,
+        "gen_s": 3.948,
+        "bytes": 201678
+      },
+      {
+        "id": "scene_23",
+        "dur_s": 5.04,
+        "gen_s": 4.59,
+        "bytes": 241998
+      },
+      {
+        "id": "scene_24",
+        "dur_s": 4.64,
+        "gen_s": 4.246,
+        "bytes": 222798
+      },
+      {
+        "id": "scene_25",
+        "dur_s": 6.56,
+        "gen_s": 6.011,
+        "bytes": 314958
+      },
+      {
+        "id": "scene_26",
+        "dur_s": 4.08,
+        "gen_s": 3.876,
+        "bytes": 195918
+      },
+      {
+        "id": "scene_27",
+        "dur_s": 6.0,
+        "gen_s": 5.328,
+        "bytes": 288078
+      },
+      {
+        "id": "scene_28",
+        "dur_s": 5.8,
+        "gen_s": 5.18,
+        "bytes": 278478
+      },
+      {
+        "id": "scene_29",
+        "dur_s": 6.56,
+        "gen_s": 5.972,
+        "bytes": 314958
+      },
+      {
+        "id": "scene_30",
+        "dur_s": 6.4,
+        "gen_s": 5.635,
+        "bytes": 307278
+      },
+      {
+        "id": "scene_31",
+        "dur_s": 6.12,
+        "gen_s": 5.539,
+        "bytes": 293838
+      },
+      {
+        "id": "scene_32",
+        "dur_s": 5.2,
+        "gen_s": 4.787,
+        "bytes": 249678
+      },
+      {
+        "id": "scene_33",
+        "dur_s": 5.2,
+        "gen_s": 4.685,
+        "bytes": 249678
+      },
+      {
+        "id": "scene_34",
+        "dur_s": 4.76,
+        "gen_s": 4.327,
+        "bytes": 228558
+      },
+      {
+        "id": "scene_35",
+        "dur_s": 5.04,
+        "gen_s": 4.7,
+        "bytes": 241998
+      },
+      {
+        "id": "scene_36",
+        "dur_s": 5.04,
+        "gen_s": 4.576,
+        "bytes": 241998
+      },
+      {
+        "id": "scene_37",
+        "dur_s": 4.68,
+        "gen_s": 4.294,
+        "bytes": 224718
+      },
+      {
+        "id": "scene_38",
+        "dur_s": 5.0,
+        "gen_s": 4.554,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_39",
+        "dur_s": 3.72,
+        "gen_s": 3.633,
+        "bytes": 178638
+      },
+      {
+        "id": "scene_40",
+        "dur_s": 6.52,
+        "gen_s": 5.755,
+        "bytes": 313038
+      },
+      {
+        "id": "scene_41",
+        "dur_s": 5.24,
+        "gen_s": 4.851,
+        "bytes": 251598
+      },
+      {
+        "id": "scene_42",
+        "dur_s": 4.52,
+        "gen_s": 4.148,
+        "bytes": 217038
+      },
+      {
+        "id": "scene_43",
+        "dur_s": 4.92,
+        "gen_s": 4.546,
+        "bytes": 236238
+      },
+      {
+        "id": "scene_44",
+        "dur_s": 4.24,
+        "gen_s": 4.006,
+        "bytes": 203598
+      },
+      {
+        "id": "scene_45",
+        "dur_s": 4.08,
+        "gen_s": 3.848,
+        "bytes": 195918
+      },
+      {
+        "id": "scene_46",
+        "dur_s": 4.52,
+        "gen_s": 4.2,
+        "bytes": 217038
+      },
+      {
+        "id": "scene_47",
+        "dur_s": 4.4,
+        "gen_s": 4.149,
+        "bytes": 211278
+      },
+      {
+        "id": "scene_48",
+        "dur_s": 5.76,
+        "gen_s": 5.172,
+        "bytes": 276558
+      },
+      {
+        "id": "scene_49",
+        "dur_s": 4.52,
+        "gen_s": 4.15,
+        "bytes": 217038
+      },
+      {
+        "id": "scene_50",
+        "dur_s": 5.0,
+        "gen_s": 4.562,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_51",
+        "dur_s": 4.04,
+        "gen_s": 3.915,
+        "bytes": 193998
+      },
+      {
+        "id": "scene_52",
+        "dur_s": 4.08,
+        "gen_s": 3.812,
+        "bytes": 195918
+      },
+      {
+        "id": "scene_53",
+        "dur_s": 4.2,
+        "gen_s": 3.941,
+        "bytes": 201678
+      },
+      {
+        "id": "scene_54",
+        "dur_s": 5.68,
+        "gen_s": 5.249,
+        "bytes": 272718
+      },
+      {
+        "id": "scene_55",
+        "dur_s": 4.16,
+        "gen_s": 3.978,
+        "bytes": 199758
+      },
+      {
+        "id": "scene_56",
+        "dur_s": 5.4,
+        "gen_s": 4.903,
+        "bytes": 259278
+      },
+      {
+        "id": "scene_57",
+        "dur_s": 5.52,
+        "gen_s": 5.104,
+        "bytes": 265038
+      },
+      {
+        "id": "scene_58",
+        "dur_s": 5.64,
+        "gen_s": 5.109,
+        "bytes": 270798
+      },
+      {
+        "id": "scene_59",
+        "dur_s": 5.2,
+        "gen_s": 4.752,
+        "bytes": 249678
+      },
+      {
+        "id": "scene_60",
+        "dur_s": 4.96,
+        "gen_s": 4.523,
+        "bytes": 238158
+      },
+      {
+        "id": "scene_61",
+        "dur_s": 5.64,
+        "gen_s": 5.11,
+        "bytes": 270798
+      },
+      {
+        "id": "scene_62",
+        "dur_s": 3.96,
+        "gen_s": 3.7,
+        "bytes": 190158
+      },
+      {
+        "id": "scene_63",
+        "dur_s": 5.84,
+        "gen_s": 5.364,
+        "bytes": 280398
+      },
+      {
+        "id": "scene_64",
+        "dur_s": 4.96,
+        "gen_s": 4.552,
+        "bytes": 238158
+      },
+      {
+        "id": "scene_65",
+        "dur_s": 4.08,
+        "gen_s": 3.864,
+        "bytes": 195918
+      },
+      {
+        "id": "scene_66",
+        "dur_s": 4.72,
+        "gen_s": 4.349,
+        "bytes": 226638
+      },
+      {
+        "id": "scene_67",
+        "dur_s": 4.28,
+        "gen_s": 4.104,
+        "bytes": 205518
+      },
+      {
+        "id": "scene_68",
+        "dur_s": 4.16,
+        "gen_s": 4.093,
+        "bytes": 199758
+      },
+      {
+        "id": "scene_69",
+        "dur_s": 3.72,
+        "gen_s": 3.716,
+        "bytes": 178638
+      },
+      {
+        "id": "scene_70",
+        "dur_s": 4.28,
+        "gen_s": 3.995,
+        "bytes": 205518
+      },
+      {
+        "id": "scene_71",
+        "dur_s": 5.36,
+        "gen_s": 4.781,
+        "bytes": 257358
+      },
+      {
+        "id": "scene_72",
+        "dur_s": 6.44,
+        "gen_s": 5.621,
+        "bytes": 309198
+      },
+      {
+        "id": "scene_73",
+        "dur_s": 4.84,
+        "gen_s": 4.49,
+        "bytes": 232398
+      },
+      {
+        "id": "scene_74",
+        "dur_s": 4.32,
+        "gen_s": 4.064,
+        "bytes": 207438
+      },
+      {
+        "id": "scene_75",
+        "dur_s": 5.76,
+        "gen_s": 5.177,
+        "bytes": 276558
+      },
+      {
+        "id": "scene_76",
+        "dur_s": 4.76,
+        "gen_s": 4.351,
+        "bytes": 228558
+      },
+      {
+        "id": "scene_77",
+        "dur_s": 3.56,
+        "gen_s": 3.485,
+        "bytes": 170958
+      },
+      {
+        "id": "scene_78",
+        "dur_s": 4.68,
+        "gen_s": 4.292,
+        "bytes": 224718
+      },
+      {
+        "id": "scene_79",
+        "dur_s": 4.76,
+        "gen_s": 4.353,
+        "bytes": 228558
+      },
+      {
+        "id": "scene_80",
+        "dur_s": 4.32,
+        "gen_s": 4.076,
+        "bytes": 207438
+      },
+      {
+        "id": "scene_81",
+        "dur_s": 5.32,
+        "gen_s": 4.795,
+        "bytes": 255438
+      },
+      {
+        "id": "scene_82",
+        "dur_s": 4.12,
+        "gen_s": 3.945,
+        "bytes": 197838
+      },
+      {
+        "id": "scene_83",
+        "dur_s": 4.32,
+        "gen_s": 4.073,
+        "bytes": 207438
+      },
+      {
+        "id": "scene_84",
+        "dur_s": 5.52,
+        "gen_s": 5.029,
+        "bytes": 265038
+      },
+      {
+        "id": "scene_85",
+        "dur_s": 4.0,
+        "gen_s": 3.836,
+        "bytes": 192078
+      },
+      {
+        "id": "scene_86",
+        "dur_s": 5.0,
+        "gen_s": 4.587,
+        "bytes": 240078
+      },
+      {
+        "id": "scene_87",
+        "dur_s": 4.96,
+        "gen_s": 4.515,
+        "bytes": 238158
+      },
+      {
+        "id": "scene_88",
+        "dur_s": 5.4,
+        "gen_s": 4.964,
+        "bytes": 259278
+      },
+      {
+        "id": "scene_89",
+        "dur_s": 4.76,
+        "gen_s": 4.383,
+        "bytes": 228558
+      },
+      {
+        "id": "scene_90",
+        "dur_s": 3.88,
+        "gen_s": 3.7,
+        "bytes": 186318
+      }
+    ]
+  }
+}

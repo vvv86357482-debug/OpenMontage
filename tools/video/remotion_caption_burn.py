@@ -170,9 +170,16 @@ class RemotionCaptionBurn(BaseTool):
         return None
 
     def _remotion_available(self) -> bool:
-        return (
-            shutil.which("npx") is not None
-            and self._find_remotion_root() is not None
+        return False
+
+    @staticmethod
+    def _render_remotion(*args, **kwargs) -> ToolResult:
+        return ToolResult(
+            success=False,
+            error=(
+                "Remotion is not available in this environment. "
+                "Use FFmpeg caption burn (operation='burn_subtitles') instead."
+            ),
         )
 
     # ------------------------------------------------------------------ #
@@ -274,85 +281,12 @@ class RemotionCaptionBurn(BaseTool):
         highlight_color: str,
         overlays: list[dict] | None = None,
     ) -> ToolResult:
-        root = self._find_remotion_root()
-        if root is None:
-            return ToolResult(success=False, error="Remotion root not found")
-
-        # Get video duration in frames
-        dur_cmd = [
-            "ffprobe", "-v", "error",
-            "-show_entries", "format=duration",
-            "-of", "csv=p=0",
-            input_path,
-        ]
-        dur_result = self.run_command(dur_cmd)
-        dur_out = dur_result.stdout
-        duration_s = float(dur_out.strip().split("\n")[0])
-        total_frames = math.ceil(duration_s * 30)
-
-        # Detect video dimensions
-        dim_cmd = [
-            "ffprobe", "-v", "error",
-            "-select_streams", "v:0",
-            "-show_entries", "stream=width,height",
-            "-of", "csv=p=0:s=x",
-            input_path,
-        ]
-        dim_result = self.run_command(dim_cmd)
-        dim_parts = dim_result.stdout.strip().split("x")
-        width = int(dim_parts[0])
-        height = int(dim_parts[1])
-
-        # Copy video to Remotion public folder
-        pub_dir = root / "public" / "talking-head"
-        pub_dir.mkdir(parents=True, exist_ok=True)
-        video_filename = Path(input_path).name
-        dest_video = pub_dir / video_filename
-        shutil.copy2(input_path, dest_video)
-
-        # Build props JSON
-        props = {
-            "videoSrc": f"public/talking-head/{video_filename}",
-            "captions": captions,
-            "overlays": overlays or [],
-            "wordsPerPage": words_per_page,
-            "fontSize": font_size,
-            "highlightColor": highlight_color,
-        }
-        props_dir = root / "public" / "demo-props"
-        props_dir.mkdir(parents=True, exist_ok=True)
-        props_file = props_dir / f"caption-burn-{Path(input_path).stem}.json"
-        props_file.write_text(json.dumps(props, indent=2), encoding="utf-8")
-
-        # Render (use npx.cmd on Windows for subprocess compatibility)
-        import sys
-        npx_bin = "npx.cmd" if sys.platform == "win32" else "npx"
-        render_cmd = [
-            npx_bin, "remotion", "render",
-            "TalkingHead",
-            f"--props={props_file.relative_to(root)}",
-            f"--width={width}", f"--height={height}", "--fps=30",
-            f"--frames=0-{total_frames - 1}",
-            "--codec=h264", "--crf=18",
-            f"--output={str(Path(output_path).resolve())}",
-        ]
-        self.run_command(render_cmd, cwd=str(root))
-
-        if not Path(output_path).exists():
-            return ToolResult(success=False, error="Remotion render produced no output")
-
         return ToolResult(
-            success=True,
-            data={
-                "method": "remotion",
-                "output": output_path,
-                "duration_seconds": round(duration_s, 2),
-                "total_frames": total_frames,
-                "caption_count": len(captions),
-                "overlay_count": len(overlays or []),
-                "words_per_page": words_per_page,
-            },
-            artifacts=[output_path],
+            success=False,
+            error=(
+                "Remotion is banned in this environment. "
+                "Use FFmpeg caption burn (operation='burn_subtitles') instead."
+            ),
         )
 
     # ------------------------------------------------------------------ #

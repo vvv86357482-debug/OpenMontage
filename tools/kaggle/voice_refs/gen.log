@@ -1,0 +1,10 @@
+/home/codespace/.python/current/lib/python3.12/site-packages/torch/nn/modules/rnn.py:1009: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+/home/codespace/.python/current/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.
+Kokoro pipeline ready in 16.2s
+  crime-ledger: voice=am_puck dur=8.20s -> /workspaces/OpenMontage/tools/kaggle/voice_refs/crime-ledger_ref.wav
+  mythology-slavic: voice=am_fenrir dur=7.67s -> /workspaces/OpenMontage/tools/kaggle/voice_refs/mythology-slavic_ref.wav
+  speculative-biology: voice=ef_dora dur=7.22s -> /workspaces/OpenMontage/tools/kaggle/voice_refs/speculative-biology_ref.wav
+Done.

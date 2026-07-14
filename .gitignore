@@ -39,6 +39,18 @@ corpus/
 music_library/
 
 # Environment & credentials
+# Kaggle credentials
+kaggle.json
+kernel-metadata.json
+
+# Secrets directories
+.secrets/
+secrets/
+
+# Private keys / certificates
+*.key
+*.pem
+
 .env
 .env.local
 *.env

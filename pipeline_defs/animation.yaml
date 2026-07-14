@@ -1,4 +1,5 @@
 name: animation
+render_runtime: ffmpeg
 version: "2.0"
 description: >
   Animation-first pipeline for motion graphics, diagram-led explainers, kinetic typography,

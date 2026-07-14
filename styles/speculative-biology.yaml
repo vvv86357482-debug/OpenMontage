@@ -1,0 +1,174 @@
+metadata:
+  render_runtime: ffmpeg
+identity:
+  name: Speculative Biology
+  category: nature-documentary
+  mood: clinical wonder, speculative grounded, authoritative calm
+  pace: slow
+  best_for: Hypothetical organisms, alien ecosystems, convergent evolution scenarios,
+    deep-time biological speculation, plausible life on other worlds
+visual_language:
+  color_palette:
+    primary:
+    - '#1A3C34'
+    - '#2F4F4F'
+    accent:
+    - '#FF6B35'
+    - '#FFD700'
+    background: '#0B1D17'
+    text: '#E8DCC8'
+    muted: '#4A7C6F'
+    biolum: '#00FFB3'
+    amber: '#FFBF00'
+  composition: rule-of-thirds, clinical isolation, macro lens feel, deep focus,
+    scientific illustration plates, specimen photography
+  texture: scientific illustration texture, field microscope slides, archival
+    research photographs, clean digital render, no artistic stylization beyond
+    scientific accuracy
+typography:
+  headings:
+    font: Cinzel
+    weight: 700
+    tracking: 0.05em
+  body:
+    font: Crimson Text
+    weight: 400
+    line_height: 1.7
+  code:
+    font: Fira Code
+    weight: 400
+  stat_card:
+    font: Cinzel
+    weight: 800
+    size_multiplier: 3.0
+  scale_system: major_third
+  weight_matrix:
+    title: 800
+    heading: 700
+    body: 400
+    caption: 300
+motion:
+  transitions:
+  - dissolve
+  - slow-zoom
+  - fade-through-mist
+  animation_style: ease-in-out, meditative, organic, no bounce
+  pacing_rules:
+    min_scene_hold_seconds: 4.0
+    max_scene_hold_seconds: 12
+    text_card_hold_seconds: 4.5
+    stat_card_hold_seconds: 3.5
+    transition_duration_seconds: 0.8
+  entrance: slow fade-up through mist (0.8s) or tree-frame reveal
+  exit: slow dissolve into mist (1.0s)
+audio:
+  voice_style: authoritative nature-documentary narrator — David Attenborough
+    meets Carl Sagan, precise terminology, measured wonder, evidence first then
+    speculation clearly labeled
+  # FINAL VOICE (2026-07-11): nicholas_james_bridgewater — real CC0 human voice, cloned via Chatterbox.
+  #   audio_prompt_path (canonical CC0 source): https://raw.githubusercontent.com/OwenTyme/voice-zero/main/voices/nicholas_james_bridgewater.flac
+  #   local mirror: tools/kaggle/voice_refs/real/nicholas_james_bridgewater.flac
+  #   attribution: LibriVox reader 1618 — "Celebration of Dialects and Accents, Vol 2, Track 13" (English, Mid-Atlantic, documentary)
+  #   license: CC0 1.0 Universal (public-domain dedication) via OwenTyme/voice-zero; source reading is public domain on LibriVox
+  tts_voice: nicholas_james_bridgewater
+  music_mood: dark ambient, neoclassical with field recording textures, distant
+    whale song, insect choruses, wind through alien flora, minimal piano
+  music_volume: 0.05
+  sfx_style: forest ambient (wind, creaking wood, water), distant owl, crackling
+    fire, ritual bell, paper rustle
+  ducking_threshold_db: -4
+asset_generation:
+  image_prompt_prefix: 'speculative biology illustration, scientific documentary
+    style, clinical precision, clean natural lighting, deep depth of field, macro
+    photography feel, field research station aesthetic, specimen collection
+    context, National Geographic scientific illustration, accurate anatomy and
+    ecology, plausible evolutionary adaptation,
+
+    '
+  image_negative_prompt: cartoon, anime, video game, fantasy, magic, monsters,
+    dragons, wizards, neon, cyberpunk, sci-fi UI, holograms, digitally abstract,
+    anthropomorphic animals with human clothes, talking animals, mythical creatures,
+    ghosts, vampires, zombies, undead, horror tropes
+  diagram_style: scientific illustration plates, field notebook sketches, taxonomic
+    keys, phylogenetic trees, habitat maps with scale bars, measurement annotations,
+    clean line work with minimal shading
+  consistency_anchors:
+  - 'Deep forest green (#1A3C34 / #2F4F4F) as primary background in every scene'
+  - 'Bioluminescent teal (#00FFB3) for biological light sources only'
+  - 'Amber (#FFD700 / #FFBF00) for warning/specimen highlights'
+  - Clinical isolation — organisms shown in habitat or specimen context, never cute or personified
+  - 'Scientific accuracy first — if it violates known biology, label it speculative'
+  - 'No text burned into images — use text card overlays for labels'
+  - Deep focus throughout — no shallow depth-of-field artistic blur
+overlays:
+  stat_card:
+    bg: rgba(11, 29, 23, 0.85)
+    border: '#00FFB3'
+    radius: 4
+    shadow: 0 2px 12px rgba(0, 0, 0, 0.6)
+  key_term:
+    bg: rgba(26, 60, 52, 0.3)
+    text: '#00FFB3'
+    radius: 4
+  text_card:
+    bg: '#F5F5DC'
+    text: '#1A1205'
+    border: '#2F4F4F'
+    radius: 2
+    shadow: 0 2px 8px rgba(0, 0, 0, 0.4)
+  chart_label:
+    bg: '#0B1D17'
+    text: '#E8DCC8'
+    border: '#4A7C6F'
+    radius: 4
+    shadow: none
+quality_rules:
+- Minimum contrast ratio 4.5:1 for all text
+- Maximum 3 accent colors on screen (deep green, biolum teal, amber)
+- Scientific accuracy first — if anatomy violates known biology, clearly mark as speculative
+- No text burned into generated images — use text card overlays for labels
+- Deep focus throughout — macro lens feel, clinical precision
+- Pacing: measured, authoritative calm — never sensationalized
+- Every organism scene shows its ecological niche or evolutionary pressure
+chart_palette:
+- '#1A3C34'
+- '#00FFB3'
+- '#FFD700'
+- '#F5F5DC'
+- '#2F4F4F'
+- '#FF6B35'
+color_rules:
+  harmony_type: analogous
+  contrast_validation: true
+  colorblind_safe: true
+voice_system:
+  persona: Nature Documentarian
+  # FINAL VOICE: nicholas_james_bridgewater (real CC0, cloned via Chatterbox — see audio.tts_voice comment for attribution + audio_prompt_path)
+  voice: nicholas_james_bridgewater
+  sentence_rhythm: Authoritative calm — state observed fact, then evolutionary implication,
+    then clearly labeled speculation
+  retention_hooks: A specific biological mechanism or evolutionary pressure every ~60s
+  cadence_rule: Slow, deliberate, let the science breathe — speculation is marked with
+    "what if" or "could have"
+  forbidden_words:
+  - magic
+  - mythical
+  - legendary
+  - fantasy
+  - incredible
+  - unbelievable
+  - shocking
+  closing_style: Always a clear evolutionary or ecological takeaway — what this tells
+    us about life's possibilities
+  script_enforcement: HARD CONSTRAINT — scripts violating forbidden_words or missing
+    closing_style must fail validation
+output:
+  resolution: 1920x1080
+  video_codec: libx264
+  crf: 18
+  preset: slow
+  pixel_format: yuv420p
+  fps: 24
+  audio_codec: aac
+  audio_bitrate: 192k
+  audio_sample_rate: 44100

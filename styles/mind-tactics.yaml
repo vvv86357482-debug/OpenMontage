@@ -1,0 +1,156 @@
+metadata:
+  render_runtime: ffmpeg
+identity:
+  name: Mind Tactics
+  category: psychology-explainer
+  mood: calm, precise, accessible
+  pace: moderate
+  best_for: Psychology and behavioral science explainers, social experiment breakdowns,
+    cognitive bias deep-dives, non-clinical educational content
+visual_language:
+  color_palette:
+    primary:
+    - '#2E86C1'
+    - '#1A5276'
+    accent:
+    - '#E67E22'
+    - '#27AE60'
+    background: '#FFFFFF'
+    text: '#1A1A2E'
+    muted: '#7F8C8D'
+  composition: multi-panel journal figure layout (a/b/c/d panels), grid-aligned, generous
+    whitespace, clean margins
+  texture: flat, clinical, no grain, no vignette, no dramatic shadows — textbook figure
+    aesthetic
+typography:
+  headings:
+    font: Inter
+    weight: 600
+    tracking: '0'
+  body:
+    font: Inter
+    weight: 400
+    line_height: 1.6
+  code:
+    font: JetBrains Mono
+    weight: 400
+  stat_card:
+    font: Inter
+    weight: 700
+    size_multiplier: 2.5
+  scale_system: major_third
+  weight_matrix:
+    title: 700
+    heading: 600
+    body: 400
+    caption: 400
+motion:
+  transitions:
+  - fade
+  - dissolve
+  animation_style: ease-out, deliberate, near-static, no bounce, no overshoot
+  pacing_rules:
+    min_scene_hold_seconds: 3.5
+    max_scene_hold_seconds: 8
+    text_card_hold_seconds: 4.0
+    stat_card_hold_seconds: 3.0
+    transition_duration_seconds: 0.5
+  entrance: minimal fade-up (0.8s) with slight scale 0.98 -> 1.0
+  exit: fade-out (0.5s)
+audio:
+  voice_style: calm, hushed, precise — setup then experiment then result then implication
+    rhythm, a specific number or finding every ~60s, never diagnostic or clinical-labeling
+  tts_voice: ef_dora
+  music_mood: minimal ambient soft pad, barely noticeable, understated
+  music_volume: 0.05
+  sfx_style: soft pen strokes, subtle paper clicks, quiet data-point chimes
+  ducking_threshold_db: -2
+asset_generation:
+  image_prompt_prefix: 'scientific journal figure illustration, clean white background,
+    flat clinical lighting, no shadows, academic diagram style, precise line work,
+    data visualization aesthetic, multi-panel layout, condition labels in small caps,
+    error bars and significance markers, minimal texture, approachable illustration,
+
+    '
+  image_negative_prompt: cyberpunk aesthetic, neon, brain circuit imagery, lightbulb
+    idea clichés, overly futuristic tech, cartoon brains, dark gritty, psychedelic,
+    horror imagery, gore, blood, sensationalist framing, neon text, dark backgrounds,
+    dystopian
+  diagram_style: thin clean lines, error bars, significance markers, labeled panels,
+    sans-serif annotations
+  consistency_anchors:
+  - Clean white (#FFFFFF) background in every scene — no dark backgrounds
+  - Data blue (#2E86C1) for primary data, effect orange (#E67E22) for effects, significance
+    green (#27AE60) for significance
+  - No film grain, no vignette, no dramatic angles — flat clinical only
+  - Multi-panel layout (a/b/c/d) for experiments — single-panel only for establishing
+    shots
+  - Error bars on all data visualizations
+  - Human subjects shown naturally — no stock-photo exaggeration
+overlays:
+  stat_card:
+    bg: '#FFFFFF'
+    border: '#2E86C1'
+    radius: 8
+    shadow: 0 1px 4px rgba(0,0,0,0.06)
+  key_term:
+    bg: '#EBF5FB'
+    text: '#1A5276'
+    radius: 4
+  text_card:
+    bg: '#FFFFFF'
+    text: '#1A1A2E'
+    border: '#7F8C8D'
+    radius: 4
+    shadow: none
+  chart_label:
+    bg: '#F8F9FA'
+    text: '#7F8C8D'
+quality_rules:
+- Minimum contrast ratio 4.5:1 for all text
+- Maximum 3 accent colors on screen (data-blue, effect-orange, significance-green)
+- White background in every scene — never dark or moody
+- No text burned into generated images — use text card overlays
+- Every data visualization includes error bars or confidence interval
+- Error bars must be visible at 720p — minimum 2px stroke width
+- Calm, educational tone — never condescending or 'wow-factor' sensationalism
+- No 'lightbulb moment' or idea-icon clichés
+chart_palette:
+- '#2E86C1'
+- '#E67E22'
+- '#27AE60'
+- '#7F8C8D'
+- '#1A1A2E'
+- '#FFFFFF'
+color_rules:
+  harmony_type: analogous
+  contrast_validation: true
+  colorblind_safe: true
+voice_system:
+  persona: Lab Notebook Narrator
+  voice: ef_dora
+  sentence_rhythm: Setup then experiment then result then implication
+  retention_hooks: A specific number or finding every ~60s
+  cadence_rule: Hushed, precise, never diagnostic — descriptive only
+  forbidden_words:
+  - disorder
+  - toxic
+  - narcissist
+  - manipulate
+  - victim
+  - sick
+  - damaged
+  - broken
+  closing_style: Always the boundary condition of the effect, never generic advice
+  script_enforcement: HARD CONSTRAINT — scripts using forbidden_words or missing closing_style
+    must fail validation
+output:
+  resolution: 1920x1080
+  video_codec: libx264
+  crf: 20
+  preset: medium
+  pixel_format: yuv420p
+  fps: 30
+  audio_codec: aac
+  audio_bitrate: 192k
+  audio_sample_rate: 44100

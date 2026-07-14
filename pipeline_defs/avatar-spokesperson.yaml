@@ -1,4 +1,5 @@
 name: avatar-spokesperson
+render_runtime: ffmpeg
 version: "2.0"
 description: >
   Presenter-led avatar pipeline for spokesperson videos, internal updates, onboarding,

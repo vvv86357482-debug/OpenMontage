@@ -1,0 +1,170 @@
+metadata:
+  render_runtime: ffmpeg
+identity:
+  name: Slavic Mythos
+  category: folklore-documentary
+  mood: mystical, ancient,森林深处
+  pace: slow
+  best_for: Slavic mythology, forest spirits, household deities, pre-Christian folklore,
+    Eastern European folk traditions
+visual_language:
+  color_palette:
+    primary:
+    - '#1B4D3E'
+    - '#2D5A27'
+    accent:
+    - '#C41E3A'
+    - '#FFD700'
+    background: '#0F1A14'
+    text: '#E8DCC8'
+    muted: '#6B8E23'
+    birch: '#F5F5DC'
+    ember: '#FF6B35'
+  composition: rule-of-thirds, deep forest perspective, mist layering, ancient tree
+    framing, World Tree axis composition
+  texture: woodcut print texture, folk embroidery patterns, birch bark texture,
+    ember glow, mist diffusion, oil paint impasto for gods, pencil sketch for spirits
+typography:
+  headings:
+    font: Cinzel
+    weight: 700
+    tracking: 0.05em
+  body:
+    font: Crimson Text
+    weight: 400
+    line_height: 1.7
+  code:
+    font: Fira Code
+    weight: 400
+  stat_card:
+    font: Cinzel
+    weight: 800
+    size_multiplier: 3.0
+  scale_system: major_third
+  weight_matrix:
+    title: 800
+    heading: 700
+    body: 400
+    caption: 300
+motion:
+  transitions:
+  - dissolve
+  - slow-zoom
+  - fade-through-mist
+  animation_style: ease-in-out, meditative, organic, no bounce
+  pacing_rules:
+    min_scene_hold_seconds: 4.0
+    max_scene_hold_seconds: 12
+    text_card_hold_seconds: 4.5
+    stat_card_hold_seconds: 3.5
+    transition_duration_seconds: 0.8
+  entrance: slow fade-up through mist (0.8s) or tree-frame reveal
+  exit: slow dissolve into mist (1.0s)
+audio:
+  voice_style: measured folklore scholar — authoritative yet wonder-struck, evidence
+    fromPrimary Chronicle and folk collections,then implication for modern belief,
+    closing with open question to the old ways
+  # FINAL VOICE (2026-07-11): padraig_o'hiceadha-lyrical — real CC0 human voice, cloned via Chatterbox.
+  #   audio_prompt_path (canonical CC0 source): https://raw.githubusercontent.com/OwenTyme/voice-zero/main/voices/padraig_o'hiceadha-lyrical.flac
+  #   local mirror: tools/kaggle/voice_refs/real/padraig_o'hiceadha-lyrical.flac
+  #   attribution: LibriVox reader 2588 — "Celebration of Dialects and Accents, Vol 1, Track 2" (Irish, lyrical)
+  #   license: CC0 1.0 Universal (public-domain dedication) via OwenTyme/voice-zero; source reading is public domain on LibriVox
+  tts_voice: padraig_o'hiceadha-lyrical
+  music_mood: dark ambient, neoclassical with Slavic folk motifs, distant hurdy-gurdy,
+    bone flute, forest field recordings
+  music_volume: 0.05
+  sfx_style: forest ambient (wind, creaking wood, water), distant owl, crackling fire,
+    ritual bell, paper rustle
+  ducking_threshold_db: -4
+asset_generation:
+  image_prompt_prefix: 'Slavic folklore scene, ancient forest atmosphere, deep emerald
+    and moss green palette, wooden texture, mist diffusion, folk art motifs, Slavic
+    pagan aesthetic, pre-Christian ritual, World Tree composition, birch bark and
+    ember glow, oil painting meets woodcut print texture, 2.35:1 letterbox,
+
+    '
+  image_negative_prompt: modern clothing, electric lighting, smartphones, digital
+    screens, contemporary architecture, neon signs, plastic, modern weapons, anime
+    aesthetic, cartoon style, fantasy game UI, Western medieval armor, Greek/Roman
+    architecture, Egyptian motifs, Norse runes
+  diagram_style: folk embroidery border patterns, birch bark texture labels, Slavic
+    knotwork dividers, hand-drawn ink lines with woodcut texture
+  consistency_anchors:
+  - 'Deep forest green (#1B4D3E / #2D5A27) as primary background in every scene'
+  - 'Slavic red (#C41E3A) for ritual/emphasis — used sparingly, never as fill'
+  - 'Birch white (#F5F5DC) for text cards and bone/skull motifs'
+  - 'Ember orange (#FF6B35) for fire, hearth, and domestic spirit scenes'
+  - Mist diffusion on every image — softens edges, creates depth
+  - 'No clean modern surfaces — all textures are organic: wood, bark, cloth, skin'
+  - 'Every spirit/god scene includes a natural element: tree, water, fire, or sky'
+overlays:
+  stat_card:
+    bg: rgba(15, 26, 20, 0.85)
+    border: '#C41E3A'
+    radius: 4
+    shadow: 0 2px 12px rgba(0, 0, 0, 0.6)
+  key_term:
+    bg: rgba(27, 77, 62, 0.3)
+    text: '#C41E3A'
+    radius: 4
+  text_card:
+    bg: '#F5F5DC'
+    text: '#1A1205'
+    border: '#2D5A27'
+    radius: 2
+    shadow: 0 2px 8px rgba(0, 0, 0, 0.4)
+  chart_label:
+    bg: '#0F1A14'
+    text: '#E8DCC8'
+    border: '#6B8E23'
+    radius: 4
+    shadow: none
+quality_rules:
+- Minimum contrast ratio 4.5:1 for all text
+- Maximum 3 accent colors on screen (forest green, Slavic red, ember orange)
+- Deep forest background in every scene — never bright or sterile
+- No text burned into generated images — use text card overlays
+- Mist diffusion on every image — creates atmospheric depth
+- Pacing: measured, mystical — never sensationalized or rapid-fire
+- Every spirit/god scene must include its Domain element (tree, water, fire, hearth)
+chart_palette:
+- '#1B4D3E'
+- '#C41E3A'
+- '#FFD700'
+- '#F5F5DC'
+- '#2D5A27'
+- '#FF6B35'
+color_rules:
+  harmony_type: analogous
+  contrast_validation: true
+  colorblind_safe: true
+voice_system:
+  persona: Folklore Scholar
+  # FINAL VOICE: padraig_o'hiceadha-lyrical (real CC0, cloned via Chatterbox — see audio.tts_voice comment for attribution + audio_prompt_path)
+  voice: padraig_o'hiceadha-lyrical
+  sentence_rhythm: Measured authority with wonder — cite source, then implication,
+    then open question to the old ways
+  retention_hooks: A specific folklore motif or primary source reference every ~60s
+  cadence_rule: Slow, deliberate, let the ancient material breathe — never rushed
+  forbidden_words:
+  - incredible
+  - unbelievable
+  - shocking
+  - fantasy
+  - magic
+  - monstrous
+  - evil
+  closing_style: Always an open question to the old ways — what did they know that
+    we have forgotten?
+  script_enforcement: HARD CONSTRAINT — scripts violating forbidden_words or missing
+    closing_style must fail validation
+output:
+  resolution: 1920x1080
+  video_codec: libx264
+  crf: 18
+  preset: slow
+  pixel_format: yuv420p
+  fps: 24
+  audio_codec: aac
+  audio_bitrate: 192k
+  audio_sample_rate: 44100

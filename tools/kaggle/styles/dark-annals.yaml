@@ -1,0 +1,148 @@
+metadata:
+  render_runtime: ffmpeg
+identity:
+  name: Dark Annals
+  category: historical-documentary
+  mood: atmospheric, somber, measured
+  pace: slow
+  best_for: Dark historical narratives, medieval/gothic topics, biographical deep-dives,
+    institutional-failure stories
+visual_language:
+  color_palette:
+    primary:
+    - '#8B4513'
+    - '#654321'
+    accent:
+    - '#D4AF37'
+    - '#B8860B'
+    background: '#1A1205'
+    text: '#E8DCC8'
+    muted: '#8B7355'
+    candlelight: '#FFB347'
+  composition: rule-of-thirds, centered subjects, heavy vignette, 2.35:1 letterbox
+    feel
+  texture: oil-painting and engraving texture, 35mm film grain, parchment texture,
+    ink and gold leaf accents
+typography:
+  headings:
+    font: Cinzel
+    weight: 700
+    tracking: 0.05em
+  body:
+    font: Crimson Text
+    weight: 400
+    line_height: 1.7
+  code:
+    font: Fira Code
+    weight: 400
+  stat_card:
+    font: Cinzel
+    weight: 800
+    size_multiplier: 3.0
+  scale_system: major_third
+  weight_matrix:
+    title: 800
+    heading: 700
+    body: 400
+    caption: 300
+motion:
+  transitions:
+  - fade
+  - dissolve
+  - slow-zoom
+  animation_style: ease-in-out, slow, meditative, no bounce
+  pacing_rules:
+    min_scene_hold_seconds: 4.0
+    max_scene_hold_seconds: 12
+    text_card_hold_seconds: 4.5
+    stat_card_hold_seconds: 3.5
+    transition_duration_seconds: 0.8
+  entrance: slow zoom-in (1.0 -> 1.04 over 3s) or gentle fade-up
+  exit: slow fade-out (0.8s)
+audio:
+  voice_style: dry, measured, deadpan archivist — sarcastic but never shocked by horror,
+    short facts alternating with longer atmospheric sentences, deliberate 'wait, what?'
+    pauses every ~60s
+  tts_voice: am_fenrir
+  music_mood: dark ambient, neoclassical, distant organ or string drones
+  music_volume: 0.06
+  sfx_style: subtle creaks, distant whispers, parchment rustle, quiet church bells
+  ducking_threshold_db: -4
+asset_generation:
+  image_prompt_prefix: 'period-accurate medieval/gothic scene, oil painting and engraving
+    texture, dramatic chiaroscuro lighting from upper-left, single warm candlelight
+    source, desaturated amber sepia gold palette, heavy vignette, parchment texture,
+    ink and gold leaf accents, painted illustration style, 2.35:1 letterbox,
+
+    '
+  image_negative_prompt: modern clothing, cars, sneakers, jeans, smartphones, digital
+    screens, electric lighting, power lines, contemporary architecture, modern furniture,
+    airplanes, satellites, anachronistic objects, text overlays, watermarks, neon
+    signs, plastic, modern weapons
+  diagram_style: illuminated manuscript borders, gothic initials, hand-drawn ink lines
+  consistency_anchors:
+  - 'Amber/sepia/gold palette (#D4AF37, #B8860B) as primary accent in every scene'
+  - Single warm candlelight source from upper-left — no other light sources
+  - Heavy vignette on every image — cinematic depth
+  - 35mm film grain texture throughout
+  - Parchment/aged paper texture in backgrounds and overlays
+  - No modern elements whatsoever — verify every detail against period reference
+overlays:
+  stat_card:
+    bg: rgba(26, 18, 5, 0.85)
+    border: '#D4AF37'
+    radius: 4
+    shadow: 0 2px 12px rgba(0,0,0,0.6)
+  key_term:
+    bg: rgba(139, 115, 85, 0.3)
+    text: '#D4AF37'
+    radius: 4
+  text_card:
+    bg: '#E8DCC8'
+    text: '#1A1205'
+    border: '#B8860B'
+    radius: 2
+    shadow: 0 2px 8px rgba(0,0,0,0.4)
+quality_rules:
+- Minimum contrast ratio 4.5:1 for all text
+- Every image must pass anachronism check before use
+- No text burned into generated images — use text card overlays instead
+- Hold establishing shots for 4s minimum
+- Candlelight is the ONLY warm light source — no cool-white fill
+- Vignette on every image scene — creates cinematic depth
+- 'Pacing: measured, atmospheric — never sensationalized or rapid-fire'
+chart_palette:
+- '#D4AF37'
+- '#B8860B'
+- '#8B4513'
+- '#654321'
+- '#E8DCC8'
+- '#FFB347'
+color_rules:
+  harmony_type: analogous
+  contrast_validation: true
+  colorblind_safe: true
+voice_system:
+  persona: Deadpan Archivist
+  voice: am_fenrir
+  sentence_rhythm: Short punchy facts alternating with longer atmospheric sentences
+  retention_hooks: '''Wait, what?'' rhetorical pause every ~60s (0.4s silence inserted
+    before it in TTS)'
+  cadence_rule: Never rushed — let atmospheric sentences breathe
+  forbidden_words:
+  - incredible
+  - unbelievable
+  - shocking
+  closing_style: Always a dry philosophical observation, never a summary
+  script_enforcement: HARD CONSTRAINT — scripts violating forbidden_words or missing
+    closing_style must fail validation
+output:
+  resolution: 1920x1080
+  video_codec: libx264
+  crf: 18
+  preset: slow
+  pixel_format: yuv420p
+  fps: 24
+  audio_codec: aac
+  audio_bitrate: 192k
+  audio_sample_rate: 44100

@@ -1,0 +1,55 @@
+{
+  "slot_max_seconds": 12.0,
+  "slot_shot_types": [
+    "body_kenburns",
+    "generated"
+  ],
+  "flags_by_channel": {
+    "crime-ledger": [],
+    "mythology-slavic": [],
+    "speculative-biology": [
+      {
+        "id": "scene_13",
+        "shot_type": "body_kenburns",
+        "duration_seconds": 12.4,
+        "max_seconds": 12.0,
+        "image_prompt": "evolutionary constraint diagram, energy budgets, predator-prey dynamics, clinica"
+      },
+      {
+        "id": "scene_40",
+        "shot_type": "body_kenburns",
+        "duration_seconds": 12.08,
+        "max_seconds": 12.0,
+        "image_prompt": "human observer documenting beetle, narrative imposed on biology, documentary con"
+      },
+      {
+        "id": "scene_43",
+        "shot_type": "body_kenburns",
+        "duration_seconds": 13.12,
+        "max_seconds": 12.0,
+        "image_prompt": "soil samples, deep sea vents, canopy epiphytes, undiscovered proofs, scientific "
+      },
+      {
+        "id": "scene_48",
+        "shot_type": "body_kenburns",
+        "duration_seconds": 14.08,
+        "max_seconds": 12.0,
+        "image_prompt": "historical accident diagram, mutation timing, environmental pressure, lucky comb"
+      },
+      {
+        "id": "scene_75",
+        "shot_type": "body_kenburns",
+        "duration_seconds": 13.68,
+        "max_seconds": 12.0,
+        "image_prompt": "specialized proteins, reinforced membranes, catalytic enzymes, eighty million ye"
+      },
+      {
+        "id": "scene_83",
+        "shot_type": "body_kenburns",
+        "duration_seconds": 13.48,
+        "max_seconds": 12.0,
+        "image_prompt": "human as new species, beetle as elder, senior researcher metaphor, clinical diag"
+      }
+    ]
+  }
+}

@@ -1,3 +1,6 @@
+metadata:
+  render_runtime: ffmpeg
+
 identity:
   name: "Flat Motion Graphics"
   category: motion-graphics

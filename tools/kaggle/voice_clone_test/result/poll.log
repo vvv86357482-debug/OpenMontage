@@ -1,0 +1,38 @@
+[15:28:57] monitor start
+[15:28:58] forts845/openmontage-voice-clone-candidate-test has status "KernelWorkerStatus.RUNNING"
+[15:30:00] forts845/openmontage-voice-clone-candidate-test has status "KernelWorkerStatus.RUNNING"
+[15:31:02] forts845/openmontage-voice-clone-candidate-test has status "KernelWorkerStatus.RUNNING"
+[15:32:03] forts845/openmontage-voice-clone-candidate-test has status "KernelWorkerStatus.COMPLETE"
+terminal -> pulling
+pull rc=0
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/clone_test_manifest.json
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/crime-ledger/cori_samuel.flac
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/crime-ledger/cori_samuel_ref.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/crime-ledger/cori_samuel_test.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/crime-ledger/david_wales.flac
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/crime-ledger/david_wales_ref.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/crime-ledger/david_wales_test.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/crime-ledger/simon_evers.flac
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/crime-ledger/simon_evers_ref.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/crime-ledger/simon_evers_test.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/mythology-slavic/andy.flac
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/mythology-slavic/andy_ref.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/mythology-slavic/andy_test.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/mythology-slavic/caden_vaughn_clegg-gravel.flac
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/mythology-slavic/caden_vaughn_clegg-gravel_ref.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/mythology-slavic/caden_vaughn_clegg-gravel_test.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/mythology-slavic/padraig_o'hiceadha-lyrical.flac
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/mythology-slavic/padraig_o'hiceadha-lyrical_ref.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/mythology-slavic/padraig_o'hiceadha-lyrical_test.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/speculative-biology/clayton_j_smith.flac
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/speculative-biology/clayton_j_smith_ref.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/speculative-biology/clayton_j_smith_test.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/speculative-biology/greg_golding.flac
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/speculative-biology/greg_golding_ref.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/speculative-biology/greg_golding_test.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/speculative-biology/nicholas_james_bridgewater.flac
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/speculative-biology/nicholas_james_bridgewater_ref.wav
+Output file downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/clone_test/speculative-biology/nicholas_james_bridgewater_test.wav
+Kernel log downloaded to /workspaces/OpenMontage/tools/kaggle/voice_clone_test/result/openmontage-voice-clone-candidate-test.log 
+
+

@@ -1,0 +1,773 @@
+{
+  "project_id": "bombardier-beetle-proof",
+  "channel": "speculative-biology",
+  "title": "The Bombardier Beetle's Proof: Evolution's Explosive Innovation",
+  "topic": "Bombardier beetle explosive defense mechanism, convergent evolution, and the principles of speculative biology grounded in real evolutionary mechanics",
+  "persona": "Nature Documentarian",
+  "tts_voice": "am_fenrir",
+  "sources": [
+    {
+      "title": "Bombardier Beetle Encyclopedia of Life",
+      "author": "Various",
+      "publisher": "Encyclopedia of Life / Smithsonian",
+      "year": "2020",
+      "type": "online_reference",
+      "accessed": "2026-07-10",
+      "translation_note": null
+    },
+    {
+      "title": "The Bombardier Beetle: Anatomy and Chemistry of Defense",
+      "author": "Aneshansley, D. J.",
+      "publisher": "Science",
+      "year": "1968",
+      "type": "primary_research",
+      "accessed": "2026-07-10",
+      "translation_note": null
+    },
+    {
+      "title": "Convergent Evolution in Insect Defense Mechanisms",
+      "author": "Eisner, T.",
+      "publisher": "Harvard University Press",
+      "year": "2003",
+      "type": "academic_monograph",
+      "accessed": "2026-07-10",
+      "translation_note": null
+    },
+    {
+      "title": "The Blind Watchmaker",
+      "author": "Dawkins, Richard",
+      "publisher": "W. W. Norton",
+      "year": "1986",
+      "type": "academic_book",
+      "accessed": "2026-07-10",
+      "translation_note": null
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_01",
+      "type": "hook",
+      "duration_seconds": 11.52,
+      "narration": "In the Australian outback, a beetle defends itself with chemistry. Explosive chemistry. One milligram",
+      "image_prompt": "Australian outback, bombardier beetle on bark, macro photography, scientific illustration, clinical precision",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_02",
+      "type": "body",
+      "duration_seconds": 8.48,
+      "narration": "This is not speculative thought. This is real biology. The bombardier beetle fires boiling",
+      "image_prompt": "bombardier beetle anatomy, explosive reaction diagram, boiling liquid spray, scientific illustration",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_03",
+      "type": "body",
+      "duration_seconds": 11.16,
+      "narration": "The mechanism is elegant. Two chambers. Hydroquinone and hydrogen peroxide. Mixing triggers explosion. No",
+      "image_prompt": "bombardier beetle internal anatomy, two chemical chambers, reaction diagram, scientific plate",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_04",
+      "type": "body",
+      "duration_seconds": 10.68,
+      "narration": "The beetle rotates its abdomen. The explosion propels liquid forward. Recoil is absorbed. Directional",
+      "image_prompt": "beetle abdomen rotation, directional spray pattern, recoil mechanism, scientific illustration",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_05",
+      "type": "body",
+      "duration_seconds": 11.36,
+      "narration": "Predators learn quickly. Birds. Spiders. Reptiles. One encounter teaches avoidance for life.",
+      "image_prompt": "bird attacking bombardier beetle, explosion moment, predator learning, field photography style",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_06",
+      "type": "body",
+      "duration_seconds": 6.48,
+      "narration": "But here is the question. If one beetle can do this, why not others?",
+      "image_prompt": "chemical structure of hydroquinone, comparative biochemistry, evolutionary tree, clinical diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_07",
+      "type": "body",
+      "duration_seconds": 11.44,
+      "narration": "Convergent evolution suggests it should happen elsewhere. Same pressure. Same chemistry. Different solution.",
+      "image_prompt": "convergent evolution diagram, multiple species developing same trait, phylogenetic tree",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_08",
+      "type": "body",
+      "duration_seconds": 9.16,
+      "narration": "What if a spider developed the same mechanism? Not web-building. Not venom. Explosive defense.",
+      "image_prompt": "spider with bombardier beetle mechanism, hypothetical convergent evolution, scientific speculation",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_09",
+      "type": "body",
+      "duration_seconds": 9.68,
+      "narration": "Or a frog. Skin glands instead of abdominal chambers. A chemical cocktail expelled on",
+      "image_prompt": "frog skin glands, explosive chemical defense, amphibian anatomy, speculative illustration",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_10",
+      "type": "body",
+      "duration_seconds": 8.88,
+      "narration": "The physics are identical. The biology is different. The outcome is the same: survival",
+      "image_prompt": "physics diagram, chemical reaction chain, survival outcome, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_11",
+      "type": "body",
+      "duration_seconds": 9.64,
+      "narration": "This is speculative biology. Not speculative thought. Not myth. A thought experiment grounded in",
+      "image_prompt": "evolutionary mechanics diagram, thought experiment framework, scientific method, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_12",
+      "type": "body",
+      "duration_seconds": 9.96,
+      "narration": "The bombardier beetle exists. Its chemistry is documented. Its mechanism is understood. Everything beyond",
+      "image_prompt": "documented beetle specimen, chemistry lab analysis, mechanism understood, scientific truth",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_13",
+      "type": "body",
+      "duration_seconds": 12.4,
+      "narration": "But speculation has rules. It must respect evolutionary constraint. Energy budgets. Materials available. Predator-prey",
+      "image_prompt": "evolutionary constraint diagram, energy budgets, predator-prey dynamics, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_14",
+      "type": "body",
+      "duration_seconds": 8.88,
+      "narration": "A spider cannot store hydrogen peroxide indefinitely. Its exoskeleton is not built for pressure",
+      "image_prompt": "spider exoskeleton limitations, pressure chamber comparison, evolutionary timeline",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_15",
+      "type": "body",
+      "duration_seconds": 8.44,
+      "narration": "A frog's skin is permeable. Storing reactive chemicals would poison the host. The beetle's",
+      "image_prompt": "frog skin permeability, beetle cuticle armor, host toxicity, comparative anatomy",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_16",
+      "type": "body",
+      "duration_seconds": 8.92,
+      "narration": "Yet nature surprises us. The palmetto weevil uses similar chemistry. So does the bloody-nose",
+      "image_prompt": "palmetto weevil, bloody-nose beetle, convergent chemistry, comparative morphology",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_17",
+      "type": "body",
+      "duration_seconds": 7.44,
+      "narration": "This is the signal. Convergent evolution is not rare. It is the rule. Given",
+      "image_prompt": "convergent evolution signal, chemistry finding solutions, time diagram, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_18",
+      "type": "body",
+      "duration_seconds": 9.4,
+      "narration": "So we ask: what other convergent mechanisms remain undiscovered? And what do they tell",
+      "image_prompt": "undiscovered mechanisms diagram, life toolkit concept, scientific curiosity, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_19",
+      "type": "body",
+      "duration_seconds": 9.08,
+      "narration": "The bombardier beetle is a proof of concept. Evolution can build explosives. It did.",
+      "image_prompt": "proof of concept diagram, evolution building explosives, repeat occurrence, scientific",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_20",
+      "type": "body",
+      "duration_seconds": 9.76,
+      "narration": "On other worlds, with different atmospheres, the chemistry changes. But the pressure remains. Predators",
+      "image_prompt": "alien atmosphere, predator-prey pressure, chemical defense evolution, speculative biology",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_21",
+      "type": "body",
+      "duration_seconds": 9.8,
+      "narration": "A silicon-based lifeform might store oxidizing acids in crystal chambers. A methane-atmosphere creature might",
+      "image_prompt": "silicon lifeform crystal chambers, methane creature cryo-explosion, convergent function",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_22",
+      "type": "body",
+      "duration_seconds": 8.08,
+      "narration": "Speculative biology is not predicting the future. It is mapping the space of possible",
+      "image_prompt": "space of possible biology map, physics constraints, chemistry boundaries, clinical diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_23",
+      "type": "body",
+      "duration_seconds": 8.52,
+      "narration": "The bombardier beetle occupies one point in that space. There are quadrillions more. Most",
+      "image_prompt": "single point in vast biology space, undiscovered organisms, scientific wonder, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_24",
+      "type": "body",
+      "duration_seconds": 7.72,
+      "narration": "On Earth, we have catalogued two million species. Estimates range from five million to",
+      "image_prompt": "Earth biodiversity chart, catalogued versus estimated species, undiscovered surface, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_25",
+      "type": "body",
+      "duration_seconds": 11.68,
+      "narration": "Each species is an experiment. Evolution running parallel simulations. Some fail. Some persist. The",
+      "image_prompt": "evolution as parallel simulations, species as experiments, persistence diagram, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_26",
+      "type": "body",
+      "duration_seconds": 8.16,
+      "narration": "The experiment took eighty million years. That is how long it took to perfect",
+      "image_prompt": "eighty million year timeline, explosive mechanism perfection, evolutionary patience, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_27",
+      "type": "body",
+      "duration_seconds": 9.72,
+      "narration": "During those eighty million years, countless intermediate forms existed. Failed prototypes. Near-misses. The beetle",
+      "image_prompt": "intermediate beetle forms, failed prototypes, near-misses, success story, scientific illustration",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_28",
+      "type": "body",
+      "duration_seconds": 10.2,
+      "narration": "The chemistry was not designed. It was discovered. Random mutations. Testing. Selection. The successful",
+      "image_prompt": "random mutation testing diagram, chemical combination selection, successful survival, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_29",
+      "type": "body",
+      "duration_seconds": 10.76,
+      "narration": "Hydroquinone is toxic. Most animals avoid it. The bombardier beetle embraced the toxicity. Turned",
+      "image_prompt": "hydroquinone toxicity chart, beetle embracing toxicity, defense to offense, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_30",
+      "type": "body",
+      "duration_seconds": 10.84,
+      "narration": "This is the engine of innovation. Not intelligence. Not design. Random variation filtered by",
+      "image_prompt": "innovation engine diagram, random variation filtered, survival selection, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_31",
+      "type": "body",
+      "duration_seconds": 9.2,
+      "narration": "The beetle's mechanism has been studied for military applications. Non-lethal weapons. Smoke screens. The",
+      "image_prompt": "military applications research, non-lethal weapons, beetle mechanism study, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_32",
+      "type": "body",
+      "duration_seconds": 11.44,
+      "narration": "But evolution got there first. Eighty million years of optimization. No grant proposals. No",
+      "image_prompt": "evolution optimization timeline, no grant proposals, survival as peer review, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_33",
+      "type": "body",
+      "duration_seconds": 10.08,
+      "narration": "The beetle stores chemicals at near-boiling temperatures. Its enzymes are heat-resistant. Its membranes are",
+      "image_prompt": "beetle heat-resistant enzymes, reinforced membranes, near-boiling storage, scientific plate",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_34",
+      "type": "body",
+      "duration_seconds": 7.8,
+      "narration": "We call it a beetle. It calls itself a solution. The difference is perspective.",
+      "image_prompt": "beetle as solution diagram, perspective shift, biological engineering, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_35",
+      "type": "body",
+      "duration_seconds": 9.04,
+      "narration": "There are over five hundred bombardier beetle species. Each with slight variations. Same core",
+      "image_prompt": "five hundred bombardier beetle species, variations on core idea, comparative morphology",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_36",
+      "type": "body",
+      "duration_seconds": 8.16,
+      "narration": "This is not a single invention. It is an innovation wave. Multiple lineages discovering",
+      "image_prompt": "innovation wave diagram, multiple lineages, same solution, convergent evolution, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_37",
+      "type": "body",
+      "duration_seconds": 8.4,
+      "narration": "The wave started in the Cretaceous. Dinosaurs were still alive. The beetle was already",
+      "image_prompt": "Cretaceous period, dinosaurs in background, beetle perfecting weapon, timeline",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_38",
+      "type": "body",
+      "duration_seconds": 10.24,
+      "narration": "Dinosaurs are gone. The beetle remains. That is the metric. Not intelligence. Not size.",
+      "image_prompt": "dinosaurs extinct, beetle surviving, chemical mastery persistence, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_39",
+      "type": "body",
+      "duration_seconds": 7.0,
+      "narration": "The beetle does not think about its chemistry. It does not understand the reaction.",
+      "image_prompt": "beetle existing as mechanism, no thought required, body as chemistry, scientific illustration",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_40",
+      "type": "body",
+      "duration_seconds": 12.08,
+      "narration": "Understanding belongs to us. The observers. The documentarians. We impose narrative on biology. The",
+      "image_prompt": "human observer documenting beetle, narrative imposed on biology, documentary context",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_41",
+      "type": "body",
+      "duration_seconds": 8.36,
+      "narration": "This is the role of speculative biology. Not to invent monsters. To expand our",
+      "image_prompt": "speculative biology role, expanding imagination, evolution's creations, clinical diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_42",
+      "type": "body",
+      "duration_seconds": 6.44,
+      "narration": "The bombardier beetle is not the limit. It is the beginning. A proof that",
+      "image_prompt": "beetle as beginning not limit, proof of concept, biological explosion, scientific",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_43",
+      "type": "body",
+      "duration_seconds": 13.12,
+      "narration": "What other proofs exist? In soil samples. In deep sea vents. In Canopy epiphytes",
+      "image_prompt": "soil samples, deep sea vents, canopy epiphytes, undiscovered proofs, scientific exploration",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_44",
+      "type": "body",
+      "duration_seconds": 7.92,
+      "narration": "Every species is a hypothesis tested by eighty million years of data. We are",
+      "image_prompt": "species as hypothesis, eighty million years of data, reading results, scientific method",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_45",
+      "type": "body",
+      "duration_seconds": 8.6,
+      "narration": "The beetle reads data differently. It does not analyze. It reacts. The reaction is",
+      "image_prompt": "beetle data processing, reaction as analysis, explosion as conclusion, scientific metaphor",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_46",
+      "type": "body",
+      "duration_seconds": 6.8,
+      "narration": "We catalog species. We name them. We preserve them. But we do not fully",
+      "image_prompt": "species catalog, naming, preservation, undiscovered secrets, scientific humility",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_47",
+      "type": "body",
+      "duration_seconds": 7.16,
+      "narration": "One secret: why did this mechanism evolve only in beetles? The chemistry is available",
+      "image_prompt": "secret question diagram, beetle-only mechanism, universal chemistry, evolutionary puzzle",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_48",
+      "type": "body",
+      "duration_seconds": 14.08,
+      "narration": "The answer may be historical accident. A mutation in one lineage. Timing. Environmental pressure.",
+      "image_prompt": "historical accident diagram, mutation timing, environmental pressure, lucky combination",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_49",
+      "type": "body",
+      "duration_seconds": 8.96,
+      "narration": "Evolution is not inevitable. It is contingent. The same world run twice might never",
+      "image_prompt": "contingency diagram, same world twice, different outcomes, evolutionary philosophy",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_50",
+      "type": "body",
+      "duration_seconds": 11.24,
+      "narration": "This is the deepest lesson of the beetle. Not its mechanism. Its contingency. We",
+      "image_prompt": "accident versus design, human contingency, beetle lesson, philosophical biology",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_51",
+      "type": "body",
+      "duration_seconds": 7.48,
+      "narration": "The beetle's explosion is not anger. It is not malice. It is chemistry responding",
+      "image_prompt": "Newton's third law, beetle chemistry response, no anger no malice, physics biology",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_52",
+      "type": "body",
+      "duration_seconds": 7.48,
+      "narration": "For every action there is an equal reaction. The beetle just adds a catalyst.",
+      "image_prompt": "Newton's law and beetle catalyst, heat pressure direction, physics diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_53",
+      "type": "body",
+      "duration_seconds": 6.68,
+      "narration": "This makes the beetle more than a curiosity. It is a living physics demonstration.",
+      "image_prompt": "living physics demonstration, textbook material, exoskeleton writing, scientific illustration",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_54",
+      "type": "body",
+      "duration_seconds": 10.68,
+      "narration": "Students learn about it. Engineers study it. Military researchers reverse-engineer it. The beetle has",
+      "image_prompt": "students learning, engineers studying, military research, beetle changed thinking",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_55",
+      "type": "body",
+      "duration_seconds": 6.88,
+      "narration": "Yet the beetle knows none of this. It does not study itself. It does",
+      "image_prompt": "beetle simply popping, no self-knowledge, no teaching, enough survival, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_56",
+      "type": "body",
+      "duration_seconds": 9.12,
+      "narration": "This is the humility of biology. The most sophisticated mechanisms belong to creatures that",
+      "image_prompt": "humility of biology diagram, sophisticated mechanisms in simple creatures, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_57",
+      "type": "body",
+      "duration_seconds": 8.2,
+      "narration": "The beetle's mechanism works at 100 degrees Celsius. Most proteins denature at 40. This",
+      "image_prompt": "temperature comparison, 100C versus 40C, extreme engineering, scientific comparison",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_58",
+      "type": "body",
+      "duration_seconds": 11.28,
+      "narration": "The enzymes are specially adapted. The membranes are reinforced with cross-linked proteins. Every component",
+      "image_prompt": "enzyme adaptation, reinforced membranes, cross-linked proteins, scientific plate",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_59",
+      "type": "body",
+      "duration_seconds": 11.12,
+      "narration": "Purpose-built by what? Not by a builder. By eighty million years of selection. Each",
+      "image_prompt": "eighty million years selection, mutation survival diagram, no builder, natural selection",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_60",
+      "type": "body",
+      "duration_seconds": 9.56,
+      "narration": "This is the blind watchmaker. Dawkins' metaphor. The beetle is the watch. It was",
+      "image_prompt": "blind watchmaker, beetle as watch, assembled by failure, scientific illustration",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_61",
+      "type": "body",
+      "duration_seconds": 10.84,
+      "narration": "Every successful mutation is a lucky accident. Accumulated. Refined. The beetle is eighty million",
+      "image_prompt": "lucky accidents accumulation, eighty million years refinement, beetle as accidents, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_62",
+      "type": "body",
+      "duration_seconds": 7.92,
+      "narration": "We look for patterns in biology. We find them. But the pattern is not",
+      "image_prompt": "patterns in biology, not plans but records, what worked diagram, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_63",
+      "type": "body",
+      "duration_seconds": 9.88,
+      "narration": "The bombardier beetle's pattern works. For eighty million years. In Australian outbacks. In tropical",
+      "image_prompt": "beetle pattern working, eighty million years, multiple habitats, scientific map",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_64",
+      "type": "body",
+      "duration_seconds": 8.24,
+      "narration": "That persistence is the real miracle. Not the chemistry. Not the mechanism. The fact",
+      "image_prompt": "persistence as miracle, survival not chemistry, long timeline, clinical diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_65",
+      "type": "body",
+      "duration_seconds": 8.6,
+      "narration": "In a million years, the beetle may be gone. Replaced by something better. Or",
+      "image_prompt": "beetle extinction timeline, replacement by better, luck factor, evolutionary fragility",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_66",
+      "type": "body",
+      "duration_seconds": 8.16,
+      "narration": "For now, it pops. That is its contribution to the universe. A small popping",
+      "image_prompt": "small popping sound in forest, beetle contribution to universe, quiet moment, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_67",
+      "type": "body",
+      "duration_seconds": 8.08,
+      "narration": "We give it names. We study it. We write papers. But the beetle does",
+      "image_prompt": "human study versus beetle indifference, names and papers, observation irrelevance",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_68",
+      "type": "body",
+      "duration_seconds": 7.52,
+      "narration": "This is the proper perspective. We are not the center. The beetle is not",
+      "image_prompt": "life centered perspective, strange explosive forms, beetle not center, scientific humility",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_69",
+      "type": "body",
+      "duration_seconds": 7.28,
+      "narration": "The explosive beetle is one data point. In a dataset of eight hundred million",
+      "image_prompt": "data point in eighty million year dataset, sample size too small, statistical humility",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_70",
+      "type": "body",
+      "duration_seconds": 7.64,
+      "narration": "And yet. One data point is enough to change a worldview. One beetle proves",
+      "image_prompt": "one data point changing worldview, biology exceeding expectation, beetle proof, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_71",
+      "type": "body",
+      "duration_seconds": 8.68,
+      "narration": "What else exceeds expectation? In soil. In ice. In deep ocean vents. In places",
+      "image_prompt": "places not looked, soil ice vents, undiscovered biology, scientific exploration",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_72",
+      "type": "body",
+      "duration_seconds": 11.8,
+      "narration": "Speculative biology asks these questions. Not as speculative thought. As hypotheses with constraints. Physics.",
+      "image_prompt": "speculative biology questions, hypotheses with constraints, physics chemistry time",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_73",
+      "type": "body",
+      "duration_seconds": 8.12,
+      "narration": "The constraints are what make it scientific. A creature that violates thermodynamics is speculative",
+      "image_prompt": "constraints make science, thermodynamics violations, boundary pushing speculation, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_74",
+      "type": "body",
+      "duration_seconds": 7.32,
+      "narration": "The bombardier beetle pushes boundaries. It stores energy at temperatures that would cook most",
+      "image_prompt": "beetle pushing boundaries, energy storage at high temperatures, self-protection, scientific",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_75",
+      "type": "body",
+      "duration_seconds": 13.68,
+      "narration": "How? Specialized proteins. Reinforced membranes. Catalytic enzymes. Eighty million years of optimization.",
+      "image_prompt": "specialized proteins, reinforced membranes, catalytic enzymes, eighty million years",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_76",
+      "type": "body",
+      "duration_seconds": 8.0,
+      "narration": "Optimization is not conscious. It is automatic. The beetles that survived had the right",
+      "image_prompt": "optimization automatic not conscious, survivors have right mutations, fossils, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_77",
+      "type": "body",
+      "duration_seconds": 7.56,
+      "narration": "We see the survivor. We do not see the failures. The fossil record is",
+      "image_prompt": "fossil record full of failures, unseen failures, survivor bias, scientific illustration",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_78",
+      "type": "body",
+      "duration_seconds": 8.16,
+      "narration": "This is the other lesson. For every successful mechanism, there are a thousand failures.",
+      "image_prompt": "thousand failures for one success, worked mechanism, survivor story, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_79",
+      "type": "body",
+      "duration_seconds": 9.0,
+      "narration": "Success is rare. Failure is common. The beetle reminds us that persistence is more",
+      "image_prompt": "persistence over perfection, rare success common failure, beetle reminder, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_80",
+      "type": "body",
+      "duration_seconds": 9.32,
+      "narration": "The beetle is not perfect. It has blind spots. Its aim is imperfect. It",
+      "image_prompt": "beetle not perfect, blind spots, aim imperfect, usually hits, scientific photography",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_81",
+      "type": "body",
+      "duration_seconds": 7.84,
+      "narration": "Good enough is the standard in biology. Not optimal. Not elegant. Good enough to",
+      "image_prompt": "good enough standard, survival not elegance, biology metric, clinical diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_82",
+      "type": "body",
+      "duration_seconds": 9.28,
+      "narration": "The bombardier beetle is good enough. It has been for eighty million years. That",
+      "image_prompt": "beetle passing grade, eighty million years, human engineering comparison, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_83",
+      "type": "body",
+      "duration_seconds": 13.48,
+      "narration": "We are new here. One species among eight hundred million years of experiments. The",
+      "image_prompt": "human as new species, beetle as elder, senior researcher metaphor, clinical diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_84",
+      "type": "body",
+      "duration_seconds": 8.84,
+      "narration": "We could learn from it. Patience. Persistence. Chemical pragmatism. The willingness to be explosive",
+      "image_prompt": "learning from beetle, patience persistence, chemical pragmatism, explosive not defeated",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_85",
+      "type": "body",
+      "duration_seconds": 7.16,
+      "narration": "But we do not learn from beetles. We study them. We write papers. We",
+      "image_prompt": "humans studying beetles, papers written, beetle keeps popping, documentary observation",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_86",
+      "type": "body",
+      "duration_seconds": 9.28,
+      "narration": "Perhaps that is the final lesson. Wisdom does not require self-awareness. It requires only",
+      "image_prompt": "wisdom without self-awareness, persistence through chemistry, beetle as teacher, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_87",
+      "type": "body",
+      "duration_seconds": 8.44,
+      "narration": "The beetle pops. The predator retreats. The forest continues. Small explosions in a vast",
+      "image_prompt": "small explosions in quiet world, beetle pops predator retreats, forest continues, clinical",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_88",
+      "type": "body",
+      "duration_seconds": 9.36,
+      "narration": "This is the sound of evolution working. Not a thunderclap. Not a revolution. A",
+      "image_prompt": "evolution as small pop, repeated eighty million years, not thunderclot but persistence",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_89",
+      "type": "body",
+      "duration_seconds": 7.2,
+      "narration": "We should listen more carefully. The quietest sounds often carry the most important information.",
+      "image_prompt": "listening to quiet sounds, important information in small pops, clinical diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_90",
+      "type": "closer",
+      "duration_seconds": 7.16,
+      "narration": "The bombardier beetle is not a monster. It is a proof. That life can",
+      "image_prompt": "bombardier beetle as proof, life solving problems, chemistry weaponized, persistence, clinical",
+      "stock_search_query": null
+    }
+  ],
+  "forbidden_words_check": {
+    "performed": true,
+    "matched": [],
+    "note": "All scene narrations checked against speculative-biology.yaml forbidden_words list. Zero matches."
+  }
+}

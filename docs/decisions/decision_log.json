@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "project_id": "openmontage-platform",
+  "decisions": [
+    {
+      "decision_id": "d-tts-001",
+      "stage": "platform",
+      "category": "voice_selection",
+      "subject": "Narration TTS engine",
+      "options_considered": [
+        {
+          "option_id": "chatterbox",
+          "label": "Chatterbox (Kaggle T4, runtime=KAGGLE_GPU)",
+          "score": 0.92,
+          "reason": "Near-real-time on T4 (RTF 1.08 avg across 270 scenes). Preferred by ear in 10-scene compare. Single built-in default voice; cloning available for channel timbres later. Shorter durations than Kokoro (~14.5% total runtime reduction)."
+        },
+        {
+          "option_id": "kokoro",
+          "label": "Kokoro-82M (local CPU, runtime=LOCAL)",
+          "score": 0.5,
+          "reason": "Was the prior sole engine. Retained as documented manual fallback only (Kaggle GPU quota exhaustion / HF Hub rate-limit on Chatterbox download). Not the default.",
+          "rejected_because": "Reversed 2026-07-11: Chatterbox now runs near-real-time on the Kaggle T4 runtime already in the pipeline, and was preferred by ear. Kokoro demoted to manual fallback, not deleted."
+        }
+      ],
+      "selected": "chatterbox",
+      "reason": "Reversal of the prior 'Kokoro sole TTS' decision. New evidence: Kaggle T4 RTF verified ~1.08 (near-real-time), 10-scene by-ear preference for Chatterbox, and consistently shorter durations. See docs/decisions/tts-engine-chatterbox-reversal.md.",
+      "user_visible": true,
+      "user_approved": false,
+      "confidence": 0.95
+    }
+  ]
+}

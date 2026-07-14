@@ -1,4 +1,5 @@
 name: cinematic
+render_runtime: ffmpeg
 version: "2.0"
 description: >
   Mood-led cinematic pipeline for trailers, brand films, montages, and short-form dramatic edits.

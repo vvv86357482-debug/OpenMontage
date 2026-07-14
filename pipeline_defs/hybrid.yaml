@@ -1,4 +1,5 @@
 name: hybrid
+render_runtime: ffmpeg
 version: "2.0"
 description: >
   Hybrid pipeline for videos that combine source footage with designed or generated support

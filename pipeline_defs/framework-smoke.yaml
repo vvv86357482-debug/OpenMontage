@@ -1,4 +1,5 @@
 name: framework-smoke
+render_runtime: ffmpeg
 version: "1.0"
 description: Minimal pipeline manifest used to exercise the Phase 0 framework contracts.
 category: custom

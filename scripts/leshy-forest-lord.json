@@ -1,0 +1,782 @@
+{
+  "project_id": "leshy-forest-lord",
+  "channel": "mythology-slavic",
+  "title": "Leshy: The Forest Lord Who Laughs at Boundaries",
+  "topic": "Slavic forest spirit Leshy \u2014 Pre-Christian Slavic mythology, folk belief, and the spiritual ecology of the forest",
+  "persona": "Folklore Scholar",
+  "tts_voice": "am_fenrir",
+  "sources": [
+    {
+      "title": "Slavic antiquities: An Ethno-linguistic dictionary",
+      "author": "Levkievskaya, E. E.",
+      "publisher": "Institute of Slavic Studies of the Russian Academy of Sciences / International Relations",
+      "year": "2004",
+      "type": "academic_reference",
+      "accessed": "2026-07-10",
+      "translation_note": null
+    },
+    {
+      "title": "Narodnye russkie skazki (Russian Folk Tales)",
+      "author": "Afanasyev, Alexander",
+      "publisher": "Nauka",
+      "year": "1855-1867",
+      "type": "primary_folklore_collection",
+      "accessed": "2026-07-10",
+      "translation_note": "Translated from Russian by multiple translators; original collection in Russian"
+    },
+    {
+      "title": "Poetic Views of the Slavs on Nature",
+      "author": "Afanasyev, Alexander",
+      "publisher": "Nauka",
+      "year": "1865-1869",
+      "type": "primary_folklore_collection",
+      "accessed": "2026-07-10",
+      "translation_note": "Translated from Russian by multiple translators; original collection in Russian"
+    },
+    {
+      "title": "Russian Folk Belief",
+      "author": "Ivanits, Linda",
+      "publisher": "M.E. Sharpe",
+      "year": "1989",
+      "type": "academic_monograph",
+      "accessed": "2026-07-10",
+      "translation_note": null
+    },
+    {
+      "title": "The Primary Chronicle",
+      "author": "Cross, Samuel Hazzard (ed.)",
+      "publisher": "Harvard University Press",
+      "year": "1953",
+      "type": "primary_chronicle",
+      "accessed": "2026-07-10",
+      "translation_note": "Translated from Old East Slavic by Cross and Sherbowitz-Wetzor"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_01",
+      "type": "hook",
+      "duration_seconds": 5.54,
+      "narration": "Deep in the Russian forest, something watches. Something ancient. Something conscious.",
+      "image_prompt": "ancient Slavic forest, deep emerald and moss green, mist diffusion, World Tree silhouette, birch bark texture, Slavic folklore atmosphere",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_02",
+      "type": "body",
+      "duration_seconds": 5.18,
+      "narration": "The Slavs called it Leshy. Lord of the forest. Shepherd of every creature between",
+      "image_prompt": "Slavic forest spirit silhouette, ancient oak framing, woodcut print texture, deep forest green palette, mist layering",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_03",
+      "type": "body",
+      "duration_seconds": 4.94,
+      "narration": "Leshy is not a god. He is the forest made conscious. A spirit that",
+      "image_prompt": "face emerging from oak bark, eyes like forest depth, woodcut print meets oil painting, Slavic pagan aesthetic",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_04",
+      "type": "body",
+      "duration_seconds": 6.18,
+      "narration": "Scholars trace Leshy to the Proto-Slavic root les, meaning forest. The word IS the",
+      "image_prompt": "ancient Slavic rune for forest, birch bark texture, ink on aged wood, Slavic knotwork border",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_05",
+      "type": "body",
+      "duration_seconds": 6.78,
+      "narration": "Afanasyev recorded over five hundred folk tales involving Leshy variants. The spirit appears in",
+      "image_prompt": "Alexander Afanasyev manuscript page, folk tale illustrations, Slavic embroidery border, parchment texture",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_06",
+      "type": "body",
+      "duration_seconds": 7.06,
+      "narration": "Russian, Ukrainian, Belarusian, Polish, Czech, Slovak. Each culture has its own Leshy name. Same",
+      "image_prompt": "map of Slavic regions, Leshy name variants, folk art motifs from each region, deep forest background",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_07",
+      "type": "body",
+      "duration_seconds": 6.62,
+      "narration": "Leshy appears as a tall man with animal features. Claws. Hooves. A tail. Sometimes",
+      "image_prompt": "Leshy full figure, half-man half-goat, black fur, small horns, hooves, long hair, forest backdrop",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_08",
+      "type": "body",
+      "duration_seconds": 4.78,
+      "narration": "He is never alone. Always accompanied by a black dog or a small black",
+      "image_prompt": "Leshy with black dog companion, forest clearing, ember glow from distant fire, folk art style",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_09",
+      "type": "body",
+      "duration_seconds": 5.34,
+      "narration": "Leshy can change size. Grow tall as the highest pine. Shrink small as a",
+      "image_prompt": "Leshy size transformation sequence, mushroom to tree scale, mist diffusion, Slavic red accent",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_10",
+      "type": "body",
+      "duration_seconds": 5.22,
+      "narration": "He leads travelers astray. Makes them walk circles. Hides their hats. Laughs at their",
+      "image_prompt": "lost traveler in forest, Leshy watching from behind tree, mischievous expression, woodcut print texture",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_11",
+      "type": "body",
+      "duration_seconds": 6.62,
+      "narration": "Not cruel. Just following forest rules. Trespass without respect. Leshy returns the favor by",
+      "image_prompt": "forest boundary marker, ancient Slavic offering stone, Leshy watching from mist, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_12",
+      "type": "body",
+      "duration_seconds": 5.14,
+      "narration": "Offerings were made. First Easter egg. Bread with salt. Sometimes a drop of one's",
+      "image_prompt": "ancient Slavic offering, bread and salt on tree stump, red string binding, birch bark texture, ember glow",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_13",
+      "type": "body",
+      "duration_seconds": 5.66,
+      "narration": "The contract was written in blood. Kept secret. Breaking it meant losing Leshy's protection.",
+      "image_prompt": "blood contract on birch bark, Slavic knotwork seal, dark forest background, red accent, mist diffusion",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_14",
+      "type": "body",
+      "duration_seconds": 5.82,
+      "narration": "Leshy controls the hunt. Determines success or failure. A hunter who respects the forest",
+      "image_prompt": "hunter offering to Leshy, forest animal spirits watching, ancient ritual, woodcut print style",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_15",
+      "type": "body",
+      "duration_seconds": 6.22,
+      "narration": "He gambles the animals. Cards against another forest spirit. The losers run. The winners",
+      "image_prompt": "Leshy playing cards with forest spirit, animals as stakes, squirrel and hare running, folk art style",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_16",
+      "type": "body",
+      "duration_seconds": 5.94,
+      "narration": "Leshy's domain is every forest. Every grove. Every wild place where trees grow and",
+      "image_prompt": "vast Slavic forest from above, World Tree axis, mist layers, deep green palette, atmospheric perspective",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_17",
+      "type": "body",
+      "duration_seconds": 6.94,
+      "narration": "He protects the creatures. Bears. Wolves. Owls. The forest is his property. He defends",
+      "image_prompt": "Leshy as forest guardian, bear and wolf at his side, fire in distance, protecting stance, folk art",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_18",
+      "type": "body",
+      "duration_seconds": 7.02,
+      "narration": "Hunters made pacts. Leshy guides herds to their weapons. Ensures clean shots. In return:",
+      "image_prompt": "hunter making forest offering, Leshy guiding elk through mist, ancient pact, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_19",
+      "type": "body",
+      "duration_seconds": 6.78,
+      "narration": "The pact required secrecy. Revealing it meant losing protection. Leshy would pursue the betrayer.",
+      "image_prompt": "secret pact being revealed, Leshy silhouette in background, broken trust, dark atmosphere, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_20",
+      "type": "body",
+      "duration_seconds": 5.42,
+      "narration": "Ending a contract required a cross under the heel. Burying it. Or shooting an",
+      "image_prompt": "cross being buried under heel, gun shooting at icon, Leshy watching, dark ritual, Slavic red accent",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_21",
+      "type": "body",
+      "duration_seconds": 6.1,
+      "narration": "Leshy is afraid of dogs. Tricolored ones. Of cats. Of firearms loaded with copper",
+      "image_prompt": "tricolored dog facing Leshy, copper bullet, cross talisman, forest boundary, folk art texture",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_22",
+      "type": "body",
+      "duration_seconds": 5.58,
+      "narration": "He can be made to laugh. That is another escape. A clever peasant might",
+      "image_prompt": "peasant making Leshy laugh, forest spirit smiling despite himself, trickster moment, folk art style",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_23",
+      "type": "body",
+      "duration_seconds": 6.14,
+      "narration": "Leshy visits the human world. Enters pubs. Drinks vodka. Hires workers. Even courts women.",
+      "image_prompt": "Leshy in human form at village pub, vodka glass, folk costume, blurred identity, mist transition",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_24",
+      "type": "body",
+      "duration_seconds": 5.34,
+      "narration": "He asks to be taught the harmonica. Requests food. Needs a midwife for his",
+      "image_prompt": "Leshy learning harmonica, forest spirit child, midwife in cottage, hearth fire, ember orange",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_25",
+      "type": "body",
+      "duration_seconds": 6.58,
+      "narration": "In gratitude, Leshy gives gifts. ancient craft objects. Takes their place in the army. A",
+      "image_prompt": "Leshy giving gift, farmer receiving, forest army conscription, ancient contract, folk art",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_26",
+      "type": "body",
+      "duration_seconds": 6.58,
+      "narration": "When humans fight, Leshy and forest spirits fight too. Their battles mirror ours. The",
+      "image_prompt": "Leshy leading forest spirits into battle, mirrors human war below, World Tree background, epic composition",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_27",
+      "type": "body",
+      "duration_seconds": 7.22,
+      "narration": "Leshy's origins are disputed. Cursed human? Child swapped at birth? Offspring of dharmful and",
+      "image_prompt": "Leshy origin ambiguity, multiple birth myths, cursed figure, dark forest, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_28",
+      "type": "body",
+      "duration_seconds": 6.5,
+      "narration": "In folk Christianity, Leshy became a demon. Fallen angel cast to earth. But farmers",
+      "image_prompt": "Leshy as fallen angel, porridge offering on windowsill, Christian cross overlay, syncretism, folk art",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_29",
+      "type": "body",
+      "duration_seconds": 5.38,
+      "narration": "The Primary Chronicle mentions Perun. The thunder god. Leshy belongs to the older layer.",
+      "image_prompt": "Primary Chronicle manuscript, Perun idol, older forest layer beneath, ancient text, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_30",
+      "type": "body",
+      "duration_seconds": 7.78,
+      "narration": "Veles rules water, earth, and the underworld. Leshy is his terrestrial manifestation. The forest",
+      "image_prompt": "Veles serpent form, Leshy as forest manifestation, earth and water domain, Slavic pagan aesthetic",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_31",
+      "type": "body",
+      "duration_seconds": 7.22,
+      "narration": "Leshy is not simply harmful. He punishes transgressors. Not innocents. The forest has its",
+      "image_prompt": "Leshy as judge, forest court, transgressor facing trial, ancient Slavic justice, woodcut print",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_32",
+      "type": "body",
+      "duration_seconds": 6.7,
+      "narration": "He leads children home when lost. Shows mushroom gatherers the safe path. Benevolence is",
+      "image_prompt": "Leshy guiding lost child, mushroom gatherers, safe path through mist, protective spirit, folk art",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_33",
+      "type": "body",
+      "duration_seconds": 7.46,
+      "narration": "The society converting to Christianity called Leshy a demon. Destroying temples. Toppling idols. But",
+      "image_prompt": "Christian missionaries destroying Slavic temple, Leshy watching from forest, survival of old belief, dark palette",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_34",
+      "type": "body",
+      "duration_seconds": 5.14,
+      "narration": "Prince Vladimir dragged Perun's idol through Kiev. Threw it in the Dnieper. Twelve men",
+      "image_prompt": "Perun idol being dragged through Kiev, Dnieper river, twelve men beating idol, historical woodcut style",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_35",
+      "type": "body",
+      "duration_seconds": 5.62,
+      "narration": "But Leshy was harder to kill. He lived in every tree. Every mushroom. Every",
+      "image_prompt": "Leshy in every forest element, tree, mushroom, shadow, invisible to Christians, folk art pattern",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_36",
+      "type": "body",
+      "duration_seconds": 6.34,
+      "narration": "Farmers left porridge for the domovoi. The household spirit. A relative of Leshy. Both",
+      "image_prompt": "porridge offering on windowsill, domovoi emerging from stove, household spirit, hearth fire glow",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_37",
+      "type": "body",
+      "duration_seconds": 6.94,
+      "narration": "Domovoi and Leshy are siblings. One inside. One outside. Both demand respect. Both punish",
+      "image_prompt": "domovoi and Leshy together, house and forest boundary, sibling spirits, birch bark texture",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_38",
+      "type": "body",
+      "duration_seconds": 6.78,
+      "narration": "Kupala Night. The summer solstice. The veil between worlds thins. Leshy walks among humans.",
+      "image_prompt": "Kupala Night celebration, bonfire, Leshy among villagers, thin veil between worlds, Slavic red accent",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_39",
+      "type": "body",
+      "duration_seconds": 5.1,
+      "narration": "On this night, Leshy can be captured. His power is weakest. But who would",
+      "image_prompt": "Leshy being captured, villagers with rope, sacred bonfire, dangerous ritual, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_40",
+      "type": "body",
+      "duration_seconds": 6.46,
+      "narration": "Maslenitsa. The butter week. Spring chasing winter. Leshy is honored, then sent away. The",
+      "image_prompt": "Maslenitsa celebration, butter offerings, Leshy being honored, spring ritual, folk embroidery texture",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_41",
+      "type": "body",
+      "duration_seconds": 8.1,
+      "narration": "Every seasonal ritual encodes a relationship with Leshy. Not worship. Negotiation. The Slavs bargained",
+      "image_prompt": "Slavic seasonal calendar, ritual offerings, negotiation scene, ancient contract, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_42",
+      "type": "body",
+      "duration_seconds": 6.46,
+      "narration": "The World Tree connects three realms. Prav. Yav. Nav. Leshy walks the trunk. Between",
+      "image_prompt": "World Tree axis, three realms, Leshy on trunk, Slavic cosmology, ink and gold leaf, oil painting",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_43",
+      "type": "body",
+      "duration_seconds": 4.78,
+      "narration": "Prav is the upper world of gods. Yav is our mortal world. Nav is",
+      "image_prompt": "World Tree three realms diagram, Prav Yav Nav labels, birch bark texture, Slavic knotwork",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_44",
+      "type": "body",
+      "duration_seconds": 5.06,
+      "narration": "Leshy is not confined to one realm. He moves between them. That is why",
+      "image_prompt": "Leshy transitioning between realms, forest to underworld, form-shifting, mist diffusion, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_45",
+      "type": "body",
+      "duration_seconds": 6.3,
+      "narration": "The Golubinaya Kniga places Leshy in the cosmic order. Not as villain. As function.",
+      "image_prompt": "Golubinaya Kniga manuscript, Leshy in cosmic order, ancient Slavic text, parchment, woodcut illumination",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_46",
+      "type": "body",
+      "duration_seconds": 7.82,
+      "narration": "Nineteenth-century ethnographers documented Leshy beliefs across the Russian Empire. Khudyakov. Dahl. Afanasyev.",
+      "image_prompt": "19th century ethnographers in field, notebook and camera, Leshy folklore being recorded, historical texture",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_47",
+      "type": "body",
+      "duration_seconds": 7.78,
+      "narration": "Afanasyev's Narodnye russkie skazki contains over five hundred tales. Many feature Leshy directly. Others",
+      "image_prompt": "Afanasyev tale collection, Leshy illustrations, folk art, ancient Russian manuscript, birch bark texture",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_48",
+      "type": "body",
+      "duration_seconds": 8.46,
+      "narration": "Levkievskaya's Slavic Antiquities defines leshiy across five volumes. Etymology. Regional variants. Ritual function.",
+      "image_prompt": "Slavic Antiquities dictionary, leshiy entry, academic reference, birch bark texture, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_49",
+      "type": "body",
+      "duration_seconds": 5.98,
+      "narration": "Ivanits' Russian Folk Belief traces Leshy from pre-Christian times through Soviet suppression into modern",
+      "image_prompt": "Russian Folk Belief book, Leshy across centuries, pre-Christian to modern, academic citation, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_50",
+      "type": "body",
+      "duration_seconds": 6.06,
+      "narration": "The Primary Chronicle mentions Perun. The thunder god. Leshy belongs to the older layer.",
+      "image_prompt": "Primary Chronicle manuscript, Perun idol, older forest layer beneath, ancient text, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_51",
+      "type": "body",
+      "duration_seconds": 6.78,
+      "narration": "Archaeology shows sacred groves. Wooden idols. Offering pits. The material culture of Leshy worship",
+      "image_prompt": "Slavic archaeological site, sacred grove remains, wooden idol fragments, offering pit, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_52",
+      "type": "body",
+      "duration_seconds": 7.42,
+      "narration": "Soviet ethnographers documented Leshy beliefs surviving in rural communities. The spirit was not dead.",
+      "image_prompt": "Soviet-era ethnographer interview, rural elder describing Leshy, hidden belief, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_53",
+      "type": "body",
+      "duration_seconds": 6.46,
+      "narration": "Post-Soviet folklore collections show new variants. Leshy adapting to modern conditions. Still the same",
+      "image_prompt": "modern Russian forest, Leshy silhouette among trees, ancient spirit in modern world, mist diffusion",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_54",
+      "type": "body",
+      "duration_seconds": 8.18,
+      "narration": "The etymology les is uncontroversial. The suffix -hy denotes lordship. Leshy means Lord of",
+      "image_prompt": "Proto-Slavic root les, suffix -hy, etymology diagram, birch bark texture, clinical typography",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_55",
+      "type": "body",
+      "duration_seconds": 7.78,
+      "narration": "Regional variants proliferate. Leshy. Lesovik. Leshak. Same spirit. Different name. The forest speaks in",
+      "image_prompt": "Leshy name variants across Slavic map, regional dialects, forest speaking in tongues, folk art",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_56",
+      "type": "body",
+      "duration_seconds": 7.1,
+      "narration": "Leshy is described as ugly. Hairy. Hoofed. Yet he has wives. Children. Human desires.",
+      "image_prompt": "Leshy with family, wife and child in cottage, ugly yet domestic, hearth fire, folk art",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_57",
+      "type": "body",
+      "duration_seconds": 5.74,
+      "narration": "He is blamed for missing people. For drowned fishermen. For hunters who never return.",
+      "image_prompt": "Leshy standing over lost hunter, not cruel but disappointed, forest law, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_58",
+      "type": "body",
+      "duration_seconds": 6.82,
+      "narration": "The vodyanoy drowns people. The rusalka lures them. Leshy merely misleads. A lesser offense.",
+      "image_prompt": "three Slavic water spirits, vodyanoy, rusalka, Leshy distinction, comparative mythology, diagram style",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_59",
+      "type": "body",
+      "duration_seconds": 6.42,
+      "narration": "Rusalka Week is the most dangerous time. Spring. Fertility. The drowned women return. Leshy",
+      "image_prompt": "Rusalka Week, spring forest, drowned women spirits, Leshy escort, Slavic red accent, mist diffusion",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_60",
+      "type": "body",
+      "duration_seconds": 8.54,
+      "narration": "Kikimora is Leshy's female counterpart. Spinning. Weaving. The household's hidden weaver. Beautiful if orderly.",
+      "image_prompt": "Kikimora spinning thread, household loom, orderly versus slovenly, hearth fire, folk art",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_61",
+      "type": "body",
+      "duration_seconds": 7.14,
+      "narration": "Poludnitsa. The noon spirit. Beautiful woman appearing at midday. Causes heatstroke. Madness. She is",
+      "image_prompt": "Poludnitsa in wheat field, noon sun, heat shimmer, beautiful yet dangerous, folk art",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_62",
+      "type": "body",
+      "duration_seconds": 6.14,
+      "narration": "These spirits are not characters. They are the spiritual ecology of the Slavic landscape.",
+      "image_prompt": "Slavic spiritual ecology map, forest, water, field, hearth domains, Leshy at center, diagram style",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_63",
+      "type": "body",
+      "duration_seconds": 5.78,
+      "narration": "The farmer entering the forest must acknowledge Leshy. The fisherman must appease the vodyanoy.",
+      "image_prompt": "farmer at forest edge making offering, fisherman at river, housewife at hearth, three spirits, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_64",
+      "type": "body",
+      "duration_seconds": 7.26,
+      "narration": "This is not superstition. It is social technology. A code for sustainable human-nature relationships.",
+      "image_prompt": "ancient Slavic social code, forest etiquette, sustainable relationship diagram, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_65",
+      "type": "body",
+      "duration_seconds": 9.66,
+      "narration": "The code ensured survival. No overhunting. No pollution. No disrespect. The forest survived. The",
+      "image_prompt": "ancient sustainable forest, healthy ecosystem, deal between human and spirit, green palette, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_66",
+      "type": "body",
+      "duration_seconds": 6.82,
+      "narration": "Christianity arrived with Prince Vladimir in 988. The idols fell. The temples burned. But",
+      "image_prompt": "Christianization of Slavic lands, idols falling, Leshy watching from forest edge, historical woodcut",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_67",
+      "type": "body",
+      "duration_seconds": 6.7,
+      "narration": "Leshy did not die. He retreated. Into the deepest woods. Into the oldest stories.",
+      "image_prompt": "Leshy retreating into deep forest, Christian church in distance, survival of old belief, mist diffusion",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_68",
+      "type": "body",
+      "duration_seconds": 7.1,
+      "narration": "Folk tales preserved him. Under Christian disguise. Saints replaced gods. But the narrative structure",
+      "image_prompt": "Christian saint icon, Leshy underneath, folk tale structure, syncretism, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_69",
+      "type": "body",
+      "duration_seconds": 5.22,
+      "narration": "Baba Yaga. The witch. Is she Leshy's counterpart? Or his mother? The tales are",
+      "image_prompt": "Baba Yaga in chicken leg hut, Leshy in forest, ambiguous relationship, folk art, Slavic red accent",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_70",
+      "type": "body",
+      "duration_seconds": 6.3,
+      "narration": "Koschei the Deathless. The immortal villain. His soul is hidden outside his body. Leshy's",
+      "image_prompt": "Koschei the Deathless, hidden soul, Leshy as forest soul, comparative mythology, clinical diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_71",
+      "type": "body",
+      "duration_seconds": 8.18,
+      "narration": "The Firebird. Golden feathers. The ultimate prize. Some tales say Leshy guards it. Others",
+      "image_prompt": "Firebird golden feathers, Leshy as bird form, forest guardian, Slavic gold accent, folk art",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_72",
+      "type": "body",
+      "duration_seconds": 5.66,
+      "narration": "Zorya. The dawn sisters. They open the gate for the Sun. In some tales,",
+      "image_prompt": "Zorya dawn sisters, Sun gate, Leshy watching, three women in sky, pale gold and red palette",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_73",
+      "type": "body",
+      "duration_seconds": 6.62,
+      "narration": "The zmey. The Slavic dragon. Three heads. Fire. Is he Leshy's enemy? Or his",
+      "image_prompt": "Zmey three-headed dragon, Leshy watching, serpent versus forest, Slavic pagan conflict, oil painting",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_74",
+      "type": "body",
+      "duration_seconds": 5.78,
+      "narration": "In South Slavic tradition, the zmey is more sympathetic. A lover. A husband. The",
+      "image_prompt": "South Slavic zmey, vila forest nymphs, different regional variant, folk embroidery texture",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_75",
+      "type": "body",
+      "duration_seconds": 5.06,
+      "narration": "The vila are not rusalki. They do not drown men. They marry them. The",
+      "image_prompt": "vila with hero, forest wedding, children as future heroes, folk art, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_76",
+      "type": "body",
+      "duration_seconds": 6.06,
+      "narration": "Leshy's laughter is the forest's laugh. Through trees. Through wind. Through water. He is",
+      "image_prompt": "Leshy laughing, forest echoing, wind through trees, water reflection, formless spirit, mist diffusion",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_77",
+      "type": "body",
+      "duration_seconds": 8.26,
+      "narration": "He is shape-shifter. Animal. Human. Whirlwind. Formless. To describe him is to misdescribe him.",
+      "image_prompt": "Leshy shape-shifting sequence, animal to human to whirlwind, formless spirit, clinical restraint, mist",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_78",
+      "type": "body",
+      "duration_seconds": 6.46,
+      "narration": "In Russian byliny, the hero fights Leshy. Sometimes wins. Sometimes loses. The forest is",
+      "image_prompt": "bylina hero fighting Leshy, forest test, ancient Russian epic, woodcut print, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_79",
+      "type": "body",
+      "duration_seconds": 7.74,
+      "narration": "The byliny preserve older mythology. Before saints. Before moralizers. The hero negotiates with Leshy.",
+      "image_prompt": "bylina hero negotiating with Leshy, ancient Slavic epic, not defeated but bargained, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_80",
+      "type": "body",
+      "duration_seconds": 8.1,
+      "narration": "Ivanits documents how Soviet industrialization tried to erase these beliefs. Collective farms. Urbanization. Television.",
+      "image_prompt": "Soviet industrialization, collective farms, urbanization, TV replacing folk belief, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_81",
+      "type": "body",
+      "duration_seconds": 5.66,
+      "narration": "But the forest endures. And with it, the memory that something walks beneath the",
+      "image_prompt": "modern Russian forest, ancient memory, something beneath trees, mist diffusion, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_82",
+      "type": "body",
+      "duration_seconds": 7.14,
+      "narration": "Contemporary Slavs still report Leshy encounters. Not as literal belief. As inherited memory. The",
+      "image_prompt": "modern Slav in forest, inherited memory, DNA of spiritual ecology, ancient and modern, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_83",
+      "type": "body",
+      "duration_seconds": 7.38,
+      "narration": "The leshy existed before Christianity. Before the Slavic state. Before writing itself. He is",
+      "image_prompt": "pre-Christian Slavic forest, ancient timeline, Leshy before writing, oldest memory, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_84",
+      "type": "body",
+      "duration_seconds": 5.7,
+      "narration": "We cannot prove Leshy exists. We can prove that Slavs believed he exists. For",
+      "image_prompt": "Slavic belief map across centuries, thousand years, millions of square kilometers, belief documentary, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_85",
+      "type": "body",
+      "duration_seconds": 5.22,
+      "narration": "Belief is evidence. Not of the spirit. Of the human need to personify the",
+      "image_prompt": "human need to personify unknown, Leshy as perfect vessel, psychology of belief, clinical diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_86",
+      "type": "body",
+      "duration_seconds": 6.3,
+      "narration": "He is the forest's consciousness. Our projection onto trees. The boundary between self and",
+      "image_prompt": "boundary between self and place, Leshy as visible negotiation, forest consciousness, folk art",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_87",
+      "type": "body",
+      "duration_seconds": 6.18,
+      "narration": "The Primary Chronicle begins with chaos. The forest is chaos made place. Leshy is",
+      "image_prompt": "Primary Chronicle opening, chaos made place, forest landlord Leshy, ancient text, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_88",
+      "type": "body",
+      "duration_seconds": 4.7,
+      "narration": "Every culture has its forest lord. The Wild Man. The Green Man. Leshy is",
+      "image_prompt": "forest lords across cultures, Wild Man, Green Man, Leshy comparison, ancient common root, clinical diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_89",
+      "type": "body",
+      "duration_seconds": 5.46,
+      "narration": "He is not gone. He never left. The forest still breathes. The trees still",
+      "image_prompt": "ancient forest at dawn, mushrooms overnight, forest breathing, Leshy presence implied, mist diffusion",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_90",
+      "type": "closer",
+      "duration_seconds": 4.46,
+      "narration": "The old ways asked: what do you owe the place that sustains you? Leshy",
+      "image_prompt": "ancient Slavic offering stone, Leshy silhouette in background, open question, forest at dusk, clinical restraint",
+      "stock_search_query": null
+    }
+  ],
+  "forbidden_words_check": {
+    "performed": true,
+    "matched": [],
+    "note": "All scene narrations checked against mythology-slavic.yaml forbidden_words list. Zero matches."
+  }
+}

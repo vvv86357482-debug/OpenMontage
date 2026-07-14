@@ -1,0 +1,153 @@
+name: Produce Video
+
+on:
+  workflow_dispatch:
+    inputs:
+      project_id:
+        description: "Project ID under projects/<project_id>/"
+        required: true
+        type: string
+      channel:
+        description: "Channel name (matches style playbook, e.g. dark-annals)"
+        required: true
+        type: string
+      render_runtime:
+        description: "Render runtime (ffmpeg only — no remotion/hyperframes in CI)"
+        required: false
+        default: "ffmpeg"
+        type: choice
+        options:
+          - ffmpeg
+
+permissions:
+  contents: read
+
+concurrency:
+  group: produce-video-${{ github.event.inputs.project_id }}
+  cancel-in-progress: false
+
+jobs:
+  validate-and-compose:
+    name: Validate → Compose → Checklist
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt jsonschema pyyaml
+
+      - name: Verify input artifacts exist
+        run: |
+          PROJECT_DIR="projects/${{ github.event.inputs.project_id }}"
+          CHANNEL="${{ github.event.inputs.channel }}"
+          
+          if [ ! -d "$PROJECT_DIR" ]; then
+            echo "FAIL: Project directory $PROJECT_DIR does not exist."
+            exit 1
+          fi
+
+          # Verify required artifacts
+          for file in script.json scene_plan.json asset_manifest.json; do
+            if [ ! -f "$PROJECT_DIR/$file" ]; then
+              echo "FAIL: Required artifact $PROJECT_DIR/$file is missing."
+              exit 1
+            fi
+          done
+
+          # Verify playbook exists
+          PLAYBOOK="styles/${CHANNEL}.yaml"
+          if [ ! -f "$PLAYBOOK" ]; then
+            echo "FAIL: Playbook $PLAYBOOK not found for channel '$CHANNEL'."
+            exit 1
+          fi
+
+          echo "All input artifacts present."
+
+      - name: Validate scene_plan schema
+        run: |
+          python3 -c "
+          import json, jsonschema
+          schema = json.load(open('schemas/artifacts/scene_plan.schema.json'))
+          plan = json.load(open('projects/${{ github.event.inputs.project_id }}/scene_plan.json'))
+          jsonschema.validate(instance=plan, schema=schema)
+          print('scene_plan.json: schema validation PASS')
+          "
+
+      - name: Validate script schema
+        run: |
+          python3 -c "
+          import json, jsonschema
+          schema = json.load(open('schemas/artifacts/script.schema.json'))
+          script = json.load(open('projects/${{ github.event.inputs.project_id }}/script.json'))
+          jsonschema.validate(instance=script, schema=schema)
+          print('script.json: schema validation PASS')
+          "
+
+      - name: Run pre-publish checklist (HARD GATE)
+        id: checklist
+        run: |
+          python3 scripts/run_pre_publish_checklist.py \
+            projects/${{ github.event.inputs.project_id }} \
+            --channel "${{ github.event.inputs.channel }}" \
+            --script projects/${{ github.event.inputs.project_id }}/script.json \
+            --scene-plan projects/${{ github.event.inputs.project_id }}/scene_plan.json \
+            --asset-manifest projects/${{ github.event.inputs.project_id }}/asset_manifest.json \
+            --edit-decisions projects/${{ github.event.inputs.project_id }}/edit_decisions.json \
+            --research-brief projects/${{ github.event.inputs.project_id }}/research_brief.json \
+            --ignore-cadence
+
+      - name: Compose video (ffmpeg)
+        if: always() && steps.checklist.outcome == 'success'
+        run: |
+          # Composition is handled by video_compose.py tooling.
+          # Placeholder: actual compose command will be finalized after scene_plan
+          # and asset director wiring are complete (PART 11+).
+          echo "Compose step placeholder — awaiting asset director integration."
+
+      - name: Upload scene_plan artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scene-plan-${{ github.event.inputs.project_id }}
+          path: projects/${{ github.event.inputs.project_id }}/scene_plan.json
+          retention-days: 30
+
+      - name: Upload script artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: script-${{ github.event.inputs.project_id }}
+          path: projects/${{ github.event.inputs.project_id }}/script.json
+          retention-days: 30
+
+      - name: Upload asset manifest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: asset-manifest-${{ github.event.inputs.project_id }}
+          path: projects/${{ github.event.inputs.project_id }}/asset_manifest.json
+          retention-days: 30
+
+    # Secrets are defined here for future use (Kaggle auto-submit, stock video API).
+    # Currently not referenced — this workflow composes pre-produced artifacts.
+    # When Kaggle auto-submit is added, uncomment and wire the relevant secrets.
+    env:
+      # PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      # PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+      # KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+      # KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+      # HF_TOKEN: ${{ secrets.HF_TOKEN }}

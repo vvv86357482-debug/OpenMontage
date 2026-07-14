@@ -1,0 +1,124 @@
+{
+  "project_id": "tts-compare-jeju",
+  "channel": "crime-ledger",
+  "gpu_name": "Tesla T4",
+  "gpu_branch": "t4_or_better",
+  "generated_at": "2026-07-11T02:15:33",
+  "error": "kokoro_load: ModuleNotFoundError(\"No module named 'kokoro'\")",
+  "errors": [
+    "kokoro_load: ModuleNotFoundError(\"No module named 'kokoro'\")"
+  ],
+  "engines": {
+    "chatterbox": {
+      "rtf": 0.964,
+      "total_gen_s": 61.32,
+      "total_audio_s": 59.08,
+      "vram_peak_bytes": 3415021056,
+      "model_load_s": 55.82,
+      "singleton": true,
+      "voice": "default"
+    }
+  },
+  "scenes": [
+    {
+      "id": "scene_01",
+      "text": "February first, 2009. Jeju Island. A childcare teacher boards a taxi at three AM.",
+      "chatterbox": {
+        "gen_s": 14.039,
+        "dur_s": 5.4,
+        "bytes": 259278
+      },
+      "kokoro": null
+    },
+    {
+      "id": "scene_09",
+      "text": "Park drove a white NF Sonata. CCTV places a matching vehicle near the scene at the critical time.",
+      "chatterbox": {
+        "gen_s": 4.467,
+        "dur_s": 5.08,
+        "bytes": 243918
+      },
+      "kokoro": null
+    },
+    {
+      "id": "scene_18",
+      "text": "The appellate court reviews. Same evidence. Same arguments. Same conclusion. Not guilty again.",
+      "chatterbox": {
+        "gen_s": 4.677,
+        "dur_s": 5.32,
+        "bytes": 255438
+      },
+      "kokoro": null
+    },
+    {
+      "id": "scene_27",
+      "text": "Jeju police form a cold case team in 2016. They re-examine the body. The taxi. The timeline.",
+      "chatterbox": {
+        "gen_s": 4.852,
+        "dur_s": 5.48,
+        "bytes": 263118
+      },
+      "kokoro": null
+    },
+    {
+      "id": "scene_36",
+      "text": "No murder weapon is found. No DNA connects Park. The fibers are not unique. The CCTV is probabilistic.",
+      "chatterbox": {
+        "gen_s": 5.851,
+        "dur_s": 6.56,
+        "bytes": 314958
+      },
+      "kokoro": null
+    },
+    {
+      "id": "scene_45",
+      "text": "The Supreme Court explicitly noted the second taxi possibility. Reasonable doubt. The victim may have boarded a third vehicle.",
+      "chatterbox": {
+        "gen_s": 5.224,
+        "dur_s": 6.0,
+        "bytes": 288078
+      },
+      "kokoro": null
+    },
+    {
+      "id": "scene_54",
+      "text": "Park left Jeju after the first investigation. He lived elsewhere for nine years. The case went cold.",
+      "chatterbox": {
+        "gen_s": 4.859,
+        "dur_s": 5.52,
+        "bytes": 265038
+      },
+      "kokoro": null
+    },
+    {
+      "id": "scene_63",
+      "text": "Jeju's Memories of Murder. The nickname references a Korean film about an unsolved killing. Parallels are unavoidable.",
+      "chatterbox": {
+        "gen_s": 4.959,
+        "dur_s": 5.6,
+        "bytes": 268878
+      },
+      "kokoro": null
+    },
+    {
+      "id": "scene_72",
+      "text": "The family receives no justice. No conviction. No apology. Just a Supreme Court document explaining why evidence fell short.",
+      "chatterbox": {
+        "gen_s": 5.793,
+        "dur_s": 6.56,
+        "bytes": 314958
+      },
+      "kokoro": null
+    },
+    {
+      "id": "scene_81",
+      "text": "The court's reasoning is precise. Circumstantial evidence can convict. But it must exclude all reasonable alternatives.",
+      "chatterbox": {
+        "gen_s": 6.595,
+        "dur_s": 7.56,
+        "bytes": 362958
+      },
+      "kokoro": null
+    }
+  ]
+}

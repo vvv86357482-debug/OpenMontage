@@ -7,6 +7,7 @@ not installed.
 
 from __future__ import annotations
 
+import re
 import time
 from pathlib import Path
 from typing import Any
@@ -261,7 +262,7 @@ class AudioMixer(BaseTool):
         cmd = ["ffmpeg", "-y"]
         cmd.extend(input_args)
         cmd.extend(["-filter_complex", filter_complex])
-        cmd.extend(["-map", out_label, str(output_path)])
+        cmd.extend(["-map", out_label, "-ar", "44100", str(output_path)])
 
         self.run_command(cmd)
 
@@ -367,6 +368,7 @@ class AudioMixer(BaseTool):
             "-i", music_path,
             "-filter_complex", filter_complex,
             "-map", "[out]",
+            "-ar", "44100",
             str(output_path),
         ]
 
@@ -398,7 +400,7 @@ class AudioMixer(BaseTool):
             "-i", str(input_path),
             "-vn",
             "-acodec", "pcm_s16le",
-            "-ar", "16000",
+            "-ar", "44100",
             "-ac", "1",
             str(output_path),
         ]
@@ -500,9 +502,9 @@ class AudioMixer(BaseTool):
                 filter_parts.append(
                     f"{speech_labels}amix=inputs={len(speech_tracks)}:duration=longest[speech_mix]"
                 )
-                speech_out = "[speech_mix]"
+                filter_parts.append("[speech_mix]asplit[speech_key][speech_branch]")
             else:
-                speech_out = f"[a{speech_indices[0]}]"
+                filter_parts.append(f"[a{speech_indices[0]}]asplit[speech_key][speech_branch]")
 
             # Mix music tracks together
             music_start = len(speech_tracks)
@@ -524,36 +526,14 @@ class AudioMixer(BaseTool):
             music_vol = duck_params.get("music_volume_during_speech", 0.15)
 
             filter_parts.append(
-                f"{music_in}{speech_out}sidechaincompress="
+                f"{music_in}[speech_key]sidechaincompress="
                 f"threshold=0.02:ratio=9:attack={attack}:release={release}:"
                 f"level_sc=1:mix=0.9[ducked_music];"
                 f"[ducked_music]volume={music_vol * 3}[music_out]"
             )
 
-            # Duplicate speech for final mix (sidechain consumes it as key)
-            filter_parts.append(
-                f"{speech_out}acopy[speech_dup]" if speech_out.startswith("[a") else ""
-            )
-            # Re-mix speech path: we need speech audio in the output too
-            # Simpler approach: use amix on original speech and ducked music
-            # Reset: use a cleaner approach — amerge the speech mix and ducked music
-            # Actually, let's rebuild. The sidechain approach above uses speech as
-            # the key signal but doesn't consume it from the output chain.
-            # FFmpeg sidechaincompress: input 0 = audio to compress, input 1 = key signal
-            # So music is compressed, speech signal is the key. We need to mix them.
-            # Remove the last filter_part (the acopy that may be empty)
-            if filter_parts and filter_parts[-1] == "":
-                filter_parts.pop()
-
-            # Build speech mix for output separately
-            if len(speech_tracks) > 1:
-                # speech_mix already exists, make a copy for output
-                filter_parts.append(f"{speech_labels}amix=inputs={len(speech_tracks)}:duration=longest[speech_out]")
-            else:
-                filter_parts.append(f"[a{speech_indices[0]}]acopy[speech_out]")
-
-            # Final mix: speech_out + music_out
-            mix_label = "[speech_out][music_out]amix=inputs=2:duration=longest[premix]"
+            # Final mix: speech_branch (from asplit) + music_out
+            mix_label = "[speech_branch][music_out]amix=inputs=2:duration=longest[premix]"
 
             # Add SFX if present
             sfx_start = len(speech_tracks) + len(music_tracks)
@@ -585,7 +565,7 @@ class AudioMixer(BaseTool):
         cmd = ["ffmpeg", "-y"]
         cmd.extend(input_args)
         cmd.extend(["-filter_complex", filter_complex])
-        cmd.extend(["-map", out_label, str(output_path)])
+        cmd.extend(["-map", out_label, "-ar", "44100", str(output_path)])
 
         self.run_command(cmd)
 
@@ -639,14 +619,29 @@ class AudioMixer(BaseTool):
 
         output_path.parent.mkdir(parents=True, exist_ok=True)
 
-        # Get video duration
+        # Get video duration — prefer ffprobe, fall back to ffmpeg stderr parse
         dur_cmd = [
             "ffprobe", "-v", "error",
             "-show_entries", "format=duration",
             "-of", "csv=p=0",
             video_path,
         ]
-        total_dur = float(self.run_command(dur_cmd).stdout.strip().split("\n")[0])
+        try:
+            total_dur = float(self.run_command(dur_cmd).stdout.strip().split("\n")[0])
+        except Exception:
+            dur_cmd = [
+                "ffmpeg", "-i", video_path,
+                "-f", "null", "-"
+            ]
+            try:
+                dur_out = self.run_command(dur_cmd).stderr or ""
+            except Exception:
+                dur_out = ""
+            m = re.search(r"Duration: (\d+):(\d+):(\d+\.\d+)", dur_out)
+            if not m:
+                raise RuntimeError(f"Could not determine duration of {video_path}")
+            h, mn, s = m.groups()
+            total_dur = float(s) + int(mn) * 60 + int(h) * 3600
 
         # Build volume expression for each segment with smooth fades
         parts = []
@@ -682,7 +677,7 @@ class AudioMixer(BaseTool):
             "-map", "0:v",
             "-map", "[aout]",
             "-c:v", "copy",
-            "-c:a", "aac", "-b:a", "192k",
+            "-c:a", "aac", "-b:a", "192k", "-ar", "44100",
             str(output_path),
         ]
 

@@ -1,4 +1,5 @@
 name: character-animation
+render_runtime: ffmpeg
 version: "0.1"
 description: >
   Character animation pipeline for local, reusable cartoon characters. It turns

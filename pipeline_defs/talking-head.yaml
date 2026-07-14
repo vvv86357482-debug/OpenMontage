@@ -1,4 +1,5 @@
 name: talking-head
+render_runtime: ffmpeg
 version: "2.0"
 description: >
   End-to-end talking-head video pipeline. Takes raw footage of a person speaking,

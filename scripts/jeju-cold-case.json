@@ -1,0 +1,772 @@
+{
+  "project_id": "jeju-cold-case",
+  "channel": "crime-ledger",
+  "title": "Jeju's Memories of Murder",
+  "topic": "Jeju childcare teacher murder case (2009)",
+  "persona": "Cold Case Detective",
+  "tts_voice": "am_puck",
+  "sources": [
+    {
+      "title": "\uc81c\uc8fc \ubcf4\uc721\uad50\uc0ac \uc0b4\uc778 \uc0ac\uac74",
+      "url": "https://ko.wikipedia.org/wiki/%EC%A0%9C%EC%A3%BC_%EB%B3%B4%EC%9C%A1%EA%B5%90%EC%82%AC_%EC%82%B4%EC%9D%B8_%EC%82%AC%EA%B1%B4",
+      "type": "korean_wikipedia",
+      "accessed": "2026-07-10",
+      "translation_note": "Facts translated from Korean-language Wikipedia article. Legal terminology and nuanced details may lose precision in translation."
+    },
+    {
+      "title": "\uc0c8\ubcbd \uadc0\uac13\uae38, \ud0dd\uc2dc\uc5d0 \ud0c4 \ub4a4 \uc0ac\ub77c\uc9c4 \ubcf4\uc721\uad50\uc0ac\u202617\ub144\uc9f8 \ubbf8\uad81\uc5d0 \ube60\uc9c4 '\uc81c\uc8fc\ud310 \uc0b4\uc778\uc758 \ucd94\uc5b5'",
+      "url": "https://www.sedaily.com/article/20064741",
+      "type": "korean_news",
+      "accessed": "2026-07-10",
+      "translation_note": "Facts translated from Korean-language Seoul Economic Daily article by \uac15\uc9c0\uc6d0. No English version exists."
+    },
+    {
+      "title": "'\uc81c\uc8fc\ud310 \uc0b4\uc778\uc758 \ucd94\uc5b5' \ubb34\uc8c4\u2026\ubcf4\uc721\uad50\uc0ac \uc0b4\uc778 \ub2e4\uc2dc \ubbf8\uad81\uc18d\uc73c\ub85c",
+      "url": "https://www.joongang.co.kr/article/23522316",
+      "type": "korean_news",
+      "accessed": "2026-07-10",
+      "translation_note": "Facts translated from Korean-language JoongAng Daily article by \ucd5c\ucda9\uc77c. No English version exists."
+    },
+    {
+      "title": "\uc81c\uc8fc\ud310 '\uc0b4\uc778\uc758 \ucd94\uc5b5' \ud53c\uace0\uc778\uc5d0 \ubc95\uc6d0 \"\uc99d\uac70 \ubd88\ucda9\ubd84\" \ubb34\uc8c4 \uc120\uace0",
+      "url": "https://www.khan.co.kr/article/201907112124005",
+      "type": "korean_news",
+      "accessed": "2026-07-10",
+      "translation_note": "Facts translated from Korean-language Kyunghyang Shinmun article. No English version exists."
+    },
+    {
+      "title": "\u2018\uc81c\uc8fc \ubcf4\uc721\uad50\uc0ac \uc0b4\uc778 \uc0ac\uac74\u2019 \ud0dd\uc2dc\uae30\uc0ac \ubb34\uc8c4 \ud655\uc815\u2026\ub2e4\uc2dc \ubbf8\uad81\uc73c\ub85c",
+      "url": "https://www.hani.co.kr/arti/society/society_general/1017022.html",
+      "type": "korean_news",
+      "accessed": "2026-07-10",
+      "translation_note": "Facts translated from Korean-language Hankyoreh article by \ucd5c\ubbfc\uc601. No English version exists."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_01",
+      "type": "hook",
+      "duration_seconds": 6.2,
+      "narration": "February first, 2009. Jeju Island. A childcare teacher boards a taxi at three AM.",
+      "image_prompt": "rain-soaked Jeju street at 3 AM, taxi pulling away, empty road, monochrome noir, film grain",
+      "stock_search_query": "Jeju Island empty street night taxi"
+    },
+    {
+      "id": "scene_02",
+      "type": "body",
+      "duration_seconds": 5.48,
+      "narration": "She calls a taxi through directory service. That is the last confirmed trace of her alive.",
+      "image_prompt": "taxi dispatch phone, hand pressing numbers, dim screen glow, forensic document, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_03",
+      "type": "body",
+      "duration_seconds": 5.32,
+      "narration": "The taxi arrives. She gets in. The meter activates. She never reaches home.",
+      "image_prompt": "taxi interior rear seat, empty passenger view, rain streaks, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_04",
+      "type": "body",
+      "duration_seconds": 5.88,
+      "narration": "Her family reports her missing after six days. A bag appears. Her wallet. Her phone.",
+      "image_prompt": "evidence bag with wallet and phone, chain of custody, forensic table, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_05",
+      "type": "body",
+      "duration_seconds": 5.48,
+      "narration": "Seven days later, a farmer finds her in a drainage ditch near Aewol. Top only.",
+      "image_prompt": "empty drainage ditch, bare earth, overcast sky, forensic marker, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_06",
+      "type": "body",
+      "duration_seconds": 6.84,
+      "narration": "The autopsy shows ligature marks on her neck. Strangulation. Upper clothing missing. Bruising from struggle.",
+      "image_prompt": "medical examiner report, neck diagram, ligature mark annotation, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_07",
+      "type": "body",
+      "duration_seconds": 5.2,
+      "narration": "But the pathologist estimates death within twenty-four hours of discovery. Not the day she vanished.",
+      "image_prompt": "autopsy timeline graph, conflicting date arrows, coroner note, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_08",
+      "type": "body",
+      "duration_seconds": 6.08,
+      "narration": "Police canvass five thousand taxi drivers across Jeju. The focus narrows to one man: Park.",
+      "image_prompt": "taxi driver lineup, five thousand files, suspect photo with red string, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_09",
+      "type": "body",
+      "duration_seconds": 6.2,
+      "narration": "Park drove a white NF Sonata. CCTV places a matching vehicle near the scene at the critical time.",
+      "image_prompt": "CCTV still frame, white taxi at intersection, timestamp, red circle annotation",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_10",
+      "type": "body",
+      "duration_seconds": 5.6,
+      "narration": "Analysts find microfibers in Park's taxi. Similar to fur on Lee's jacket. A possible connection.",
+      "image_prompt": "microscope fiber evidence, jacket texture comparison, forensic document, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_11",
+      "type": "body",
+      "duration_seconds": 5.44,
+      "narration": "But the fibers are mass-produced. The court rules they cannot be uniquely linked to one vehicle.",
+      "image_prompt": "fiber batch stamp, mass production chart, evidence inconsistency, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_12",
+      "type": "body",
+      "duration_seconds": 5.48,
+      "narration": "Park deleted phone call records. Suspicious. But deletion alone does not prove murder.",
+      "image_prompt": "phone call log with gaps, deletion marker, suspicious but inconclusive, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_13",
+      "type": "body",
+      "duration_seconds": 6.28,
+      "narration": "A blood-stained jean is found in a motel room. The search lacked a warrant. The evidence is suppressed.",
+      "image_prompt": "illegal search warrant, suppressed evidence stamp, redacted report, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_14",
+      "type": "body",
+      "duration_seconds": 7.84,
+      "narration": "Prosecutors rely on circumstantial evidence. No weapon. No DNA. No eyewitness. No direct proof.",
+      "image_prompt": "evidence table with empty slots, circumstantial cards, clinical restraint, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_15",
+      "type": "body",
+      "duration_seconds": 7.24,
+      "narration": "The first trial begins in 2019. Ten years after the crime. The family waits. The evidence is weighed.",
+      "image_prompt": "empty courtroom dock, gavel, ten-year case file, film grain, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_16",
+      "type": "body",
+      "duration_seconds": 8.32,
+      "narration": "July 11th, 2019. The verdict arrives. Not guilty. The fibers are insufficient. The CCTV is inconclusive.",
+      "image_prompt": "not guilty verdict headline, newspaper clipping, empty dock, film grain, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_17",
+      "type": "body",
+      "duration_seconds": 5.0,
+      "narration": "Prosecutors appeal immediately. They argue the cumulative weight of evidence proves guilt.",
+      "image_prompt": "appeal brief stack, cumulative evidence arrows, clinical monochrome, typewriter labels",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_18",
+      "type": "body",
+      "duration_seconds": 5.88,
+      "narration": "The appellate court reviews. Same evidence. Same arguments. Same conclusion. Not guilty again.",
+      "image_prompt": "appellate courtroom, second not guilty stamp, film grain, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_19",
+      "type": "body",
+      "duration_seconds": 10.96,
+      "narration": "July 8th, 2020. The appellate court reaffirms acquittal. Circumstantial evidence cannot exclude reasonable doubt.",
+      "image_prompt": "appellate verdict document, reasonable doubt highlight, monochrome documentary",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_20",
+      "type": "body",
+      "duration_seconds": 5.32,
+      "narration": "Prosecutors escalate to the Supreme Court. They challenge the lower courts' standard of proof.",
+      "image_prompt": "Supreme Court building, legal brief, standard of proof question, dark monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_21",
+      "type": "body",
+      "duration_seconds": 8.0,
+      "narration": "October 28th, 2021. The Supreme Court confirms acquittal. Mass-produced fibers cannot single out one suspect.",
+      "image_prompt": "Supreme Court confirmation stamp, mass-produced fibers document, case unresolved, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_22",
+      "type": "body",
+      "duration_seconds": 6.28,
+      "narration": "The murder statute of limitations expired. The 2015 abolition came too late for Lee's case.",
+      "image_prompt": "statute expiration clock, 2015 abolition key unused, time-bound justice, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_23",
+      "type": "body",
+      "duration_seconds": 10.48,
+      "narration": "Park had relocated to North Gyeongsang. He lived there for nine years before rearrest. The sources say he moved between various regions. Not an assumed name. Just displacement.",
+      "image_prompt": "relocation map, assumed identity document, nine-year gap, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_24",
+      "type": "body",
+      "duration_seconds": 9.16,
+      "narration": "After acquittal, Park speaks. His life is destroyed. His defense team claimed he never met Lee. Park himself said his life was ruined and the system treated him like a shackle.",
+      "image_prompt": "Park silhouette, microphone, destroyed life quote, film grain, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_25",
+      "type": "body",
+      "duration_seconds": 7.8,
+      "narration": "The family receives no closure. No conviction. No apology. Just a legal system that reached no answer.",
+      "image_prompt": "family portrait, empty justice scales, Supreme Court document, dark moody, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_26",
+      "type": "body",
+      "duration_seconds": 5.96,
+      "narration": "In 2015, South Korea abolished the murder statute. Cold case families gained hope.",
+      "image_prompt": "TAWAN Act document, statute clock reset, hope and family portrait, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_27",
+      "type": "body",
+      "duration_seconds": 7.64,
+      "narration": "Jeju police form a cold case team in 2016. They re-examine the body. The taxi. The timeline.",
+      "image_prompt": "cold case team meeting, evidence board, re-examination markers, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_28",
+      "type": "body",
+      "duration_seconds": 7.04,
+      "narration": "The timeline remains contested. The autopsy says death within twenty-four hours of discovery. Police say February first.",
+      "image_prompt": "conflicting timeline chart, autopsy versus police arrows, contradiction, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_29",
+      "type": "body",
+      "duration_seconds": 7.08,
+      "narration": "To resolve the timeline, scientists run decomposition experiments. Pigs and dogs. Controlled conditions.",
+      "image_prompt": "decomposition experiment, pig and dog specimens, forensic scientists, clinical restraint",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_30",
+      "type": "body",
+      "duration_seconds": 6.84,
+      "narration": "The results suggest death closer to February first. But animal-to-human extrapolation is not proof.",
+      "image_prompt": "decomposition timeline, animal to human arrow, uncertainty margin, scientific diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_31",
+      "type": "body",
+      "duration_seconds": 7.24,
+      "narration": "Police arrest Park in May 2018. Nine years after the crime. They believe evidence now supports prosecution.",
+      "image_prompt": "arrest warrant, police car lights, nine-year gap closed, monochrome noir",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_32",
+      "type": "body",
+      "duration_seconds": 6.68,
+      "narration": "The trial begins March 2019. Park's defense denies everything. No meeting. No crime. No evidence.",
+      "image_prompt": "defense table, Park silhouette, denial, empty prosecution table, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_33",
+      "type": "body",
+      "duration_seconds": 8.28,
+      "narration": "Prosecutors present target fiber analysis. The defense calls it imprecise. Mass production undermines uniqueness.",
+      "image_prompt": "target fiber report, mass production stamp, defense objection, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_34",
+      "type": "body",
+      "duration_seconds": 7.36,
+      "narration": "CCTV shows a white Sonata. Eighteen such taxis operated on Jeju. Probability is not identity.",
+      "image_prompt": "eighteen Sonata grid, CCTV highlight, probability not identity, diagram style",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_35",
+      "type": "body",
+      "duration_seconds": 7.32,
+      "narration": "The deleted phone records suggest cover-up. The defense says routine data management. The court notes suspicion.",
+      "image_prompt": "deleted call records, routine management argument, suspicious, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_36",
+      "type": "body",
+      "duration_seconds": 7.76,
+      "narration": "No murder weapon is found. No DNA connects Park. The fibers are not unique. The CCTV is probabilistic.",
+      "image_prompt": "empty evidence table, missing weapon, no DNA match, uncertain CCTV, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_37",
+      "type": "body",
+      "duration_seconds": 5.84,
+      "narration": "The first verdict: not guilty. Reasonable doubt cannot be excluded. Circumstantial evidence is not proof.",
+      "image_prompt": "verdict document, reasonable doubt highlighted, inference not proof, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_38",
+      "type": "body",
+      "duration_seconds": 8.12,
+      "narration": "Prosecutors appeal. They argue cumulative weight makes the case. The court disagrees. Each piece remains insufficient.",
+      "image_prompt": "appeal brief, cumulative evidence chart, insufficient verdict, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_39",
+      "type": "body",
+      "duration_seconds": 7.32,
+      "narration": "July 2020. Second not guilty. The appellate court finds the prosecution's forensic claims below the proof standard.",
+      "image_prompt": "second appeal verdict, proof standard bar, evidence falling short, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_40",
+      "type": "body",
+      "duration_seconds": 7.84,
+      "narration": "The prosecution goes to the Supreme Court. They claim lower courts misapplied the standard. Cumulative impact ignored.",
+      "image_prompt": "Supreme Court brief, cumulative impact diagram, reversal request, dark monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_41",
+      "type": "body",
+      "duration_seconds": 8.68,
+      "narration": "October 2021. The Supreme Court dismisses the appeal. Mass-produced fibers cannot distinguish one taxi from another.",
+      "image_prompt": "Supreme Court dismissal, fiber exclusion logic, case closed legally, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_42",
+      "type": "body",
+      "duration_seconds": 6.72,
+      "narration": "Park's acquittal is final. Double jeopardy prevents retrial. The state's chance to prove guilt is exhausted.",
+      "image_prompt": "double jeopardy wall, final acquittal seal, closed courthouse, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_43",
+      "type": "body",
+      "duration_seconds": 5.64,
+      "narration": "But legally final is not factually resolved. The questions remain. Who picked Lee up that night?",
+      "image_prompt": "unanswered question mark, empty taxi, foggy road, unresolved file, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_44",
+      "type": "body",
+      "duration_seconds": 5.68,
+      "narration": "Another taxi driver reported picking up a woman matching Lee. This lead was deprioritized.",
+      "image_prompt": "second taxi driver silhouette, witness report, deprioritized lead, dark mystery, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_45",
+      "type": "body",
+      "duration_seconds": 7.52,
+      "narration": "The Supreme Court explicitly noted the second taxi possibility. Reasonable doubt. The victim may have boarded a third vehicle.",
+      "image_prompt": "Supreme Court excerpt, third taxi highlighted, reasonable doubt, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_46",
+      "type": "body",
+      "duration_seconds": 5.88,
+      "narration": "If the second driver is truthful, Lee was alive after leaving Park's taxi. Everything shifts.",
+      "image_prompt": "timeline branching diagram, two taxi routes, murder location uncertainty, scientific diagram",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_47",
+      "type": "body",
+      "duration_seconds": 6.64,
+      "narration": "The second taxi driver's identity is protected. His vehicle was never examined. His route was never verified.",
+      "image_prompt": "anonymous witness file, untested vehicle icon, unverified route, dark mystery, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_48",
+      "type": "body",
+      "duration_seconds": 7.44,
+      "narration": "Why was this lead deprioritized? The investigation fixated on Park early. Confirmation bias shaped every step.",
+      "image_prompt": "confirmation bias diagram, spotlight on Park, second taxi in shadow, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_49",
+      "type": "body",
+      "duration_seconds": 6.12,
+      "narration": "Five thousand drivers canvassed. Breadth without depth is theatre. The second taxi was never located.",
+      "image_prompt": "five thousand canvass map, empty second taxi slot, theatrical spotlight, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_50",
+      "type": "body",
+      "duration_seconds": 8.0,
+      "narration": "The decomposition experiment used pigs and dogs. Defense argued species differences. Translation to human is speculative.",
+      "image_prompt": "pig dog decomposition chart, species difference warning, extrapolation arrow, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_51",
+      "type": "body",
+      "duration_seconds": 6.92,
+      "narration": "Target fiber analysis was groundbreaking. But groundbreaking is not infallible. The court demanded higher standards.",
+      "image_prompt": "target fiber lab, innovation versus validation scale, microscope, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_52",
+      "type": "body",
+      "duration_seconds": 8.84,
+      "narration": "Eighteen white Sonata taxis operated on Jeju. CCTV could not isolate Park's specific vehicle. Probability is not identity.",
+      "image_prompt": "eighteen Sonata grid, CCTV highlight, probability not identity, diagram style",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_53",
+      "type": "body",
+      "duration_seconds": 6.16,
+      "narration": "Park's deleted records were suspicious. Innocent people delete data too. Suspicion is not proof.",
+      "image_prompt": "deleted call log, innocent versus guilty Venn, reasonable doubt scale, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_54",
+      "type": "body",
+      "duration_seconds": 6.64,
+      "narration": "Park left Jeju after the first investigation. He lived elsewhere for nine years. The case went cold.",
+      "image_prompt": "relocation path, stalled investigation sign, nine-year gap, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_55",
+      "type": "body",
+      "duration_seconds": 7.56,
+      "narration": "The cold case team formed in 2016. They re-examined everything. New tests. New evidence. Not new proof.",
+      "image_prompt": "cold case team, re-examination markers, new evidence not proof, documentary",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_56",
+      "type": "body",
+      "duration_seconds": 5.84,
+      "narration": "The decomposition experiment shifted the timeline toward February first. But it did not close the case.",
+      "image_prompt": "experiment result chart, needle moving, court record original estimate, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_57",
+      "type": "body",
+      "duration_seconds": 6.56,
+      "narration": "The Supreme Court's reasoning is narrow. Mass-produced fibers exclude other taxis. Reasonable doubt remains.",
+      "image_prompt": "Supreme Court flowchart, fiber exclusion logic, doubt shield, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_58",
+      "type": "body",
+      "duration_seconds": 6.32,
+      "narration": "Double jeopardy blocks retrial. Even if new evidence emerges. Even if the second driver is found.",
+      "image_prompt": "double jeopardy wall, retrial blocked sign, new evidence barrier, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_59",
+      "type": "body",
+      "duration_seconds": 5.96,
+      "narration": "Lee was twenty-six. A childcare teacher. A daughter. She took a taxi home. That is certain.",
+      "image_prompt": "young woman portrait, childcare teacher, certain fact, taxi home route, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_60",
+      "type": "body",
+      "duration_seconds": 6.96,
+      "narration": "The investigation expended man-years. Forensic science. Court proceedings. The outcome was not what anyone wanted.",
+      "image_prompt": "investigation resources, man-years clock, forensic tools, unsatisfying outcome, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_61",
+      "type": "body",
+      "duration_seconds": 7.12,
+      "narration": "Park's life after acquittal is private. No media. No advocacy. Just a man destroyed by accusation.",
+      "image_prompt": "solitary figure, no microphone, aftermath landscape, dark moody, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_62",
+      "type": "body",
+      "duration_seconds": 6.72,
+      "narration": "The family's grief is ongoing. No resolution changes February first, 2009. A daughter gone.",
+      "image_prompt": "family grief, February first calendar, wrong answer stamp, ongoing sorrow, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_63",
+      "type": "body",
+      "duration_seconds": 8.24,
+      "narration": "Jeju's Memories of Murder. The nickname references a Korean film about an unsolved killing. Parallels are unavoidable.",
+      "image_prompt": "film poster overlay, Jeju landscape, fiction-reality mirror, dark ambient, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_64",
+      "type": "body",
+      "duration_seconds": 6.8,
+      "narration": "No weapon. No DNA. No eyewitness. No confession. The prosecution asked for conviction on inference alone.",
+      "image_prompt": "empty evidence table, five missing slots, inference argument, clinical restraint, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_65",
+      "type": "body",
+      "duration_seconds": 6.36,
+      "narration": "Five thousand drivers canvassed. But canvassing is not finding. The second taxi was never located.",
+      "image_prompt": "five thousand canvass map, empty second taxi slot, map gaps, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_66",
+      "type": "body",
+      "duration_seconds": 5.6,
+      "narration": "The second taxi driver's statement is sworn. His vehicle is unaccounted for. His route is untraced.",
+      "image_prompt": "anonymous witness file, unaccounted vehicle, untraced route, dark mystery, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_67",
+      "type": "body",
+      "duration_seconds": 10.24,
+      "narration": "Park left Jeju after the first investigation. He lived elsewhere for nine years. The sources describe this as drifting between regions. No assumed name is documented.",
+      "image_prompt": "relocation path, assumed identity document, nine-year gap, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_68",
+      "type": "body",
+      "duration_seconds": 7.72,
+      "narration": "When the cold case team formed in 2016, hope returned. New tests. New evidence. Not new proof.",
+      "image_prompt": "cold case team formation, new tests, evidence re-examination, documentary",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_69",
+      "type": "body",
+      "duration_seconds": 7.12,
+      "narration": "The animal decomposition experiment placed death closer to February first. But science has margins of error.",
+      "image_prompt": "experiment results, needle moving, error margin, clinical monochrome, scientific",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_70",
+      "type": "body",
+      "duration_seconds": 6.68,
+      "narration": "Target fiber analysis was a Korean forensic first. But innovation does not guarantee conviction.",
+      "image_prompt": "target fiber lab, innovation badge, validation question mark, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_71",
+      "type": "body",
+      "duration_seconds": 6.64,
+      "narration": "Park weeps in the dock after final acquittal. His life is destroyed. Whether guilty or innocent, the damage stands.",
+      "image_prompt": "Park weeping, courtroom, destroyed life quote, film grain, monochrome noir",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_72",
+      "type": "body",
+      "duration_seconds": 8.36,
+      "narration": "The family receives no justice. No conviction. No apology. Just a Supreme Court document explaining why evidence fell short.",
+      "image_prompt": "family portrait, Supreme Court document, empty justice scales, dark moody, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_73",
+      "type": "body",
+      "duration_seconds": 8.84,
+      "narration": "The case is officially closed. The statute expired. No further prosecution is possible. But closed is not resolved.",
+      "image_prompt": "officially closed stamp, expiration document, unresolved file, dark ambient, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_74",
+      "type": "body",
+      "duration_seconds": 7.8,
+      "narration": "Jeju's Memories of Murder. The nickname references a Korean film about an unsolved killing. Parallels are unavoidable.",
+      "image_prompt": "film poster reference, Jeju landscape, haunting question mark, dark ambient, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_75",
+      "type": "body",
+      "duration_seconds": 6.36,
+      "narration": "The second taxi driver was never identified publicly. His statement remains sealed. His route remains untraced.",
+      "image_prompt": "anonymous witness protection, sealed file, unmapped route, dark mystery, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_76",
+      "type": "body",
+      "duration_seconds": 7.04,
+      "narration": "Lee's case exposed flaws in Korean forensic methodology. It tested the limits of circumstantial evidence.",
+      "image_prompt": "cold case file, forensic flaw icon, evidence limit boundary, police question mark, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_77",
+      "type": "body",
+      "duration_seconds": 7.4,
+      "narration": "The decomposition experiment was a legal first. It established precedent. It also revealed the method's limitations.",
+      "image_prompt": "first-of-its-kind badge, precedent law book, limitation warning, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_78",
+      "type": "body",
+      "duration_seconds": 7.28,
+      "narration": "The microfibers were suggestive. The court said suggestive is not sufficient. Connection requires certainty.",
+      "image_prompt": "fiber connection web, suggestive link, not sufficient red X, clinical monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_79",
+      "type": "body",
+      "duration_seconds": 6.8,
+      "narration": "CCTV placed a white Sonata near the scene. Eighteen existed on Jeju. Probability is not identity.",
+      "image_prompt": "eighteen Sonata grid, CCTV highlight, probability not identity, diagram style",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_80",
+      "type": "body",
+      "duration_seconds": 7.08,
+      "narration": "Park's deleted records were suspicious. Innocent people delete data too. The standard remains: proof beyond doubt.",
+      "image_prompt": "deleted records, innocent versus guilty diagram, reasonable doubt scale, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_81",
+      "type": "body",
+      "duration_seconds": 7.56,
+      "narration": "The court's reasoning is precise. Circumstantial evidence can convict. But it must exclude all reasonable alternatives.",
+      "image_prompt": "court reasoning flowchart, circumstantial pyramid, alternative explanation breaking point, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_82",
+      "type": "body",
+      "duration_seconds": 10.12,
+      "narration": "Park's post-acquittal statement is brief. His life destroyed. His defense claimed he never met Lee. Whether true or false, the damage to Park stands. His own words were about losing everything.",
+      "image_prompt": "Park statement quote, destroyed life visual, irreversible damage, film grain, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_83",
+      "type": "body",
+      "duration_seconds": 7.84,
+      "narration": "The family attended every hearing. Every appeal. Every Supreme Court session. They watched the system work. They felt it fail.",
+      "image_prompt": "family in gallery, empty conviction seat, system functioning but failing, dark moody, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_84",
+      "type": "body",
+      "duration_seconds": 6.44,
+      "narration": "The case fractured trust on Jeju. Drivers questioned. Passengers wary. The island felt more dangerous.",
+      "image_prompt": "Jeju map, trust fracture lines, community fear, dark ambient, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_85",
+      "type": "body",
+      "duration_seconds": 7.4,
+      "narration": "No weapon. No DNA. No eyewitness. No confession. The prosecution asked for conviction on inference alone.",
+      "image_prompt": "empty evidence table, five missing slots, inference argument, clinical restraint, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_86",
+      "type": "body",
+      "duration_seconds": 7.16,
+      "narration": "Five thousand drivers canvassed. That is police work. But canvassing is not finding. The second taxi was never located.",
+      "image_prompt": "five thousand canvass grid, empty second taxi slot, map gaps, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_87",
+      "type": "body",
+      "duration_seconds": 7.84,
+      "narration": "The voice of the second taxi driver exists in the record. Anonymous. His vehicle unaccounted for. His route untraced.",
+      "image_prompt": "anonymous witness waveform, sealed statement, unaccounted vehicle, dark mystery, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_88",
+      "type": "body",
+      "duration_seconds": 7.32,
+      "narration": "Lee was twenty-six. A childcare teacher. A daughter. She took a taxi home. That is all anyone knows for certain.",
+      "image_prompt": "young woman portrait, childcare teacher, certain fact, taxi home route, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_89",
+      "type": "body",
+      "duration_seconds": 7.76,
+      "narration": "The system expended resources. Man-years. Forensic science. Court proceedings. The outcome was not what anyone wanted.",
+      "image_prompt": "investigation resources, man-years clock, forensic tools, unsatisfying outcome, monochrome",
+      "stock_search_query": null
+    },
+    {
+      "id": "scene_90",
+      "type": "closer",
+      "duration_seconds": 10.0,
+      "narration": "The evidence board stands mostly empty. The second taxi driver remains anonymous. The true perpetrator has never been identified. Seventeen years later, that question still waits.",
+      "image_prompt": "mostly empty evidence board, second taxi shadow, unknown perpetrator, unresolved file, distant siren, monochrome film grain",
+      "stock_search_query": null
+    }
+  ],
+  "forbidden_words_check": {
+    "performed": true,
+    "matched": [],
+    "note": "All scene narrations checked against crime-ledger.yaml forbidden_words list. Zero matches."
+  }
+}

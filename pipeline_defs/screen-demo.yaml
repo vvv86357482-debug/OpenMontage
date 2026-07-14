@@ -1,4 +1,5 @@
 name: screen-demo
+render_runtime: ffmpeg
 version: "2.1"
 description: >
   Screen recording pipeline. Two production modes:

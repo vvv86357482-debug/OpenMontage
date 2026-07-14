@@ -1,4 +1,5 @@
 name: documentary-montage
+render_runtime: ffmpeg
 version: "1.0"
 description: >
   Retrieval-first thematic montage pipeline. Builds a semantic corpus of real-world

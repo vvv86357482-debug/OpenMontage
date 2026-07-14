@@ -1,0 +1,162 @@
+metadata:
+  render_runtime: ffmpeg
+identity:
+  name: Crime Ledger
+  category: true-crime-documentary
+  mood: clinical, restrained, factual
+  pace: deliberate
+  best_for: True crime investigations, legal case deep-dives, forensic analysis, cold
+    case files, historical trials
+visual_language:
+  color_palette:
+    primary:
+    - '#0D0D0D'
+    - '#1A1A1A'
+    accent:
+    - '#8B0000'
+    - '#CC0000'
+    background: '#0D0D0D'
+    text: '#E5E5E5'
+    muted: '#4A4A4A'
+  composition:
+    crime_scene_reconstruction: 45-degree dutch angle, shallow depth of field
+    evidence_layout: 90-degree top-down, grid-aligned, typewriter-column precision
+  texture: film scratch, coffee-ring stains, paper grain, typewriter ink bleed, 1930s
+    photographic grain
+typography:
+  headings:
+    font: Courier Condensed
+    weight: 700
+    tracking: 0.1em
+  body:
+    font: Courier Prime
+    weight: 400
+    line_height: 1.6
+  code:
+    font: Courier Prime
+    weight: 400
+  stat_card:
+    font: Courier Condensed
+    weight: 700
+    size_multiplier: 2.5
+  scale_system: minor_third
+  weight_matrix:
+    title: 700
+    heading: 700
+    body: 400
+    caption: 400
+motion:
+  transitions:
+  - hard-cut
+  - dissolve
+  - slow-pan
+  animation_style: controlled, surveillance-like, no bounce, no overshoot
+  pacing_rules:
+    min_scene_hold_seconds: 3.0
+    max_scene_hold_seconds: 10
+    text_card_hold_seconds: 3.5
+    stat_card_hold_seconds: 3.0
+    transition_duration_seconds: 0.4
+  entrance: slow push-in (1.0 -> 1.03 over 2s) — surveillance camera feel
+  exit: cut or slow fade (0.5s)
+audio:
+  voice_style: clinical, evidence-obsessed, never speculative — evidence then implication
+    then question rhythm, new contradictory piece every 40-60s
+  # FINAL VOICE (2026-07-11): simon_evers — real CC0 human voice, cloned via Chatterbox.
+  #   audio_prompt_path (canonical CC0 source): https://raw.githubusercontent.com/OwenTyme/voice-zero/main/voices/simon_evers.flac
+  #   local mirror: tools/kaggle/voice_refs/real/simon_evers.flac
+  #   attribution: LibriVox reader 1255 — "Celebration of Dialects and Accents, Vol 2, Track 18" (English, Received Pronunciation)
+  #   license: CC0 1.0 Universal (public-domain dedication) via OwenTyme/voice-zero; source reading is public domain on LibriVox
+  tts_voice: simon_evers
+  music_mood: dark ambient, distant piano, minimal — almost silent, bass drones
+  music_volume: 0.04
+  sfx_style: typewriter keys, paper shuffle, distant siren, forensic beep, clock tick
+  ducking_threshold_db: -6
+asset_generation:
+  image_prompt_prefix: '1930s forensic evidence photograph, harsh direct flash lighting,
+    high contrast monochrome, noir atmosphere, evidence board aesthetic, film grain
+    scratches, paper texture, typewriter font, documentary realism, no color, clinical
+    restraint,
+
+    '
+  image_negative_prompt: graphic violence, gore, blood, weapons in use, sensationalist
+    framing, stock-photo overacting, exaggerated fear expressions, neon, bright colors,
+    modern clothing, smartphones, digital screens, contemporary architecture, text
+    overlays, watermarks, dramatic color grades, horror tropes, jump-scare pacing
+  diagram_style: typewriter-font labels, evidence-tag layout, red-string connections,
+    grid-aligned
+  consistency_anchors:
+  - 'Evidence red (#8B0000 / #CC0000) is the ONLY accent color'
+  - 'Pure monochrome base (#0D0D0D / #1A1A1A / #2D2D2D) — no other colors'
+  - Harsh direct flash or bare-bulb lighting only
+  - Film scratch and coffee-ring texture overlays on all images
+  - Typewriter/ Courier typography for all text elements
+  - Restrained — never sensationalized, never exploitative of victims
+overlays:
+  stat_card:
+    bg: rgba(13, 13, 13, 0.9)
+    border: '#8B0000'
+    radius: 2
+    shadow: none
+  key_term:
+    bg: '#1A1A1A'
+    text: '#CC0000'
+    border: '#8B0000'
+    radius: 2
+  text_card:
+    bg: '#E5E5E5'
+    text: '#0D0D0D'
+    border: '#8B0000'
+    radius: 2
+    shadow: none
+  section_title:
+    bg: '#0D0D0D'
+    text: '#CC0000'
+    accent: '#8B0000'
+quality_rules:
+- Minimum contrast ratio 7:1 for body text (WCAG AAA)
+- Maximum 2 colors on screen (monochrome + evidence red)
+- No sensationalist imagery — respect victims, avoid exploitative framing
+- Evidence red used SPARINGLY — only for key facts and highlights
+- Hard cuts preferred — no bouncy or playful transitions
+- Every claim must trace to a source_ref in the research brief
+- Text legible at 480p — Courier is small, compensate with size
+chart_palette:
+- '#8B0000'
+- '#CC0000'
+- '#E5E5E5'
+- '#4A4A4A'
+- '#1A1A1A'
+- '#0D0D0D'
+color_rules:
+  harmony_type: complementary
+  contrast_validation: true
+  colorblind_safe: true
+voice_system:
+  persona: Cold Case Detective
+  # FINAL VOICE: simon_evers (real CC0, cloned via Chatterbox — see audio.tts_voice comment for attribution + audio_prompt_path)
+  voice: simon_evers
+  sentence_rhythm: Evidence then implication then question
+  retention_hooks: New contradictory piece of evidence every 40-60s
+  cadence_rule: One fact per sentence, no hedging
+  forbidden_words:
+  - allegedly
+  - possibly
+  - might have
+  - perhaps
+  - could have
+  - some believe
+  - it is said
+  closing_style: Always an unresolved question from the case file, never a resolution
+  script_enforcement: HARD CONSTRAINT — scripts using forbidden_words or missing closing_style
+    must fail validation
+output:
+  resolution: 1920x1080
+  video_codec: libx264
+  crf: 23
+  preset: medium
+  pixel_format: yuv420p
+  fps: 30
+  audio_codec: aac
+  audio_bitrate: 192k
+  audio_sample_rate: 44100
