@@ -40,6 +40,9 @@ from pathlib import Path
 from typing import Any, Optional
 from urllib.parse import unquote, urlsplit
 
+import imagehash
+from PIL import Image
+
 from tools.base_tool import (
     BaseTool,
     Determinism,
@@ -1462,6 +1465,79 @@ class VideoCompose(BaseTool):
 
         return None
 
+    def _check_perceptual_hash_duplicates(
+        self,
+        resolved_cuts: list[dict],
+        asset_lookup: dict[str, dict],
+    ) -> list[str]:
+        """Detect back-to-back duplicate image assets via perceptual hash.
+
+        Compares consecutive image cuts. If two adjacent image assets have
+        a perceptual hash distance below the threshold, they are flagged as
+        likely duplicates. Returns a list of human-readable warnings.
+        """
+        log = logging.getLogger("video_compose.perceptual_hash")
+        warnings: list[str] = []
+        seen: list[tuple[imagehash.ImageHash, str]] = []
+
+        for i, cut in enumerate(resolved_cuts):
+            source_path = cut.get("source", "")
+            if not source_path or not Path(source_path).is_file():
+                continue
+            if not self._is_image(Path(source_path)):
+                continue
+
+            try:
+                with Image.open(source_path) as img:
+                    phash = imagehash.phash(img)
+            except Exception as e:
+                log.warning("Could not compute perceptual hash for %s: %s", source_path, e)
+                continue
+
+            for prev_hash, prev_path in seen:
+                distance = phash - prev_hash
+                if distance <= 3:
+                    warnings.append(
+                        f"Perceptual-hash duplicate detected: cut {i} ({Path(source_path).name}) "
+                        f"is nearly identical to cut {i - 1} ({Path(prev_path).name}). "
+                        f"Hash distance: {distance} (threshold: 3). "
+                        f"Review asset manifest for accidental duplicate images."
+                    )
+                    break
+            seen.append((phash, source_path))
+
+        return warnings
+
+    def _generate_gradient_fallback(
+        self,
+        asset_id: str,
+        target_w: int = 1920,
+        target_h: int = 1080,
+        temp_dir: Path | None = None,
+        duration: float = 2.0,
+    ) -> Path:
+        """Generate a gradient video clip as fallback for a missing asset.
+
+        Creates a teal-to-purple gradient video with the asset ID overlaid
+        so the missing asset is visible in the render.
+        """
+        base = temp_dir or Path(".compose_tmp")
+        base.mkdir(parents=True, exist_ok=True)
+        out = base / f"gradient_fallback_{asset_id}.mp4"
+        cmd = [
+            "ffmpeg", "-y",
+            "-f", "lavfi",
+            "-i",
+            f"gradients=s={target_w}x{target_h}:c0=teal:c1=purple:d={duration}:r=30",
+            "-vf",
+            f"drawtext=text='{asset_id}':fontsize=48:fontcolor=white:x=(w-tw)/2:y=(h-th)/2",
+            "-c:v", "libx264", "-crf", "28", "-pix_fmt", "yuv420p",
+            "-g", "30", "-keyint_min", "30",
+            str(out),
+        ]
+        self.run_command(cmd)
+        return out
+
     def _render(self, inputs: dict[str, Any]) -> ToolResult:
         """High-level render: assemble edit decisions + asset manifest into final video.
 
@@ -1575,6 +1651,37 @@ class VideoCompose(BaseTool):
             if source_id in asset_lookup:
                 resolved_cut["source"] = asset_lookup[source_id]["path"]
             resolved_cuts.append(resolved_cut)
+
+        # --- Gradient fallback for missing assets ---
+        log = logging.getLogger("video_compose")
+        temp_dir = output_path.parent / ".compose_tmp"
+        for cut in resolved_cuts:
+            source_path = cut.get("source", "")
+            if not source_path or not Path(source_path).is_file():
+                asset_id = cut.get("id", cut.get("source", "unknown"))
+                target_w, target_h = 1920, 1080
+                try:
+                    compose_target = (edit_decisions.get("metadata") or {}).get("compose_target")
+                    if isinstance(compose_target, dict):
+                        target_w = int(compose_target.get("width", target_w))
+                        target_h = int(compose_target.get("height", target_h))
+                except Exception:
+                    pass
+                fallback_path = self._generate_gradient_fallback(
+                    str(asset_id), target_w, target_h, temp_dir
+                )
+                log.warning(
+                    "Asset missing for cut %s — generated gradient fallback: %s",
+                    asset_id,
+                    fallback_path,
+                )
+                cut["source"] = str(fallback_path)
+                cut["fallback"] = True
+
+        # --- Perceptual-hash duplicate detection ---
+        hash_warnings = self._check_perceptual_hash_duplicates(resolved_cuts, asset_lookup)
+        for w in hash_warnings:
+            log.warning("[perceptual-hash] %s", w)
 
         # --- Pre-compose validation gate ---
         scene_plan = inputs.get("scene_plan")
