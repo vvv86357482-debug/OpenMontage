@@ -1,0 +1,131 @@
+identity:
+  name: "Forgotten History of AI"
+  category: retro
+  mood: archival, measured, evidence-driven, quietly unsettling
+  pace: deliberate
+  best_for: "Archive-first historical documentary about AI's origins, 1943-2012. NOT AI news, NOT current model coverage."
+
+taste_profile:
+  design_read: "Handling fragile primary sources under museum light: every frame feels like a photograph or document that survived its era, not a render about one."
+  visual_variance: 3
+  motion_intensity: 2
+  information_density: 4
+  palette_discipline: "Near-monochrome silver-gelatin grays with one selenium-toned amber accent; color appears only where a source artifact carries it."
+  layout_variation: "Alternate between full-bleed archival stills, contact-sheet grids, document close-ups, and technical-diagram frames."
+  reference_strategy: "Anchor each era to real Bell Labs / Stanford / MIT-era photographic references before generating reconstructed scenes."
+  anti_patterns:
+    - "modern photorealism in AI-reconstructed scenes"
+    - "glowing blue neural-network stock imagery"
+    - "hype language and tech-launch energy"
+    - "tidy summary endings or 'and that's how AI began' wrap-ups"
+    - "current-model news framing"
+  quality_gates:
+    - "Every generated scene passes the period-consistency check: could this frame have existed before 1990?"
+    - "Every historical claim is sourced in the research brief."
+    - "The closing line lands on consequence or open question."
+
+visual_language:
+  color_palette:
+    primary: ["#16150F", "#2B2822"]
+    accent: ["#C98A2C", "#8FB8A8"]
+    background: "#121110"
+    text: "#F2EEE6"
+    muted: "#A39E93"
+  composition: centered archival plate or asymmetric evidence spread, generous black margins like a photo album page, one artifact in focus per frame
+  texture: silver-gelatin film grain, slight halation on highlights, dust and emulsion scratches on documents, oscilloscope phosphor glow used sparingly
+
+typography:
+  headings:
+    font: "IBM Plex Serif"
+    weight: 700
+    tracking: "-0.01em"
+  body:
+    font: "IBM Plex Sans"
+    weight: 400
+    line_height: 1.55
+  code:
+    font: "IBM Plex Mono"
+    weight: 400
+  stat_card:
+    font: "IBM Plex Serif"
+    weight: 800
+    size_multiplier: 3.0
+  scale_system: "major_third"
+  weight_matrix:
+    title: 800
+    heading: 700
+    body: 400
+    caption: 500
+
+motion:
+  transitions: [dissolve, fade]
+  animation_style: "slow cross-dissolve between plates, Ken Burns drift no faster than a page being tilted toward lamp light, no bounce, no whip pans"
+  pacing_rules:
+    min_scene_hold_seconds: 4
+    max_scene_hold_seconds: 14
+    text_card_hold_seconds: 5
+    stat_card_hold_seconds: 4.5
+    transition_duration_seconds: 0.9
+  entrance: "fade from black over 600ms with 8px upward drift"
+  exit: "long dissolve, letting the image linger before it goes"
+
+audio:
+  voice_style: "calm, evidence-driven historian register: even cadence, low warmth, cites dates and sources like case notes, never sells"
+  voice_reference: "tools/kaggle/outputs/omnivoice/ref_voices/simon_evers.flac (sha256 3260517de0220d583890db9da0815bd0d53987b68df4d9301ff04c20a5bb64da, CC0 OwenTyme/voice-zero, smoke-tested on kaggle forts845/omnivoice v2)"
+  music_mood: "sparse analog tape bed, faint tape hiss, distant room tone of an empty lab at night"
+  music_volume: 0.06
+  sfx_style: "period-authentic only: projector clatter, tape reels, relay clicks, teletype; no modern UI sounds"
+  ducking_threshold_db: -4
+  voice_variation_allowed: false
+  hero_moment_voice_shift: "slower, pitch drops slightly, more gravity - the historian leans in, never gets excited"
+  transition_voice_shift: "a beat of silence like turning an archive page, then resume at the same even energy"
+
+asset_generation:
+  image_prompt_prefix: "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, "
+  image_negative_prompt: "modern smartphone, laptop, LED lighting, flat-screen monitor, modern UI, glossy product-render look, contemporary office, neon cyberpunk glow, futuristic hologram, modern photorealism, color photography where period demands monochrome"
+  diagram_style: "era-correct technical diagram: ink linework on graph or trace paper, hand-lettered labels, block schematics like an RCA or Bell System manual"
+  consistency_anchors:
+    - "Monochrome silver-gelatin base for all archival-era frames"
+    - "Amber selenium-tone accent reserved for emphasis, never decorative"
+    - "Reconstructed scenes match period photographic constraints: grain, halation, depth of field of era lenses"
+    - "Dates and machine names appear as typed index-card captions, not modern UI chips"
+
+overlays:
+  stat_card:
+    bg: "#211F19"
+    border: "#3E392F"
+    radius: 4
+    shadow: "none"
+  key_term:
+    bg: "#2B2417"
+    text: "#C98A2C"
+    radius: 3
+  code_block:
+    bg: "#16150F"
+    text: "#F2EEE6"
+    highlight: "#8FB8A8"
+
+quality_rules:
+  - "Never use forbidden_words anywhere in narration, titles, or captions; measured historical register throughout"
+  - "End on the real historical consequence or an open question - never a tidy summary or generic 'and that's how AI began' wrap-up"
+  - "Every frame passes the pre-1990 period-consistency gate before compose locks assets"
+  - "AI-reconstructed scenes must be visually indistinguishable in era from real archival stills used elsewhere in the piece"
+  - "One primary source artifact per frame; let documents breathe"
+  - "Scope discipline: 1943-2012 origins stories only - if the subject is current models or AI news, it belongs to another channel"
+
+forbidden_words:
+  - revolutionary
+  - genius
+  - changed everything
+  - changed the world
+
+chart_palette:
+  - "#C98A2C"
+  - "#38BDF8"
+  - "#F5F5F4"
+  - "#78716C"
+
+color_rules:
+  harmony_type: "complementary"
+  contrast_validation: true
+  colorblind_safe: true
