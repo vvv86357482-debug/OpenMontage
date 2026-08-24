@@ -32,7 +32,7 @@
 | Kernel source of truth | COMMITTED | `tools/kaggle/{sana_sprint,omnivoice}/`, smoke artifacts under `tools/kaggle/outputs/`, commit `6755bb1` |
 | Style playbook | COMMITTED | `styles/forgotten-ai-history.yaml`, jsonschema PASS, accessibility pass=True, commit `6e659e0` |
 | video_compose guards | PRESENT | phash dedup (`imagehash.phash`, threshold 3), gradient fallback for missing assets, `-shortest`/apad mux sync — commit `bad54ea` |
-| Kilo Code auth | PARTIAL | `~/.local/share/kilo/auth.json` has an openrouter key; **TODO(owner):** record intended provider/model ("OmniRoute", model auto?) in kilo.jsonc |
+| Kilo Code config | WORKING (corrected) | OpenRouter direct with model "Ox Alpha" (`~/.local/share/kilo/auth.json` holds an openrouter key — verified Phase 0). Earlier project docs assumed "OmniRoute"/model auto — that was wrong; this row records the real setup. |
 | Git remote | FORK | work happens on `vvv86357482-debug/OpenMontage` main; codespace token is denied write on `i3478421-hub/OpenMontage` |
 
 ### Known-good Kaggle constraints (do NOT re-litigate)
@@ -48,12 +48,12 @@
 - **Phase 0 — Infrastructure Audit: DONE.** Repo audited against known-good claims: video_compose patterns present, 24 addyosmani skills present-but-untracked, zero cathy-swartz/genealogy leftovers, no plan file existed.
 - **Phase 1 — Kaggle rebuild + smoke tests: DONE.** Both kernels green on first-or-second version (OmniVoice needed one diagnosed fix: NumPy 2.0 `ptp`). Commit `6755bb1`.
 - **Phase 2 — Channel scaffolding: DONE.** Playbook created, validated, pushed (`6e659e0`). Response-style convention added to AGENTS.md (`1948a59`).
-- **Phase 3 — TODO(owner):** define next phase here (first episode topic/research workflow? batch generation? publishing pipeline?).
+- **Phase 3 — Episode 1: ELIZA (IN PROGRESS).** Topic locked by owner: ELIZA (Weizenbaum, 1966) — chosen over Dartmouth 1956 as the stronger hook for episode one. Current step: primary-source research + hook/closing-line draft, awaiting owner approval before full script.
 
 ## Open Budget Items
 
-- **TODO(owner):** real Kaggle GPU-hours used vs weekly quota from kaggle.com/console/compute (smoke tests consumed ~2 T4 runs).
-- **TODO(owner):** GitHub Codespaces core-hours/storage from github.com/settings/billing.
+- **Kaggle GPU quota:** 29h44m of 30h weekly reported by owner this session, before accounting for the ~2 T4 smoke-test runs already consumed.
+- **GitHub Codespaces budget:** check github.com/settings/billing manually — not exposed to this codespace's token (gh api `/settings/billing/usage` → 403, no user codespaces billing endpoint).
 
 ## Session Conventions
 
