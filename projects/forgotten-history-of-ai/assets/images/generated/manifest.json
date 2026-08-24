@@ -1,0 +1,148 @@
+{
+  "model_id": "Efficient-Large-Model/Sana_Sprint_1.6B_1024px_diffusers",
+  "num_inference_steps": 2,
+  "gpu": "Tesla T4",
+  "torch_version": "2.10.0+cu128",
+  "items": [
+    {
+      "id": "s01_01",
+      "file": "/kaggle/working/output/batch/s01_01.png",
+      "bytes": 1393657,
+      "pixel_std": 65.5,
+      "seed": 1000,
+      "elapsed_seconds": 8.58,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s01_02",
+      "file": "/kaggle/working/output/batch/s01_02.png",
+      "bytes": 1458095,
+      "pixel_std": 71.31,
+      "seed": 1001,
+      "elapsed_seconds": 5.94,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s02_03",
+      "file": "/kaggle/working/output/batch/s02_03.png",
+      "bytes": 1440112,
+      "pixel_std": 57.98,
+      "seed": 1002,
+      "elapsed_seconds": 6.34,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s03_04",
+      "file": "/kaggle/working/output/batch/s03_04.png",
+      "bytes": 1554692,
+      "pixel_std": 66.95,
+      "seed": 1003,
+      "elapsed_seconds": 8.36,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s03_05",
+      "file": "/kaggle/working/output/batch/s03_05.png",
+      "bytes": 1441018,
+      "pixel_std": 67.41,
+      "seed": 1004,
+      "elapsed_seconds": 9.67,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s04_06",
+      "file": "/kaggle/working/output/batch/s04_06.png",
+      "bytes": 1557424,
+      "pixel_std": 54.61,
+      "seed": 1005,
+      "elapsed_seconds": 9.57,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s04_07",
+      "file": "/kaggle/working/output/batch/s04_07.png",
+      "bytes": 1570424,
+      "pixel_std": 58.74,
+      "seed": 1006,
+      "elapsed_seconds": 8.8,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s04_08",
+      "file": "/kaggle/working/output/batch/s04_08.png",
+      "bytes": 1499606,
+      "pixel_std": 72.52,
+      "seed": 1007,
+      "elapsed_seconds": 7.97,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s04_09",
+      "file": "/kaggle/working/output/batch/s04_09.png",
+      "bytes": 1513303,
+      "pixel_std": 71.34,
+      "seed": 1008,
+      "elapsed_seconds": 7.7,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s05_10",
+      "file": "/kaggle/working/output/batch/s05_10.png",
+      "bytes": 1421154,
+      "pixel_std": 56.19,
+      "seed": 1009,
+      "elapsed_seconds": 7.55,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s05_11",
+      "file": "/kaggle/working/output/batch/s05_11.png",
+      "bytes": 1416719,
+      "pixel_std": 62.51,
+      "seed": 1010,
+      "elapsed_seconds": 7.04,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s06_12",
+      "file": "/kaggle/working/output/batch/s06_12.png",
+      "bytes": 1460838,
+      "pixel_std": 70.42,
+      "seed": 1011,
+      "elapsed_seconds": 7.18,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s07_13",
+      "file": "/kaggle/working/output/batch/s07_13.png",
+      "bytes": 1514596,
+      "pixel_std": 64.43,
+      "seed": 1012,
+      "elapsed_seconds": 7.1,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    },
+    {
+      "id": "s07_14",
+      "file": "/kaggle/working/output/batch/s07_14.png",
+      "bytes": 1410317,
+      "pixel_std": 64.78,
+      "seed": 1013,
+      "elapsed_seconds": 6.93,
+      "peak_vram_mb": 12684.6,
+      "gate_passed": true
+    }
+  ]
+}
