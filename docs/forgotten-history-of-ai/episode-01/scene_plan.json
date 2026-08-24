@@ -1,0 +1,341 @@
+{
+  "version": "1.0",
+  "style_playbook": "forgotten-ai-history",
+  "scenes": [
+    {
+      "id": "s01",
+      "type": "generated",
+      "description": "COLD OPEN: THE SECRETARY: dim 1960s MIT corridor rendered as silver-gelatin photograph, fluorescent glow, long perspective",
+      "start_seconds": 0.0,
+      "end_seconds": 92.1,
+      "script_section_id": "s01",
+      "framing": "archival plate sequence, 2 image slots",
+      "movement": "slow dissolve chain, Ken Burns drift under 8px",
+      "transition_in": "fade_from_black",
+      "transition_out": "long_dissolve",
+      "shot_intent": "cold open hook",
+      "narrative_role": "introduce_subject",
+      "information_role": "cold open: the secretary",
+      "hero_moment": true,
+      "texture_keywords": [
+        "silver-gelatin",
+        "film grain",
+        "halation",
+        "dust",
+        "monochrome"
+      ],
+      "required_assets": [
+        {
+          "type": "image",
+          "description": "dim 1960s MIT corridor rendered as silver-gelatin photograph, fluorescent glow, long perspective",
+          "source": "generate"
+        },
+        {
+          "type": "image",
+          "description": "close-up of teletype console keys and curling paper tape, tungsten light",
+          "source": "generate"
+        },
+        {
+          "type": "audio",
+          "description": "narration segment s01 via OmniVoice/simon_evers",
+          "source": "generate"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "type": "broll",
+      "description": "THE MAN WHO WOULD BUILD IT: 1930s Berlin street scene archival photograph, monochrome emulsion grain",
+      "start_seconds": 92.1,
+      "end_seconds": 506.1,
+      "script_section_id": "s02",
+      "framing": "archival plate sequence, 3 image slots",
+      "movement": "slow dissolve chain, Ken Burns drift under 8px",
+      "transition_in": "dissolve",
+      "transition_out": "long_dissolve",
+      "shot_intent": "historical grounding",
+      "narrative_role": "establish_context",
+      "information_role": "the man who would build it",
+      "hero_moment": false,
+      "texture_keywords": [
+        "silver-gelatin",
+        "film grain",
+        "halation",
+        "dust",
+        "monochrome"
+      ],
+      "required_assets": [
+        {
+          "type": "image",
+          "description": "1930s Berlin street scene archival photograph, monochrome emulsion grain",
+          "source": "source"
+        },
+        {
+          "type": "image",
+          "description": "1930s Detroit street with pedestrians and automobiles, archival monochrome",
+          "source": "source"
+        },
+        {
+          "type": "image",
+          "description": "mainframe hall with raised floor, reel-to-reel cabinets and patch panels",
+          "source": "generate"
+        },
+        {
+          "type": "audio",
+          "description": "narration segment s02 via OmniVoice/simon_evers",
+          "source": "generate"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "type": "generated",
+      "description": "WHY CALL IT ELIZA: period phonetic pronunciation chart, ink linework on graph paper",
+      "start_seconds": 506.1,
+      "end_seconds": 806.8,
+      "script_section_id": "s03",
+      "framing": "archival plate sequence, 3 image slots",
+      "movement": "slow dissolve chain, Ken Burns drift under 8px",
+      "transition_in": "dissolve",
+      "transition_out": "long_dissolve",
+      "shot_intent": "naming and timing thesis",
+      "narrative_role": "establish_context",
+      "information_role": "why call it eliza",
+      "hero_moment": false,
+      "texture_keywords": [
+        "silver-gelatin",
+        "film grain",
+        "halation",
+        "dust",
+        "monochrome"
+      ],
+      "required_assets": [
+        {
+          "type": "image",
+          "description": "period phonetic pronunciation chart, ink linework on graph paper",
+          "source": "generate"
+        },
+        {
+          "type": "image",
+          "description": "typographic index card reading PYGMALION 1913 in Shaw-era lettering",
+          "source": "generate"
+        },
+        {
+          "type": "image",
+          "description": "CACM January 1966 and JNMD February 1966 journal cover plates side by side",
+          "source": "source"
+        },
+        {
+          "type": "audio",
+          "description": "narration segment s03 via OmniVoice/simon_evers",
+          "source": "generate"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "type": "generated",
+      "description": "HOW DOCTOR ACTUALLY WORKED: ink technical diagram of keyword decomposition and reassembly flow, Bell Systems manual style",
+      "start_seconds": 806.8,
+      "end_seconds": 1755.5,
+      "script_section_id": "s04",
+      "framing": "archival plate sequence, 4 image slots",
+      "movement": "slow dissolve chain, Ken Burns drift under 8px",
+      "transition_in": "dissolve",
+      "transition_out": "long_dissolve",
+      "shot_intent": "mechanism honesty core",
+      "narrative_role": "deliver_payload",
+      "information_role": "how doctor actually worked",
+      "hero_moment": false,
+      "texture_keywords": [
+        "silver-gelatin",
+        "film grain",
+        "halation",
+        "dust",
+        "monochrome"
+      ],
+      "required_assets": [
+        {
+          "type": "image",
+          "description": "ink technical diagram of keyword decomposition and reassembly flow, Bell Systems manual style",
+          "source": "generate"
+        },
+        {
+          "type": "image",
+          "description": "printed terminal transcript page with lowercase questions and capital-letter replies",
+          "source": "generate"
+        },
+        {
+          "type": "image",
+          "description": "stack of MAD-SLIP line printer output with margin punch marks",
+          "source": "generate"
+        },
+        {
+          "type": "image",
+          "description": "CTSS-era time-sharing console terminal in laboratory setting",
+          "source": "source"
+        },
+        {
+          "type": "audio",
+          "description": "narration segment s04 via OmniVoice/simon_evers",
+          "source": "generate"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "type": "broll",
+      "description": "THE REACTION: contact sheet of psychiatry conference programs and hospital corridor signage, archival",
+      "start_seconds": 1755.5,
+      "end_seconds": 2402.8,
+      "script_section_id": "s05",
+      "framing": "archival plate sequence, 3 image slots",
+      "movement": "slow dissolve chain, Ken Burns drift under 8px",
+      "transition_in": "dissolve",
+      "transition_out": "long_dissolve",
+      "shot_intent": "reaction evidence",
+      "narrative_role": "evidence",
+      "information_role": "the reaction",
+      "hero_moment": false,
+      "texture_keywords": [
+        "silver-gelatin",
+        "film grain",
+        "halation",
+        "dust",
+        "monochrome"
+      ],
+      "required_assets": [
+        {
+          "type": "image",
+          "description": "contact sheet of psychiatry conference programs and hospital corridor signage, archival",
+          "source": "generate"
+        },
+        {
+          "type": "image",
+          "description": "student silhouette at glowing terminal in darkened laboratory, low key",
+          "source": "generate"
+        },
+        {
+          "type": "image",
+          "description": "Science journal October 28 1977 issue cover plate",
+          "source": "source"
+        },
+        {
+          "type": "audio",
+          "description": "narration segment s05 via OmniVoice/simon_evers",
+          "source": "generate"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "type": "broll",
+      "description": "THE TURN: Weizenbaum portrait sequence across decades, archival photographs",
+      "start_seconds": 2402.8,
+      "end_seconds": 2986.6,
+      "script_section_id": "s06",
+      "framing": "archival plate sequence, 3 image slots",
+      "movement": "slow dissolve chain, Ken Burns drift under 8px",
+      "transition_in": "dissolve",
+      "transition_out": "long_dissolve",
+      "shot_intent": "critic turn arc",
+      "narrative_role": "build_tension",
+      "information_role": "the turn",
+      "hero_moment": true,
+      "texture_keywords": [
+        "silver-gelatin",
+        "film grain",
+        "halation",
+        "dust",
+        "monochrome"
+      ],
+      "required_assets": [
+        {
+          "type": "image",
+          "description": "Weizenbaum portrait sequence across decades, archival photographs",
+          "source": "source"
+        },
+        {
+          "type": "image",
+          "description": "Computer Power and Human Reason book jacket photographed flat like evidence",
+          "source": "source"
+        },
+        {
+          "type": "image",
+          "description": "lecture hall podium microphone close-up, volumetric projector light",
+          "source": "generate"
+        },
+        {
+          "type": "audio",
+          "description": "narration segment s06 via OmniVoice/simon_evers",
+          "source": "generate"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "type": "generated",
+      "description": "CLOSING: empty corridor with finished teletype tape lying on floor, single shaft of light",
+      "start_seconds": 2986.6,
+      "end_seconds": 3018.2,
+      "script_section_id": "s07",
+      "framing": "archival plate sequence, 2 image slots",
+      "movement": "slow dissolve chain, Ken Burns drift under 8px",
+      "transition_in": "dissolve",
+      "transition_out": "fade_to_black",
+      "shot_intent": "consequence and open question",
+      "narrative_role": "resolution",
+      "information_role": "closing",
+      "hero_moment": true,
+      "texture_keywords": [
+        "silver-gelatin",
+        "film grain",
+        "halation",
+        "dust",
+        "monochrome"
+      ],
+      "required_assets": [
+        {
+          "type": "image",
+          "description": "empty corridor with finished teletype tape lying on floor, single shaft of light",
+          "source": "generate"
+        },
+        {
+          "type": "image",
+          "description": "end card typography FORGOTTEN HISTORY OF AI on archive-card stock",
+          "source": "generate"
+        },
+        {
+          "type": "audio",
+          "description": "narration segment s07 via OmniVoice/simon_evers",
+          "source": "generate"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "pipeline": "pending-owner-selection (documentary-montage vs animated-explainer vs hybrid)",
+    "episode": 1,
+    "thematic_question": "Why did the machine that understood nothing become the template for how we talk to machines?",
+    "tone": "elegiac",
+    "shape": "three-act",
+    "era_mix": "vintage",
+    "narration_words": 6739,
+    "estimated_runtime_seconds": 3018.2,
+    "estimated_runtime_minutes": 50.3,
+    "asset_counts": {
+      "images_generate": 13,
+      "images_source": 7,
+      "narration_segments": 7
+    },
+    "rn_status": {
+      "RN-1": "open-paraphrase",
+      "RN-2": "resolved-unattributed",
+      "RN-3": "open-paraphrase",
+      "RN-4": "resolved-softened",
+      "RN-5": "resolved-single-quote",
+      "RN-6": "open-paraphrase",
+      "RN-7": "open-paraphrase"
+    }
+  }
+}
