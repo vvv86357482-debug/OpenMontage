@@ -8,6 +8,8 @@ Skipping it WILL cause you to take the wrong action.
 
 There are no other instructions in this file. All other instructions are in AGENT_GUIDE.md.
 
+For the active production project (Forgotten History of AI channel), read FORGOTTEN_AI_HISTORY_PLAN.md first.
+
 ## Response Style (mobile terminal, always apply)
 - Lead with the result. No preamble, no restating the task, no "I will 
   now..." framing.
