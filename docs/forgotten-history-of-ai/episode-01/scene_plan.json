@@ -314,7 +314,7 @@
     }
   ],
   "metadata": {
-    "pipeline": "pending-owner-selection (documentary-montage vs animated-explainer vs hybrid)",
+    "pipeline": "documentary-montage",
     "episode": 1,
     "thematic_question": "Why did the machine that understood nothing become the template for how we talk to machines?",
     "tone": "elegiac",
@@ -336,6 +336,7 @@
       "RN-5": "resolved-single-quote",
       "RN-6": "open-paraphrase",
       "RN-7": "open-paraphrase"
-    }
+    },
+    "runtime_decision": "owner-approved 2026-08-24: option (c) ~50 min @135wpm, 6739 words, no padding"
   }
 }

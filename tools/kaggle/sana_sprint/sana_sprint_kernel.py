@@ -1,151 +1,116 @@
 """
-Sana-Sprint 1.6B image-generation kernel (Kaggle T4).
+Sana-Sprint 1.6B batch generation kernel v3 (Kaggle T4) - ELIZA ep01 Phase 4.
 
-Known-good constraints — do NOT "fix" any of these, each one closed a real bug:
-  - machine_shape: NvidiaTeslaT4 in kernel-metadata.json ("gpu_type" /
-    "hardware_tier" are not real Kaggle API fields; they are silently ignored
-    and the job defaults to P100).
-  - num_inference_steps=2 exactly. This pipeline class raises ValueError on 4.
-  - Transformer stays bfloat16; immediately after load run
-    pipe.vae.to(torch.float32). A float16 VAE on this model produces
-    all-black images.
-  - torch.cuda.synchronize() before reading torch.cuda.max_memory_allocated().
-  - augment_prompt_for_sana(): this pipeline has no negative_prompt argument;
-    negatives are folded into "NOT X, use Y instead" clauses.
-  - Hard-fail gate: reject output under 50KB or with pixel std < 5.0
-    (catches black/placeholder images even when the job reports success).
-Outputs go to /kaggle/working/output (kernel output), never /tmp.
+Known-good constraints unchanged from smoke test (do NOT modify):
+  machine_shape NvidiaTeslaT4; num_inference_steps=2 exactly; transformer
+  bfloat16 + pipe.vae.to(torch.float32); torch.cuda.synchronize() before
+  max_memory_allocated(); hard gate >=50KB and pixel std >=5.0 per image;
+  prompts pre-augmented with augment_prompt_for_sana() semantics
+  (NOT X, use Y instead clauses); outputs to /kaggle/working/output, never /tmp.
 """
 
-import json
-import os
-import sys
-import time
-
+import json, os, sys, time
 import numpy as np
 import torch
 from PIL import Image
 
-OUTPUT_DIR = "/kaggle/working/output"
+OUTPUT_DIR = "/kaggle/working/output/batch"
 MODEL_ID = "Efficient-Large-Model/Sana_Sprint_1.6B_1024px_diffusers"
-NUM_INFERENCE_STEPS = 2
-MIN_BYTES = 50_000
-MIN_STD = 5.0
+STEPS = 2
+MIN_BYTES, MIN_STD = 50_000, 5.0
+
+BATCH = [
+  {
+    "id": "s01_01",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, dim 1960s MIT corridor rendered as silver-gelatin photograph, fluorescent glow, long perspective. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  },
+  {
+    "id": "s01_02",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, close-up of teletype console keys and curling paper tape, tungsten light. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  },
+  {
+    "id": "s02_03",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, mainframe hall with raised floor, reel-to-reel cabinets and patch panels. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  },
+  {
+    "id": "s03_04",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, period phonetic pronunciation chart, ink linework on graph paper. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  },
+  {
+    "id": "s03_05",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, typographic index card reading PYGMALION 1913 in Shaw-era lettering. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  },
+  {
+    "id": "s04_06",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, ink technical diagram of keyword decomposition and reassembly flow, Bell Systems manual style. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  },
+  {
+    "id": "s04_07",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, printed terminal transcript page with lowercase questions and capital-letter replies. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  },
+  {
+    "id": "s04_08",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, stack of MAD-SLIP line printer output with margin punch marks. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  },
+  {
+    "id": "s05_09",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, contact sheet of psychiatry conference programs and hospital corridor signage, archival. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  },
+  {
+    "id": "s05_10",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, student silhouette at glowing terminal in darkened laboratory, low key. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  },
+  {
+    "id": "s06_11",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, lecture hall podium microphone close-up, volumetric projector light. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  },
+  {
+    "id": "s07_12",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, empty corridor with finished teletype tape lying on floor, single shaft of light. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  },
+  {
+    "id": "s07_13",
+    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, end card typography FORGOTTEN HISTORY OF AI on archive-card stock. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
+  }
+]
 
 
-def log(msg):
-    print(f"[sana_sprint] {msg}", flush=True)
-
-
-def augment_prompt_for_sana(prompt, negative_prompt="", replacement=""):
-    """SanaSprintPipeline accepts no negative_prompt parameter.
-
-    Fold each comma-separated negative into a 'NOT X' clause, upgraded to
-    'NOT X, use Y instead' when a replacement is supplied.
-    """
-    clauses = []
-    for neg in [n.strip() for n in negative_prompt.split(",") if n.strip()]:
-        if replacement.strip():
-            clauses.append(f"NOT {neg}, use {replacement.strip()} instead")
-        else:
-            clauses.append(f"NOT {neg}")
-    return prompt if not clauses else f"{prompt}. {', '.join(clauses)}."
-
-
-def validate_output(path):
-    """Hard-fail gate: catches black/placeholder images regardless of exit status."""
-    size_bytes = os.path.getsize(path)
-    arr = np.asarray(Image.open(path).convert("RGB"), dtype=np.float32)
-    pixel_std = float(arr.std())
-    passed = size_bytes >= MIN_BYTES and pixel_std >= MIN_STD
-    return {
-        "path": path,
-        "size_bytes": size_bytes,
-        "pixel_std": round(pixel_std, 2),
-        "min_bytes_required": MIN_BYTES,
-        "min_std_required": MIN_STD,
-        "gate_passed": passed,
-    }
-
+def log(m): print(f"[sana_batch] {m}", flush=True)
 
 def main():
     from diffusers import SanaSprintPipeline
-
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    manifest = {
-        "model_id": MODEL_ID,
-        "num_inference_steps": NUM_INFERENCE_STEPS,
-        "transformer_dtype": "bfloat16",
-        "vae_dtype": "float32",
-        "seed": 0,
-        "gpu_name": torch.cuda.get_device_name(0),
-        "torch_version": torch.__version__,
-    }
-    log(f"GPU: {manifest['gpu_name']}")
-
-    pipe = SanaSprintPipeline.from_pretrained(
-        MODEL_ID,
-        torch_dtype=torch.bfloat16,
-    )
+    pipe = SanaSprintPipeline.from_pretrained(MODEL_ID, torch_dtype=torch.bfloat16)
     pipe.to("cuda")
-    pipe.vae.to(torch.float32)  # fp16 VAE renders all-black images on this model
-    manifest["vae_dtype_actual"] = str(next(pipe.vae.parameters()).dtype)
-    manifest["transformer_dtype_actual"] = str(next(pipe.transformer.parameters()).dtype)
-
-    scene = {
-        "id": "smoke_001",
-        "prompt": (
-            "A weathered brass automaton head resting on archive shelves among "
-            "dusty ledgers, candlelight, shallow depth of field, cinematic"
-        ),
-        "negative_prompt": "blurry, low quality, watermark, text",
-        "replacement": "sharp focus, high detail",
-    }
-    final_prompt = augment_prompt_for_sana(
-        scene["prompt"], scene["negative_prompt"], scene["replacement"]
-    )
-    log(f"augmented prompt: {final_prompt}")
-
-    generator = torch.Generator("cuda").manual_seed(manifest["seed"])
-    torch.cuda.reset_peak_memory_stats()
-    torch.cuda.synchronize()
-    started = time.time()
-    result = pipe(
-        prompt=final_prompt,
-        num_inference_steps=NUM_INFERENCE_STEPS,
-        height=1024,
-        width=1024,
-        generator=generator,
-    )
-    torch.cuda.synchronize()
-    elapsed = time.time() - started
-    peak_mem_mb = torch.cuda.max_memory_allocated() / (1024 * 1024)
-
-    image_path = os.path.join(OUTPUT_DIR, f"{scene['id']}.png")
-    result.images[0].save(image_path)
-    check = validate_output(image_path)
-
-    manifest.update(
-        {
-            "scene_id": scene["id"],
-            "final_prompt": final_prompt,
-            "elapsed_seconds": round(elapsed, 2),
-            "peak_vram_mb": round(peak_mem_mb, 1),
-            **check,
-        }
-    )
-    with open(os.path.join(OUTPUT_DIR, "manifest.json"), "w") as fh:
-        json.dump(manifest, fh, indent=2)
-    log(f"manifest: {json.dumps(manifest)}")
-
-    if not check["gate_passed"]:
-        log(
-            f"HARD FAIL: size={check['size_bytes']}B std={check['pixel_std']} "
-            f"(needs >={MIN_BYTES}B and std>={MIN_STD})"
-        )
-        sys.exit(2)
-    log("GATE PASSED")
-
+    pipe.vae.to(torch.float32)
+    log(f"GPU {torch.cuda.get_device_name(0)} | vae={next(pipe.vae.parameters()).dtype} "
+        f"transformer={next(pipe.transformer.parameters()).dtype}")
+    manifest={"model_id":MODEL_ID,"num_inference_steps":STEPS,"gpu":torch.cuda.get_device_name(0),
+              "torch_version":torch.__version__,"items":[]}
+    failed=0
+    for i,item in enumerate(BATCH):
+        seed=1000+i
+        g=torch.Generator("cuda").manual_seed(seed)
+        torch.cuda.reset_peak_memory_stats(); torch.cuda.synchronize()
+        t0=time.time()
+        img=pipe(prompt=item["prompt"], num_inference_steps=STEPS,
+                 height=1024, width=1024, generator=g).images[0]
+        torch.cuda.synchronize()
+        el=time.time()-t0
+        path=os.path.join(OUTPUT_DIR, item["id"]+".png")
+        img.save(path)
+        size=os.path.getsize(path)
+        std=float(np.asarray(Image.open(path).convert("RGB"),dtype=np.float32).std())
+        ok=size>=MIN_BYTES and std>=MIN_STD
+        failed+= 0 if ok else 1
+        rec={"id":item["id"],"file":path,"bytes":size,"pixel_std":round(std,2),
+             "seed":seed,"elapsed_seconds":round(el,2),
+             "peak_vram_mb":round(torch.cuda.max_memory_allocated()/1048576,1),"gate_passed":ok}
+        manifest["items"].append(rec)
+        log(json.dumps(rec))
+    with open(os.path.join(OUTPUT_DIR,"manifest.json"),"w") as fh: json.dump(manifest,fh,indent=2)
+    log(f"DONE total={len(BATCH)} failed={failed}")
+    sys.exit(3 if failed else 0)
 
 if __name__ == "__main__":
     main()
