@@ -121,9 +121,9 @@
           "source": "generate"
         },
         {
-          "type": "image",
-          "description": "CACM January 1966 and JNMD February 1966 journal cover plates side by side",
-          "source": "source"
+          "type": "text_card",
+          "description": "Typographic citation card pair, text_card pattern: 'Weizenbaum, ELIZA—a computer program for the study of natural language communication between man and machine, Communications of the ACM 9(1), Jan 1966, pp.36-45, DOI 10.1145/365153.365168' | 'Colby, Watt & Gilbert, A Computer Method of Psychotherapy, Journal of Nervous and Mental Disease 142(2), Feb 1966, pp.148-152, DOI 10.1097/00005053-196602000-00005'. No fabricated cover art.",
+          "source": "provided"
         },
         {
           "type": "audio",
@@ -172,8 +172,8 @@
         },
         {
           "type": "image",
-          "description": "CTSS-era time-sharing console terminal in laboratory setting",
-          "source": "source"
+          "description": "AI reconstruction, general period environment (not a specific documented terminal): time-sharing console terminal with typewriter keyboard and CRT, laboratory setting, 1960s",
+          "source": "generate"
         },
         {
           "type": "audio",
@@ -216,9 +216,9 @@
           "source": "generate"
         },
         {
-          "type": "image",
-          "description": "Science journal October 28 1977 issue cover plate",
-          "source": "source"
+          "type": "text_card",
+          "description": "Typographic citation card, text_card pattern: 'Computers as \\u201cTherapists\\u201d, Science 198(4315), 28 Oct 1977, p.354, DOI 10.1126/science.198.4315.354.a'. No fabricated cover art.",
+          "source": "provided"
         },
         {
           "type": "audio",
@@ -324,8 +324,9 @@
     "estimated_runtime_seconds": 3018.2,
     "estimated_runtime_minutes": 50.3,
     "asset_counts": {
-      "images_generate": 13,
-      "images_source": 7,
+      "images_generate": 14,
+      "images_source_archive": 4,
+      "text_cards_provided": 2,
       "narration_segments": 7
     },
     "rn_status": {
@@ -337,6 +338,7 @@
       "RN-6": "open-paraphrase",
       "RN-7": "open-paraphrase"
     },
-    "runtime_decision": "owner-approved 2026-08-24: option (c) ~50 min @135wpm, 6739 words, no padding"
+    "runtime_decision": "owner-approved 2026-08-24: option (c) ~50 min @135wpm, 6739 words, no padding",
+    "slot_decisions": "owner 2026-08-24: journal/Science cover plates -> typographic citation cards (provided, no fabricated art); CTSS console -> AI reconstruction (generate)"
   }
 }
