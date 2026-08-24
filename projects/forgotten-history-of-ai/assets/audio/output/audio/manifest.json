@@ -1,0 +1,101 @@
+{
+  "model_id": "k2-fsa/OmniVoice",
+  "ref_voice_url": "https://raw.githubusercontent.com/OwenTyme/voice-zero/main/voices/simon_evers.flac",
+  "ref_voice_sha256": "3260517de0220d583890db9da0815bd0d53987b68df4d9301ff04c20a5bb64da",
+  "gpu": "Tesla T4",
+  "torch_version": "2.10.0+cu128",
+  "num_step": 16,
+  "segments": [
+    {
+      "id": "s01",
+      "chars": 1086,
+      "chunks": 2,
+      "elapsed_generation_seconds": 24.82,
+      "peak_vram_mb": 4537.0,
+      "output_wav": "/kaggle/working/output/audio/s01.wav",
+      "ffprobe_ok": true,
+      "codec_name": "pcm_s16le",
+      "sample_rate": "24000",
+      "duration_seconds": 73.85,
+      "size_bytes": 3544844
+    },
+    {
+      "id": "s02",
+      "chars": 5519,
+      "chunks": 7,
+      "elapsed_generation_seconds": 72.79,
+      "peak_vram_mb": 4537.0,
+      "output_wav": "/kaggle/working/output/audio/s02.wav",
+      "ffprobe_ok": true,
+      "codec_name": "pcm_s16le",
+      "sample_rate": "24000",
+      "duration_seconds": 376.26,
+      "size_bytes": 18060524
+    },
+    {
+      "id": "s03",
+      "chars": 3992,
+      "chunks": 5,
+      "elapsed_generation_seconds": 52.96,
+      "peak_vram_mb": 4537.0,
+      "output_wav": "/kaggle/working/output/audio/s03.wav",
+      "ffprobe_ok": true,
+      "codec_name": "pcm_s16le",
+      "sample_rate": "24000",
+      "duration_seconds": 258.13,
+      "size_bytes": 12390284
+    },
+    {
+      "id": "s04",
+      "chars": 12976,
+      "chunks": 15,
+      "elapsed_generation_seconds": 176.84,
+      "peak_vram_mb": 4537.0,
+      "output_wav": "/kaggle/working/output/audio/s04.wav",
+      "ffprobe_ok": true,
+      "codec_name": "pcm_s16le",
+      "sample_rate": "24000",
+      "duration_seconds": 857.41,
+      "size_bytes": 41155724
+    },
+    {
+      "id": "s05",
+      "chars": 9050,
+      "chunks": 11,
+      "elapsed_generation_seconds": 123.35,
+      "peak_vram_mb": 4537.0,
+      "output_wav": "/kaggle/working/output/audio/s05.wav",
+      "ffprobe_ok": true,
+      "codec_name": "pcm_s16le",
+      "sample_rate": "24000",
+      "duration_seconds": 604.71,
+      "size_bytes": 29026124
+    },
+    {
+      "id": "s06",
+      "chars": 7917,
+      "chunks": 10,
+      "elapsed_generation_seconds": 110.69,
+      "peak_vram_mb": 4537.0,
+      "output_wav": "/kaggle/working/output/audio/s06.wav",
+      "ffprobe_ok": true,
+      "codec_name": "pcm_s16le",
+      "sample_rate": "24000",
+      "duration_seconds": 540.95,
+      "size_bytes": 25965644
+    },
+    {
+      "id": "s07",
+      "chars": 319,
+      "chunks": 1,
+      "elapsed_generation_seconds": 4.36,
+      "peak_vram_mb": 4537.0,
+      "output_wav": "/kaggle/working/output/audio/s07.wav",
+      "ffprobe_ok": true,
+      "codec_name": "pcm_s16le",
+      "sample_rate": "24000",
+      "duration_seconds": 20.31,
+      "size_bytes": 974924
+    }
+  ]
+}
