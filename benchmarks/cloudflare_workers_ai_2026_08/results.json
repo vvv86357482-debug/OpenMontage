@@ -1,0 +1,68 @@
+{
+  "timestamp_utc": "2026-08-25T09:10:18+00:00",
+  "credentials_total": 10,
+  "distinct_accounts": 10,
+  "probe": [
+    {
+      "pair": "1",
+      "group": "cbb410e1",
+      "tokens_in_group": 1,
+      "status": "HTTP 401: Authentication error"
+    },
+    {
+      "pair": "2",
+      "group": "5c62378c",
+      "tokens_in_group": 1,
+      "status": "HTTP 401: Authentication error"
+    },
+    {
+      "pair": "3",
+      "group": "3b6ac90d",
+      "tokens_in_group": 1,
+      "status": "HTTP 401: Authentication error"
+    },
+    {
+      "pair": "4",
+      "group": "fbb74315",
+      "tokens_in_group": 1,
+      "status": "HTTP 401: Authentication error"
+    },
+    {
+      "pair": "5",
+      "group": "cefd778f",
+      "tokens_in_group": 1,
+      "status": "HTTP 401: Authentication error"
+    },
+    {
+      "pair": "6",
+      "group": "7b5c67ce",
+      "tokens_in_group": 1,
+      "status": "HTTP 401: Authentication error"
+    },
+    {
+      "pair": "7",
+      "group": "1ccdc8bc",
+      "tokens_in_group": 1,
+      "status": "HTTP 401: Authentication error"
+    },
+    {
+      "pair": "8",
+      "group": "2600b9d3",
+      "tokens_in_group": 1,
+      "status": "HTTP 401: Authentication error"
+    },
+    {
+      "pair": "9",
+      "group": "978ce4b6",
+      "tokens_in_group": 1,
+      "status": "HTTP 401: Authentication error"
+    },
+    {
+      "pair": "10",
+      "group": "d8f860c3",
+      "tokens_in_group": 1,
+      "status": "HTTP 401: Authentication error"
+    }
+  ],
+  "generations": []
+}

@@ -1,5 +1,8 @@
 """
-Sana-Sprint 1.6B batch generation kernel v3 (Kaggle T4) - ELIZA ep01 Phase 4.
+Sana-Sprint 1.6B batch generation kernel v5 (Kaggle T4) - ELIZA ep01 Phase 4
+complex-scene remediation: 11 flagged scenes regenerated with subject-first
+prompts, equipment anchors trimmed where they caused collage, scene-specific
+NOT clauses through augment_prompt_for_sana semantics, seed base 2000.
 
 Known-good constraints unchanged from smoke test (do NOT modify):
   machine_shape NvidiaTeslaT4; num_inference_steps=2 exactly; transformer
@@ -18,64 +21,48 @@ OUTPUT_DIR = "/kaggle/working/output/batch"
 MODEL_ID = "Efficient-Large-Model/Sana_Sprint_1.6B_1024px_diffusers"
 STEPS = 2
 MIN_BYTES, MIN_STD = 50_000, 5.0
+SEED_BASE = 2000
+
+STD_NEG = ("NOT modern smartphone, use era-correct equipment instead, "
+           "NOT laptop, use era-correct equipment instead, "
+           "NOT LED lighting, use era-correct equipment instead, "
+           "NOT flat-screen monitor, use era-correct equipment instead, "
+           "NOT modern UI, use era-correct equipment instead, "
+           "NOT glossy product-render look, use era-correct equipment instead, "
+           "NOT contemporary office, use era-correct equipment instead, "
+           "NOT neon cyberpunk glow, use era-correct equipment instead, "
+           "NOT futuristic hologram, use era-correct equipment instead, "
+           "NOT modern photorealism, use era-correct equipment instead, "
+           "NOT color photography where period demands monochrome, use era-correct equipment instead.")
+
+STYLE = ("silver-gelatin black-and-white photograph, Bell Labs / Stanford / "
+         "MIT-era technical documentation style, available-light realism, film grain.")
 
 BATCH = [
-  {
-    "id": "s01_01",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, dim 1960s MIT corridor rendered as silver-gelatin photograph, fluorescent glow, long perspective. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s01_02",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, close-up of teletype console keys and curling paper tape, tungsten light. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s02_03",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, mainframe hall with raised floor, reel-to-reel cabinets and patch panels. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s03_04",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, period phonetic pronunciation chart, ink linework on graph paper. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s03_05",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, typographic index card reading PYGMALION 1913 in Shaw-era lettering. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s04_06",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, ink technical diagram of keyword decomposition and reassembly flow, Bell Systems manual style. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s04_07",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, printed terminal transcript page with lowercase questions and capital-letter replies. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s04_08",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, stack of MAD-SLIP line printer output with margin punch marks. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s04_09",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, AI reconstruction, general period environment (not a specific documented terminal): time-sharing console terminal with typewriter keyboard and CRT, laboratory setting, 1960s. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s05_10",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, contact sheet of psychiatry conference programs and hospital corridor signage, archival. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s05_11",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, student silhouette at glowing terminal in darkened laboratory, low key. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s06_12",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, lecture hall podium microphone close-up, volumetric projector light. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s07_13",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, empty corridor with finished teletype tape lying on floor, single shaft of light. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  },
-  {
-    "id": "s07_14",
-    "prompt": "1950s-1980s laboratory black-and-white photograph, Bell Labs / Stanford / MIT-era technical documentation style, silver-gelatin print, available-light realism, punch cards, oscilloscope traces, reel-to-reel hardware, end card typography FORGOTTEN HISTORY OF AI on archive-card stock. NOT modern smartphone, use era-correct equipment instead, NOT laptop, use era-correct equipment instead, NOT LED lighting, use era-correct equipment instead, NOT flat-screen monitor, use era-correct equipment instead, NOT modern UI, use era-correct equipment instead, NOT glossy product-render look, use era-correct equipment instead, NOT contemporary office, use era-correct equipment instead, NOT neon cyberpunk glow, use era-correct equipment instead, NOT futuristic hologram, use era-correct equipment instead, NOT modern photorealism, use era-correct equipment instead, NOT color photography where period demands monochrome, use era-correct equipment instead."
-  }
+  {"id": "s01_01",
+   "prompt": f"dim 1960s university corridor, long perspective, fluorescent glow, linoleum floor, painted walls, {STYLE} NOT control room, use empty corridor instead, NOT computer equipment, use empty corridor instead, {STD_NEG}"},
+  {"id": "s01_02",
+   "prompt": f"close-up of a single vintage teletype machine, round keys soft in shallow focus, curling paper tape, tungsten light, {STYLE} NOT sharp readable key legends, use soft out-of-focus keys instead, NOT multiple keyboards, use one teletype instead, NOT dense control panels, use a single machine instead, {STD_NEG}"},
+  {"id": "s02_03",
+   "prompt": f"wide view of a mainframe hall, rows of tall plain cabinets with tape reels and small status lights, raised floor, long perspective, {STYLE} NOT patch panels, use plain cabinet fronts instead, NOT dense buttons, use plain cabinet fronts instead, NOT readable labels, use plain cabinet fronts instead, {STD_NEG}"},
+  {"id": "s03_04",
+   "prompt": f"period phonetic chart page, ink linework of mouth-position diagrams on graph paper, sparse annotation, slight angle, {STYLE} NOT dense text, use sparse linework instead, NOT computer equipment, use paper chart instead, {STD_NEG}"},
+  {"id": "s03_05",
+   "prompt": f"vintage archival index card with large hand-lettered title reading PYGMALION 1913, Shaw-era lettering, card stock, slight angle, soft focus, {STYLE} NOT computer equipment, use paper card instead, NOT dense panels, use paper card instead, {STD_NEG}"},
+  {"id": "s04_06",
+   "prompt": f"ink technical flow diagram, rectangular blocks connected by arrows, sparse hand-lettered labels, graph paper, Bell Systems manual style, {STYLE} NOT dense equipment, use paper diagram instead, NOT readable paragraphs, use short labels instead, {STD_NEG}"},
+  {"id": "s04_07",
+   "prompt": f"printed terminal transcript page on tractor-feed paper, alternating lowercase lines and capital-letter lines, print slightly soft and illegible, raking light, {STYLE} NOT sharp readable words, use soft illegible print instead, NOT computer equipment, use paper page instead, {STD_NEG}"},
+  {"id": "s04_08",
+   "prompt": f"tall stack of fanfold line-printer paper, tractor-feed margins, dense print lines as soft texture, shallow depth of field, {STYLE} NOT readable words, use soft print texture instead, NOT computer equipment, use paper stack instead, {STD_NEG}"},
+  {"id": "s04_09",
+   "prompt": f"time-sharing console terminal with one typewriter-style keyboard suggested in shallow focus, round CRT with soft glow, three-quarter view, laboratory setting, 1960s, {STYLE} NOT multiple keyboards, use one keyboard instead, NOT dense buttons, use plain console surfaces instead, NOT readable labels, use blank surfaces instead, {STD_NEG}"},
+  {"id": "s05_10",
+   "prompt": f"archival contact sheet, grid of small document photographs, shallow depth of field, lettering soft and illegible, {STYLE} NOT readable signage, use soft letterforms instead, NOT control panels, use paper documents instead, {STD_NEG}"},
+  {"id": "s07_13",
+   "prompt": f"empty corridor, a single curled paper tape ribbon lying on the polished floor, one shaft of light, long perspective, {STYLE} NOT scattered debris, use one paper ribbon instead, NOT keyboards, use one paper ribbon instead, {STD_NEG}"},
+  {"id": "s06_12",
+   "prompt": f"lecture hall podium microphone close-up, vintage dynamic microphone on a slim stand, blurred rows of seats in the background, volumetric projector light beam, 1960s, {STYLE} NOT vacuum tubes, use solid-state electronics instead, NOT valve-based electronics, use solid-state electronics instead, NOT dense buttons, use plain microphone body instead, NOT control panels, use lecture hall background instead, NOT tangled cables, use slim stand instead, {STD_NEG}"}
 ]
 
 def log(m): print(f"[sana_batch] {m}", flush=True)
@@ -92,7 +79,7 @@ def main():
               "torch_version":torch.__version__,"items":[]}
     failed=0
     for i,item in enumerate(BATCH):
-        seed=1000+i
+        seed=SEED_BASE+i
         g=torch.Generator("cuda").manual_seed(seed)
         torch.cuda.reset_peak_memory_stats(); torch.cuda.synchronize()
         t0=time.time()

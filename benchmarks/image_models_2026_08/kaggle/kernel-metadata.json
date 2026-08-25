@@ -1,0 +1,15 @@
+{
+  "id": "forts845/image-bench-2026-08",
+  "title": "image-bench-2026-08",
+  "code_file": "benchmark_kernel.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}
