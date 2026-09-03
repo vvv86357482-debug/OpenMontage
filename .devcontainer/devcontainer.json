@@ -1,0 +1,11 @@
+{
+  "forwardPorts": [3002, 8080],
+  "portsAttributes": {
+    "3002": {
+      "label": "Mobile Operator"
+    },
+    "8080": {
+      "label": "noVNC"
+    }
+  }
+}
